@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 12,0 24,12 12,24 12,0" fill="#000000" stroke="#FFFFFF"/>
+    <line x1="0" y1="4.5" x2="10" y2="4.5" stroke="#000000"/>
+    <line x1="0" y1="8.5" x2="10" y2="8.5" stroke="#000000"/>
+    <line x1="0" y1="12.5" x2="10" y2="12.5" stroke="#000000"/>
+    <line x1="0" y1="16.5" x2="10" y2="16.5" stroke="#000000"/>
+    <line x1="0" y1="20.5" x2="10" y2="20.5" stroke="#000000"/>
+    <line x1="0" y1="3.5" x2="10" y2="3.5" stroke="#FFFFFF"/>
+    <line x1="0" y1="7.5" x2="10" y2="7.5" stroke="#FFFFFF"/>
+    <line x1="0" y1="11.5" x2="10" y2="11.5" stroke="#FFFFFF"/>
+    <line x1="0" y1="15.5" x2="10" y2="15.5" stroke="#FFFFFF"/>
+    <line x1="0" y1="19.5" x2="10" y2="19.5" stroke="#FFFFFF"/>
+</svg>

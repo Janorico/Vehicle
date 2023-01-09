@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.3.1 commit date:2022-10-04, commit time:18:35, hash:b292cfe5a936</authoring_tool>
+    </contributor>
+    <created>2022-11-09T17:12:16</created>
+    <modified>2022-11-09T17:12:16</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="GrassMaterial-effect">
+      <profile_COMMON>
+        <newparam sid="GrassImage-surface">
+          <surface type="2D">
+            <init_from>GrassImage</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="GrassImage-sampler">
+          <sampler2D>
+            <source>GrassImage-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="GrassImage-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="StonesMaterial-effect">
+      <profile_COMMON>
+        <newparam sid="StonesImage-surface">
+          <surface type="2D">
+            <init_from>StonesImage</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="StonesImage-sampler">
+          <sampler2D>
+            <source>StonesImage-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="StonesImage-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="WoodMaterial-effect">
+      <profile_COMMON>
+        <newparam sid="WoodImage-surface">
+          <surface type="2D">
+            <init_from>WoodImage</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="WoodImage-sampler">
+          <sampler2D>
+            <source>WoodImage-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="WoodImage-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street11Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street11Image-surface">
+          <surface type="2D">
+            <init_from>Street11Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street11Image-sampler">
+          <sampler2D>
+            <source>Street11Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street11Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street10Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street10Image-surface">
+          <surface type="2D">
+            <init_from>Street10Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street10Image-sampler">
+          <sampler2D>
+            <source>Street10Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street10Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street9Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street9Image-surface">
+          <surface type="2D">
+            <init_from>Street9Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street9Image-sampler">
+          <sampler2D>
+            <source>Street9Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street9Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street8Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street8Image-surface">
+          <surface type="2D">
+            <init_from>Street8Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street8Image-sampler">
+          <sampler2D>
+            <source>Street8Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street8Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street7Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street7Image-surface">
+          <surface type="2D">
+            <init_from>Street7Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street7Image-sampler">
+          <sampler2D>
+            <source>Street7Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street7Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street6Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street6Image-surface">
+          <surface type="2D">
+            <init_from>Street6Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street6Image-sampler">
+          <sampler2D>
+            <source>Street6Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street6Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street5Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street5Image-surface">
+          <surface type="2D">
+            <init_from>Street5Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street5Image-sampler">
+          <sampler2D>
+            <source>Street5Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street5Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street4Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street4Image-surface">
+          <surface type="2D">
+            <init_from>Street4Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street4Image-sampler">
+          <sampler2D>
+            <source>Street4Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street4Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street3Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street3Image-surface">
+          <surface type="2D">
+            <init_from>Street3Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street3Image-sampler">
+          <sampler2D>
+            <source>Street3Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street3Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street2Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street2Image-surface">
+          <surface type="2D">
+            <init_from>Street2Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street2Image-sampler">
+          <sampler2D>
+            <source>Street2Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street2Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street1Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street1Image-surface">
+          <surface type="2D">
+            <init_from>Street1Image</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street1Image-sampler">
+          <sampler2D>
+            <source>Street1Image-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street1Image-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="GrassImage" name="GrassImage">
+      <init_from>GrassImage.png</init_from>
+    </image>
+    <image id="StonesImage" name="StonesImage">
+      <init_from>StonesImage.png</init_from>
+    </image>
+    <image id="Street10Image" name="Street10Image">
+      <init_from>Street10Image.png</init_from>
+    </image>
+    <image id="Street11Image" name="Street11Image">
+      <init_from>Street11Image.png</init_from>
+    </image>
+    <image id="Street1Image" name="Street1Image">
+      <init_from>Street1Image.png</init_from>
+    </image>
+    <image id="Street2Image" name="Street2Image">
+      <init_from>Street2Image.png</init_from>
+    </image>
+    <image id="Street3Image" name="Street3Image">
+      <init_from>Street3Image.png</init_from>
+    </image>
+    <image id="Street4Image" name="Street4Image">
+      <init_from>Street4Image.png</init_from>
+    </image>
+    <image id="Street5Image" name="Street5Image">
+      <init_from>Street5Image.png</init_from>
+    </image>
+    <image id="Street6Image" name="Street6Image">
+      <init_from>Street6Image.png</init_from>
+    </image>
+    <image id="Street7Image" name="Street7Image">
+      <init_from>Street7Image.png</init_from>
+    </image>
+    <image id="Street8Image" name="Street8Image">
+      <init_from>Street8Image.png</init_from>
+    </image>
+    <image id="Street9Image" name="Street9Image">
+      <init_from>Street9Image.png</init_from>
+    </image>
+    <image id="WoodImage" name="WoodImage">
+      <init_from>WoodImage.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="GrassMaterial-material" name="GrassMaterial">
+      <instance_effect url="#GrassMaterial-effect"/>
+    </material>
+    <material id="StonesMaterial-material" name="StonesMaterial">
+      <instance_effect url="#StonesMaterial-effect"/>
+    </material>
+    <material id="WoodMaterial-material" name="WoodMaterial">
+      <instance_effect url="#WoodMaterial-effect"/>
+    </material>
+    <material id="Street11Material-material" name="Street11Material">
+      <instance_effect url="#Street11Material-effect"/>
+    </material>
+    <material id="Street10Material-material" name="Street10Material">
+      <instance_effect url="#Street10Material-effect"/>
+    </material>
+    <material id="Street9Material-material" name="Street9Material">
+      <instance_effect url="#Street9Material-effect"/>
+    </material>
+    <material id="Street8Material-material" name="Street8Material">
+      <instance_effect url="#Street8Material-effect"/>
+    </material>
+    <material id="Street7Material-material" name="Street7Material">
+      <instance_effect url="#Street7Material-effect"/>
+    </material>
+    <material id="Street6Material-material" name="Street6Material">
+      <instance_effect url="#Street6Material-effect"/>
+    </material>
+    <material id="Street5Material-material" name="Street5Material">
+      <instance_effect url="#Street5Material-effect"/>
+    </material>
+    <material id="Street4Material-material" name="Street4Material">
+      <instance_effect url="#Street4Material-effect"/>
+    </material>
+    <material id="Street3Material-material" name="Street3Material">
+      <instance_effect url="#Street3Material-effect"/>
+    </material>
+    <material id="Street2Material-material" name="Street2Material">
+      <instance_effect url="#Street2Material-effect"/>
+    </material>
+    <material id="Street1Material-material" name="Street1Material">
+      <instance_effect url="#Street1Material-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane_001-mesh" name="Plane.001">
+      <mesh>
+        <source id="Plane_001-mesh-positions">
+          <float_array id="Plane_001-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_001-mesh-normals">
+          <float_array id="Plane_001-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_001-mesh-map-0">
+          <float_array id="Plane_001-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane_001-mesh-vertices">
+          <input semantic="POSITION" source="#Plane_001-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#Plane_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane_001-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Plane-mesh" name="Plane">
+      <mesh>
+        <source id="Plane-mesh-positions">
+          <float_array id="Plane-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-normals">
+          <float_array id="Plane-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-map-0">
+          <float_array id="Plane-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane-mesh-vertices">
+          <input semantic="POSITION" source="#Plane-mesh-positions"/>
+        </vertices>
+        <triangles material="StonesMaterial-material" count="2">
+          <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Wood-mesh" name="Wood">
+      <mesh>
+        <source id="Wood-mesh-positions">
+          <float_array id="Wood-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Wood-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Wood-mesh-normals">
+          <float_array id="Wood-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Wood-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Wood-mesh-map-0">
+          <float_array id="Wood-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Wood-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Wood-mesh-vertices">
+          <input semantic="POSITION" source="#Wood-mesh-positions"/>
+        </vertices>
+        <triangles material="WoodMaterial-material" count="2">
+          <input semantic="VERTEX" source="#Wood-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Wood-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Wood-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse11-mesh" name="Strasse11">
+      <mesh>
+        <source id="Strasse11-mesh-positions">
+          <float_array id="Strasse11-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse11-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse11-mesh-normals">
+          <float_array id="Strasse11-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse11-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse11-mesh-map-0">
+          <float_array id="Strasse11-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse11-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse11-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse11-mesh-positions"/>
+        </vertices>
+        <triangles material="Street11Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse11-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse11-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse11-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse10-mesh" name="Strasse10">
+      <mesh>
+        <source id="Strasse10-mesh-positions">
+          <float_array id="Strasse10-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse10-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse10-mesh-normals">
+          <float_array id="Strasse10-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse10-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse10-mesh-map-0">
+          <float_array id="Strasse10-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse10-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse10-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse10-mesh-positions"/>
+        </vertices>
+        <triangles material="Street10Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse10-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse10-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse10-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse9-mesh" name="Strasse9">
+      <mesh>
+        <source id="Strasse9-mesh-positions">
+          <float_array id="Strasse9-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse9-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse9-mesh-normals">
+          <float_array id="Strasse9-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse9-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse9-mesh-map-0">
+          <float_array id="Strasse9-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse9-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse9-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse9-mesh-positions"/>
+        </vertices>
+        <triangles material="Street9Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse9-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse9-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse9-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse8-mesh" name="Strasse8">
+      <mesh>
+        <source id="Strasse8-mesh-positions">
+          <float_array id="Strasse8-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse8-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse8-mesh-normals">
+          <float_array id="Strasse8-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse8-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse8-mesh-map-0">
+          <float_array id="Strasse8-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse8-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse8-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse8-mesh-positions"/>
+        </vertices>
+        <triangles material="Street8Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse8-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse8-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse8-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse7-mesh" name="Strasse7">
+      <mesh>
+        <source id="Strasse7-mesh-positions">
+          <float_array id="Strasse7-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse7-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse7-mesh-normals">
+          <float_array id="Strasse7-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse7-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse7-mesh-map-0">
+          <float_array id="Strasse7-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse7-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse7-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse7-mesh-positions"/>
+        </vertices>
+        <triangles material="Street7Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse7-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse7-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse7-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse6-mesh" name="Strasse6">
+      <mesh>
+        <source id="Strasse6-mesh-positions">
+          <float_array id="Strasse6-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse6-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse6-mesh-normals">
+          <float_array id="Strasse6-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse6-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse6-mesh-map-0">
+          <float_array id="Strasse6-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse6-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse6-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse6-mesh-positions"/>
+        </vertices>
+        <triangles material="Street6Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse6-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse6-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse6-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse5-mesh" name="Strasse5">
+      <mesh>
+        <source id="Strasse5-mesh-positions">
+          <float_array id="Strasse5-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse5-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse5-mesh-normals">
+          <float_array id="Strasse5-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse5-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse5-mesh-map-0">
+          <float_array id="Strasse5-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse5-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse5-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse5-mesh-positions"/>
+        </vertices>
+        <triangles material="Street5Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse5-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse5-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse5-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse4-mesh" name="Strasse4">
+      <mesh>
+        <source id="Strasse4-mesh-positions">
+          <float_array id="Strasse4-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse4-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse4-mesh-normals">
+          <float_array id="Strasse4-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse4-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse4-mesh-map-0">
+          <float_array id="Strasse4-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse4-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse4-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse4-mesh-positions"/>
+        </vertices>
+        <triangles material="Street4Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse4-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse4-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse4-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse3-mesh" name="Strasse3">
+      <mesh>
+        <source id="Strasse3-mesh-positions">
+          <float_array id="Strasse3-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse3-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse3-mesh-normals">
+          <float_array id="Strasse3-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse3-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse3-mesh-map-0">
+          <float_array id="Strasse3-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse3-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse3-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse3-mesh-positions"/>
+        </vertices>
+        <triangles material="Street3Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse3-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse3-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse3-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse2-mesh" name="Strasse2">
+      <mesh>
+        <source id="Strasse2-mesh-positions">
+          <float_array id="Strasse2-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse2-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse2-mesh-normals">
+          <float_array id="Strasse2-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse2-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse2-mesh-map-0">
+          <float_array id="Strasse2-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse2-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse2-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse2-mesh-positions"/>
+        </vertices>
+        <triangles material="Street2Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse2-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse2-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse2-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Strasse1-mesh" name="Strasse1">
+      <mesh>
+        <source id="Strasse1-mesh-positions">
+          <float_array id="Strasse1-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Strasse1-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse1-mesh-normals">
+          <float_array id="Strasse1-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse1-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Strasse1-mesh-map-0">
+          <float_array id="Strasse1-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Strasse1-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Strasse1-mesh-vertices">
+          <input semantic="POSITION" source="#Strasse1-mesh-positions"/>
+        </vertices>
+        <triangles material="Street1Material-material" count="2">
+          <input semantic="VERTEX" source="#Strasse1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Strasse1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Strasse1-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Grass" name="Grass" type="NODE">
+        <matrix sid="transform">1 0 0 -2.5 0 1 0 7.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plane_001-mesh" name="Grass">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Stones" name="Stones" type="NODE">
+        <matrix sid="transform">1 0 0 -7.5 0 1 0 7.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plane-mesh" name="Stones">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="StonesMaterial-material" target="#StonesMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Wood" name="Wood" type="NODE">
+        <matrix sid="transform">1 0 0 7.5 0 1 0 2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Wood-mesh" name="Wood">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="WoodMaterial-material" target="#WoodMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street11" name="Street11" type="NODE">
+        <matrix sid="transform">1 0 0 2.5 0 1 0 2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse11-mesh" name="Street11">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street11Material-material" target="#Street11Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street10" name="Street10" type="NODE">
+        <matrix sid="transform">1 0 0 -2.5 0 1 0 2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse10-mesh" name="Street10">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street10Material-material" target="#Street10Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street9" name="Street9" type="NODE">
+        <matrix sid="transform">1 0 0 -7.5 0 1 0 2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse9-mesh" name="Street9">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street9Material-material" target="#Street9Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street8" name="Street8" type="NODE">
+        <matrix sid="transform">1 0 0 7.5 0 1 0 -2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse8-mesh" name="Street8">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street8Material-material" target="#Street8Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street7" name="Street7" type="NODE">
+        <matrix sid="transform">1 0 0 2.5 0 1 0 -2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse7-mesh" name="Street7">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street7Material-material" target="#Street7Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street6" name="Street6" type="NODE">
+        <matrix sid="transform">1 0 0 -2.5 0 1 0 -2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse6-mesh" name="Street6">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street6Material-material" target="#Street6Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street5" name="Street5" type="NODE">
+        <matrix sid="transform">1 0 0 -7.5 0 1 0 -2.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse5-mesh" name="Street5">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street5Material-material" target="#Street5Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street4" name="Street4" type="NODE">
+        <matrix sid="transform">1 0 0 7.5 0 1 0 -7.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse4-mesh" name="Street4">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street4Material-material" target="#Street4Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street3" name="Street3" type="NODE">
+        <matrix sid="transform">1 0 0 2.5 0 1 0 -7.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse3-mesh" name="Street3">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street3Material-material" target="#Street3Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street2" name="Street2" type="NODE">
+        <matrix sid="transform">1 0 0 -2.5 0 1 0 -7.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse2-mesh" name="Street2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street2Material-material" target="#Street2Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street1" name="Street1" type="NODE">
+        <matrix sid="transform">1 0 0 -7.5 0 1 0 -7.5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Strasse1-mesh" name="Street1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street1Material-material" target="#Street1Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.3.1 commit date:2022-10-04, commit time:18:35, hash:b292cfe5a936</authoring_tool>
+    </contributor>
+    <created>2022-12-22T16:31:05</created>
+    <modified>2022-12-22T16:31:05</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_geometries>
+    <geometry id="SiloConstructionMesh-mesh" name="SiloConstructionMesh">
+      <mesh>
+        <source id="SiloConstructionMesh-mesh-positions">
+          <float_array id="SiloConstructionMesh-mesh-positions-array" count="72">-2.9 -1 0 -2.9 -1 4.85 -2.9 1.4 0 -2.9 1.4 4.85 -2.5 -1 0 -2.5 -1 4.45 -2.5 1.4 0 -1 -1 4.45 -1 1 4.45 -1 -1 4.85 -1 1 4.85 1 1 4.45 1 1 4.85 -2.5 1.4 4.45 2.9 1.4 0 2.9 1.4 4.85 2.9 -0.9999999 0 2.9 -0.9999999 4.85 2.5 1.4 0 2.5 1.4 4.45 2.5 -0.9999999 0 2.5 -1 4.45 1 -1 4.45 1 -1 4.85</float_array>
+          <technique_common>
+            <accessor source="#SiloConstructionMesh-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="SiloConstructionMesh-mesh-normals">
+          <float_array id="SiloConstructionMesh-mesh-normals-array" count="60">-1 0 0 0 1 8.22133e-7 0 -1 0 1 0 0 0 0 1 0 0 -1 -1 -1.49011e-7 0 2.98023e-7 -1 0 -2.98023e-7 1 0 -2.98023e-7 1 0 0 1 0 -2.98023e-7 1 0 0 1 -4.76837e-7 4.18278e-7 0 1 -4.70563e-7 0 1 0 0 -1 5.29819e-7 0 -1 -1 0 0 0 -1 3.13709e-7 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#SiloConstructionMesh-mesh-normals-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="SiloConstructionMesh-mesh-map-0">
+          <float_array id="SiloConstructionMesh-mesh-map-0-array" count="240">0.625 0 0.375 0.25 0.375 0 0.625 0.25 0.625 0 0 0 0.625 0.75 0.625 0.75 0.625 0 0.625 0.625 0.625 0.75 0.625 0.75 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.25 0.625 0.625 0.625 0 0.625 0.75 0 0 0 0 0.625 0.625 0 0 0.625 0.75 0.625 0 0.375 0.25 0.375 0 0.625 0.75 0 0 0 0 0.625 0.625 0 0 0.625 0.625 0.625 0.25 0 0 0.375 0.25 0.625 0 0.625 0.25 0.375 0.25 0.625 0 0.375 0 0.625 0.75 0.375 0 0.375 0.75 0.625 0.75 0 0 0.375 0.25 0 0 0.375 0.25 0.625 0.25 0 0 0.625 0 0.625 0.75 0 0 0.625 0 0.125 0.75 0.625 0.75 0.125 0.75 0.375 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.625 0.625 0.625 0.625 0.75 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.25 0.625 0 0.625 0.625 0.625 0 0.625 0.75 0.625 0.625 0 0 0.625 0.25 0.625 0.625 0.625 0.25 0.625 0 0.625 0.625 0.625 0.25 0.625 0.625 0.625 0.625 0.625 0.75 0.375 0.75 0 0 0.625 0.625 0.625 0.75 0.625 0.75 0.625 0.75 0 0 0.625 0.625 0 0 0 0 0.625 0.625 0.625 0.625 0.625 0.75 0 0 0.625 0.75 0.625 0.625 0.625 0.625 0.625 0 0.625 0.25 0.375 0.25 0.625 0.75 0.375 0.75 0 0 0.625 0.625 0 0 0 0 0.625 0.25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.375 0.25</float_array>
+          <technique_common>
+            <accessor source="#SiloConstructionMesh-mesh-map-0-array" count="120" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="SiloConstructionMesh-mesh-vertices">
+          <input semantic="POSITION" source="#SiloConstructionMesh-mesh-positions"/>
+        </vertices>
+        <triangles count="40">
+          <input semantic="VERTEX" source="#SiloConstructionMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#SiloConstructionMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#SiloConstructionMesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 3 1 3 15 1 4 13 1 5 5 2 6 9 2 7 1 2 8 8 3 9 9 3 10 7 3 11 8 2 12 12 2 13 10 2 14 3 4 15 12 4 16 15 4 17 5 3 18 6 3 19 13 3 20 8 5 21 13 5 22 19 5 23 15 3 24 16 3 25 14 3 26 19 0 27 20 0 28 21 0 29 11 6 30 23 6 31 12 6 32 17 7 33 21 7 34 16 7 35 1 0 36 3 0 37 2 0 38 15 8 39 14 8 40 19 8 41 14 9 42 18 9 43 19 9 44 6 10 45 2 10 46 13 10 47 2 11 48 3 11 49 13 11 50 15 12 51 19 12 52 13 12 53 1 2 54 0 2 55 5 2 56 0 2 57 4 2 58 5 2 59 5 2 60 7 2 61 9 2 62 8 3 63 10 3 64 9 3 65 8 2 66 11 2 67 12 2 68 3 13 69 1 13 70 10 13 71 1 4 72 9 4 73 10 4 74 23 4 75 17 4 76 12 4 77 17 14 78 15 14 79 12 14 80 3 4 81 10 4 82 12 4 83 5 3 84 4 3 85 6 3 86 8 15 87 7 15 88 5 15 89 19 16 90 21 16 91 11 16 92 21 15 93 22 15 94 11 15 95 8 15 96 5 15 97 13 15 98 19 15 99 11 15 100 8 15 101 15 3 102 17 3 103 16 3 104 19 0 105 18 0 106 20 0 107 11 17 108 22 17 109 23 17 110 17 18 111 23 18 112 21 18 113 23 2 114 22 2 115 21 2 116 21 19 117 20 19 118 16 19 119</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="SiloConstruction" name="SiloConstruction" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#SiloConstructionMesh-mesh" name="SiloConstruction"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

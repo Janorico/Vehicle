@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000mm"
+   height="1000mm"
+   viewBox="0 0 1000 1000"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="Vehicle Logo.svg"
+   inkscape:export-filename="Vehicle Logo.png"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.20293468"
+     inkscape:cx="1739.476"
+     inkscape:cy="1902.0899"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#800080;stroke:none;stroke-width:0.264583"
+       id="rect298"
+       width="1000"
+       height="1000"
+       x="0"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:299.861px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.264583"
+       x="9.5777206"
+       y="812.44836"
+       id="text80"><tspan
+         sodipodi:role="line"
+         id="tspan78"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:299.861px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.264583"
+         x="9.5777206"
+         y="812.44836">Vehicle</tspan></text>
+    <path
+       style="fill:#ffff00;stroke:none;stroke-width:0.264583"
+       d="M 150,150 H 550 V 275 H 850 V 400 H 150"
+       id="path485"
+       sodipodi:nodetypes="cccccc" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.261898"
+       id="path695"
+       cx="325"
+       cy="400"
+       r="75" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.261898"
+       id="path695-4"
+       cx="675"
+       cy="400"
+       r="75" />
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0.380388"
+       id="rect168"
+       width="162.5"
+       height="80"
+       x="362.5"
+       y="172.5" />
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0.380388"
+       id="rect224"
+       width="162.5"
+       height="80"
+       x="175"
+       y="172.5" />
+  </g>
+</svg>
