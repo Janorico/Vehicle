@@ -1,0 +1,244 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Vehicles/DumpTruck.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Vehicles/Wheel_0.4_0.25.tres" type="CylinderMesh" id=2]
+[ext_resource path="res://Scenes/Vehicles/Base/Wheel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Vehicles/DumpTruck.dae" type="PackedScene" id=5]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.940228, 0.5, -2.77316, 0.999932, 0.567809, 3, -1, 0.562991, 2.95102, 0.923554, 0, 2.77273, 0.923699, 0.5, -2.77316, -0.940083, 0, -2.77273, -0.940083, 0, 2.77273, 0.923554, 0, -2.77273, -1.02479, 0.570248, 1.48753, 1.00826, 0.570248, 1.48753 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -0.922684, 1.33659, 2.94745, 0.960424, 2.45863, 2.51592, 0.992064, 2.48872, 1.5, 0.992064, 0.585657, 1.5, -1, 2.48055, 1.5065, -1, 0.593832, 1.5065, 0.975666, 0.601256, 3, -0.992195, 0.601256, 3, -0.976949, 2.45862, 2.51592, 0.90615, 1.3366, 2.94745 )
+
+[sub_resource type="ConcavePolygonShape" id=6]
+data = PoolVector3Array( -0.8315, 0.6666, 4.4, 0.8315, 0.6666, 4.4, -0.9239, 0.926, 4.4, -0.9808, 1.2074, 4.4, -1, 1.5, 4.4, -1, 1.5, 0, 1, 1.5, 4.4, 0.9808, 1.2074, 4.4, 0.9808, 1.2074, 0, 0.1951, 0.0288, 4.4, 0, 0, 4.4, 0, 0, 0, -0.9239, 0.926, 4.4, -0.9808, 1.2074, 4.4, -0.9808, 1.2074, 0, 0.3827, 0.1142, 4.4, 0.1951, 0.0288, 4.4, 0.1951, 0.0288, 0, -0.8315, 0.6666, 4.4, -0.9239, 0.926, 4.4, -0.9239, 0.926, 0, 0.5556, 0.2528, 4.4, 0.3827, 0.1142, 4.4, 0.3827, 0.1142, 0, -0.7071, 0.4393, 4.4, -0.8315, 0.6666, 4.4, -0.8315, 0.6666, 0, 0.7071, 0.4393, 4.4, 0.5556, 0.2528, 4.4, 0.5556, 0.2528, 0, -0.5556, 0.2528, 4.4, -0.7071, 0.4393, 4.4, -0.7071, 0.4393, 0, 0.8315, 0.6666, 4.4, 0.7071, 0.4393, 4.4, 0.7071, 0.4393, 0, -0.3827, 0.1142, 4.4, -0.5556, 0.2528, 4.4, -0.5556, 0.2528, 0, 0.9239, 0.926, 4.4, 0.8315, 0.6666, 4.4, 0.8315, 0.6666, 0, -0.1951, 0.0288, 4.4, -0.3827, 0.1142, 4.4, -0.3827, 0.1142, 0, 0.9808, 1.2074, 4.4, 0.9239, 0.926, 4.4, 0.9239, 0.926, 0, 0, 0, 4.4, -0.1951, 0.0288, 4.4, -0.1951, 0.0288, 0, -0.9239, 0.926, 4.4, 0.9808, 1.2074, 4.4, -0.9808, 1.2074, 4.4, -0.9808, 1.2074, 4.4, 0.9808, 1.2074, 4.4, -1, 1.5, 4.4, -1, 1.5, 4.4, 0.9808, 1.2074, 4.4, 1, 1.5, 4.4, 0.9808, 1.2074, 4.4, -0.9239, 0.926, 4.4, 0.9239, 0.926, 4.4, 0.9239, 0.926, 4.4, -0.9239, 0.926, 4.4, 0.8315, 0.6666, 4.4, 0.8315, 0.6666, 4.4, -0.7071, 0.4393, 4.4, 0.7071, 0.4393, 4.4, 0.7071, 0.4393, 4.4, -0.5556, 0.2528, 4.4, 0.5556, 0.2528, 4.4, 0.5556, 0.2528, 4.4, -0.5556, 0.2528, 4.4, 0.3827, 0.1142, 4.4, 0.3827, 0.1142, 4.4, -0.3827, 0.1142, 4.4, 0.1951, 0.0288, 4.4, -0.5556, 0.2528, 4.4, -0.3827, 0.1142, 4.4, 0.3827, 0.1142, 4.4, 0.1951, 0.0288, 4.4, -0.1951, 0.0288, 4.4, 0, 0, 4.4, -0.1951, 0.0288, 4.4, 0.1951, 0.0288, 4.4, -0.3827, 0.1142, 4.4, -0.5556, 0.2528, 4.4, 0.7071, 0.4393, 4.4, -0.7071, 0.4393, 4.4, -0.7071, 0.4393, 4.4, 0.8315, 0.6666, 4.4, -0.8315, 0.6666, 4.4, -0.9808, 1.2074, 4.4, -1, 1.5, 0, -0.9808, 1.2074, 0, 1, 1.5, 4.4, 0.9808, 1.2074, 0, 1, 1.5, 0, 0.1951, 0.0288, 4.4, 0, 0, 0, 0.1951, 0.0288, 0, -0.9239, 0.926, 4.4, -0.9808, 1.2074, 0, -0.9239, 0.926, 0, 0.3827, 0.1142, 4.4, 0.1951, 0.0288, 0, 0.3827, 0.1142, 0, -0.8315, 0.6666, 4.4, -0.9239, 0.926, 0, -0.8315, 0.6666, 0, 0.5556, 0.2528, 4.4, 0.3827, 0.1142, 0, 0.5556, 0.2528, 0, -0.7071, 0.4393, 4.4, -0.8315, 0.6666, 0, -0.7071, 0.4393, 0, 0.7071, 0.4393, 4.4, 0.5556, 0.2528, 0, 0.7071, 0.4393, 0, -0.5556, 0.2528, 4.4, -0.7071, 0.4393, 0, -0.5556, 0.2528, 0, 0.8315, 0.6666, 4.4, 0.7071, 0.4393, 0, 0.8315, 0.6666, 0, -0.3827, 0.1142, 4.4, -0.5556, 0.2528, 0, -0.3827, 0.1142, 0, 0.9239, 0.926, 4.4, 0.8315, 0.6666, 0, 0.9239, 0.926, 0, -0.1951, 0.0288, 4.4, -0.3827, 0.1142, 0, -0.1951, 0.0288, 0, 0.9808, 1.2074, 4.4, 0.9239, 0.926, 0, 0.9808, 1.2074, 0, 0, 0, 4.4, -0.1951, 0.0288, 0, 0, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( 1, 0, 0, 0.980619, -0.292776, 0, -1, 0, 0, 0.923845, -0.574099, 0, -0.980814, -0.292776, 0, 0.831441, -0.833399, 0, -0.924041, -0.574099, 0, 0.70693, -1.06069, 0, -0.831637, -0.833399, 0, 0.555403, -1.24731, 0, -0.707126, -1.06069, 0, 0.382537, -1.38591, 0, -0.555599, -1.24731, 0, 0.194988, -1.47122, 0, -0.382733, -1.38591, 0, 0, -1.5, 0, -0.195184, -1.47122, 0 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Tipping"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VehicleBody/DumpTruck/Back:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -50, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VehicleBody/DumpTruck/Back/BackFlap:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 80, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("VehicleBody/BackCollisionShape:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -50, 0, 0 ) ]
+}
+tracks/3/type = "transform"
+tracks/3/path = NodePath("VehicleBody/BackFlapCollisionShape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 0, 2.5, -3, 0, 0, 0, 1, 1, 1, 1, 1.5, 1, 0, 1.96418, -4.14907, 0.258819, 0, 0, 0.965926, 1, 1, 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "UndoTipping"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VehicleBody/DumpTruck/Back:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -50, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VehicleBody/DumpTruck/Back/BackFlap:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 80, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("VehicleBody/BackCollisionShape:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -50, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/3/type = "transform"
+tracks/3/path = NodePath("VehicleBody/BackFlapCollisionShape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 0, 1.96418, -4.14907, 0.258819, 0, 0, 0.965926, 1, 1, 1, 1.5, 1, 0, 2.5, -3, 0, 0, 0, 1, 1, 1, 1 )
+
+[node name="Spatial" instance=ExtResource( 4 )]
+
+[node name="VehicleBody" parent="." index="0"]
+script = ExtResource( 1 )
+
+[node name="DumpTruck" parent="VehicleBody" index="0" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="VehicleBody" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="VehicleBody" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0 )
+shape = SubResource( 2 )
+
+[node name="BackCollisionShape" type="CollisionShape" parent="VehicleBody" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3 )
+shape = SubResource( 6 )
+
+[node name="BackFlapCollisionShape" type="CollisionShape" parent="VehicleBody" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -3 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VehicleBody" index="5"]
+root_node = NodePath("../..")
+anims/Tipping = SubResource( 3 )
+anims/UndoTipping = SubResource( 4 )
+
+[node name="WindscreenCamera" parent="VehicleBody" index="8"]
+transform = Transform( -1, -1.51808e-08, 8.60947e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 2.4, 2.3 )
+
+[node name="CenterCamera" parent="VehicleBody" index="9"]
+transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 4, -7 )
+
+[node name="LeftCamera" parent="VehicleBody" index="10"]
+transform = Transform( -0.939693, -0.0593912, 0.336824, 0, 0.984808, 0.173648, -0.34202, 0.163176, -0.925417, 7, 4, -7 )
+
+[node name="RightCamera" parent="VehicleBody" index="11"]
+transform = Transform( -0.939693, 0.0593912, -0.336824, 0, 0.984808, 0.173648, 0.34202, 0.163176, -0.925417, -7, 4, -7 )
+
+[node name="FollowCamera" parent="VehicleBody" index="12"]
+transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 3, 2, -4 )
+min_distance = 6.0
+max_distance = 8.0
+height = 3.0
+
+[node name="LeftMirrorPlaceHolder" parent="VehicleBody" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 2.4, 2.6 )
+
+[node name="RightMirrorPlaceHolder" parent="VehicleBody" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 2.4, 2.6 )
+
+[node name="Camera" parent="VehicleBody/LeftMirror/Viewport" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 2.4, 2.6 )
+
+[node name="Camera" parent="VehicleBody/RightMirror/Viewport" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 2.4, 2.6 )
+
+[node name="BackwardLight" parent="VehicleBody" index="18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -3 )
+
+[node name="RightFrontLight" parent="VehicleBody" index="19"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.7, 0.75, 3 )
+
+[node name="RightBackLight" parent="VehicleBody" index="20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.75, -3 )
+
+[node name="LeftBackLight" parent="VehicleBody" index="21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.75, -3 )
+
+[node name="LeftFrontLight" parent="VehicleBody" index="22"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 0.75, 3 )
+
+[node name="LeftFrontWheel" parent="VehicleBody" index="23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85, 0.4, 2 )
+wheel_radius = 0.4
+
+[node name="Wheel" parent="VehicleBody/LeftFrontWheel" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="LeftBackWheel" parent="VehicleBody" index="24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85, 0.4, -1.1 )
+wheel_radius = 0.4
+
+[node name="Wheel" parent="VehicleBody/LeftBackWheel" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="LeftBackWheel2" parent="VehicleBody" index="25" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85, 0.4, -2 )
+wheel_radius = 0.4
+
+[node name="Wheel" parent="VehicleBody/LeftBackWheel2" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="RightFrontWheel" parent="VehicleBody" index="26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85, 0.4, 2 )
+wheel_radius = 0.4
+
+[node name="Wheel" parent="VehicleBody/RightFrontWheel" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="RightBackWheel" parent="VehicleBody" index="27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85, 0.4, -1.1 )
+wheel_radius = 0.4
+
+[node name="Wheel" parent="VehicleBody/RightBackWheel" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="RightBackWheel2" parent="VehicleBody" index="28" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85, 0.4, -2 )
+wheel_radius = 0.4
+
+[node name="Wheel" parent="VehicleBody/RightBackWheel2" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="PreviewCamera" parent="VehicleBody" index="29"]
+transform = Transform( 0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, -0.122788, 0.696364, 3, 2, 4 )
+
+[node name="InterpolatedCamera" parent="." index="1"]
+transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 3, 2, -4 )
+offset = Vector3( 0, 4, -7 )
+
+[editable path="VehicleBody/DumpTruck"]
+[editable path="VehicleBody/LeftFrontWheel"]
+[editable path="VehicleBody/LeftBackWheel"]
+[editable path="VehicleBody/LeftBackWheel2"]
+[editable path="VehicleBody/RightFrontWheel"]
+[editable path="VehicleBody/RightBackWheel"]
+[editable path="VehicleBody/RightBackWheel2"]

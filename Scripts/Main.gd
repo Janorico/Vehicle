@@ -20,8 +20,10 @@ func _ready():
 		# warning-ignore:return_value_discarded
 		Net.connect("player_disconnected", self, "remove_player")
 	if Global.day_night_cycle == true:
-		$SunAnimator.play("Day")
+		$DayAnimator.play("Day")
 	emit_signal("setup_ready")
+	if not $Vehicles.get_vehicle() is Vehicle:
+		$Control/VBoxContainer/HandbrakeButton.disabled = true
 
 func remove_player(id):
 	print_stack()
@@ -31,16 +33,19 @@ func remove_player(id):
 func create_player(id):
 	print_stack()
 	print("	Creating player ", id, "...")
-	if Net.is_host and Global.day_night_cycle:
-		rpc_id(id, "seek_day_night", $SunAnimator.current_animation_position)
+	if Global.day_night_cycle:
+		rpc("_update_day_night")
 	var info = Net.player_info[id]
 	var p = load_player(info)
 	$Vehicles.add_child(p)
 	p.name = str(id)
 	p.get_child(0).initialize(id)
 	p.get_child(0).set_player_name(info["name"])
+	$Vehicles.get_vehicle().update_camera()
 
 func create_my_player():
+	print_stack()
+	print("	Creating player...")
 	var p = load_player(Net.my_info)
 	$Vehicles.add_child(p)
 	p.name = str(Net.net_id)
@@ -49,13 +54,13 @@ func create_my_player():
 func load_player(info: Dictionary):
 	var vehicle = load(Global.get_vehicle_path(info["vehicle"])).instance()
 	for child in vehicle.get_children():
-		child.translation.y = Global.get_vehicle_start_y_translation()
-		child.rotation_degrees.y = Global.get_vehicle_start_y_rotation()
+		child.translation.y += Global.get_vehicle_start_y_translation()
+		child.rotation_degrees.y += Global.get_vehicle_start_y_rotation()
 	return vehicle
 
 remote func _update_day_night():
 	if Net.is_host:
-		rpc("seek_day_night", $SunAnimator.current_animation_position)
+		rpc("_seek_day_night", $DayAnimator.current_animation_position)
 
-remote func seek_day_night(new_pos):
-	$SunAnimator.seek(new_pos, true)
+remote func _seek_day_night(new_pos):
+	$DayAnimator.seek(new_pos, true)

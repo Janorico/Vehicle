@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Vehicles/Wheel_0.25_0.2.tres" type="CylinderMesh" id=1]
-[ext_resource path="res://Scenes/Vehicles/Vehicle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Vehicles/Minibus.dae" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape" id=4]

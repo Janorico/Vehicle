@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.3.1 commit date:2022-10-04, commit time:18:35, hash:b292cfe5a936</authoring_tool>
+    </contributor>
+    <created>2023-02-12T17:10:05</created>
+    <modified>2023-02-12T17:10:05</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="StonesMaterial-effect">
+      <profile_COMMON>
+        <newparam sid="Stone_png-surface">
+          <surface type="2D">
+            <init_from>Stone_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Stone_png-sampler">
+          <sampler2D>
+            <source>Stone_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Stone_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="GrassMaterial-effect">
+      <profile_COMMON>
+        <newparam sid="Grass_png-surface">
+          <surface type="2D">
+            <init_from>Grass_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Grass_png-sampler">
+          <sampler2D>
+            <source>Grass_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Grass_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street2Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street2_png-surface">
+          <surface type="2D">
+            <init_from>Street2_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street2_png-sampler">
+          <sampler2D>
+            <source>Street2_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street2_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Street1Material-effect">
+      <profile_COMMON>
+        <newparam sid="Street1_png-surface">
+          <surface type="2D">
+            <init_from>Street1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Street1_png-sampler">
+          <sampler2D>
+            <source>Street1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Street1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Crossing4WayMaterial-effect">
+      <profile_COMMON>
+        <newparam sid="Crossing4Way_png-surface">
+          <surface type="2D">
+            <init_from>Crossing4Way_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Crossing4Way_png-sampler">
+          <sampler2D>
+            <source>Crossing4Way_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Crossing4Way_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Crossing3Way4Material-effect">
+      <profile_COMMON>
+        <newparam sid="Crossing3Way4_png-surface">
+          <surface type="2D">
+            <init_from>Crossing3Way4_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Crossing3Way4_png-sampler">
+          <sampler2D>
+            <source>Crossing3Way4_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Crossing3Way4_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Crossing3Way3Material-effect">
+      <profile_COMMON>
+        <newparam sid="Crossing3Way3_png-surface">
+          <surface type="2D">
+            <init_from>Crossing3Way3_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Crossing3Way3_png-sampler">
+          <sampler2D>
+            <source>Crossing3Way3_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Crossing3Way3_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Crossing3Way2Material-effect">
+      <profile_COMMON>
+        <newparam sid="Crossing3Way2_png-surface">
+          <surface type="2D">
+            <init_from>Crossing3Way2_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Crossing3Way2_png-sampler">
+          <sampler2D>
+            <source>Crossing3Way2_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Crossing3Way2_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Crossing3Way1Material-effect">
+      <profile_COMMON>
+        <newparam sid="Crossing3Way1_png-surface">
+          <surface type="2D">
+            <init_from>Crossing3Way1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Crossing3Way1_png-sampler">
+          <sampler2D>
+            <source>Crossing3Way1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Crossing3Way1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Corner4Material-effect">
+      <profile_COMMON>
+        <newparam sid="Corner4_png-surface">
+          <surface type="2D">
+            <init_from>Corner4_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Corner4_png-sampler">
+          <sampler2D>
+            <source>Corner4_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Corner4_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Corner3Material-effect">
+      <profile_COMMON>
+        <newparam sid="Corner3_png-surface">
+          <surface type="2D">
+            <init_from>Corner3_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Corner3_png-sampler">
+          <sampler2D>
+            <source>Corner3_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Corner3_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Corner2Material-effect">
+      <profile_COMMON>
+        <newparam sid="Corner2_png-surface">
+          <surface type="2D">
+            <init_from>Corner2_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Corner2_png-sampler">
+          <sampler2D>
+            <source>Corner2_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Corner2_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Corner1Material-effect">
+      <profile_COMMON>
+        <newparam sid="Corner1_png-surface">
+          <surface type="2D">
+            <init_from>Corner1_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Corner1_png-sampler">
+          <sampler2D>
+            <source>Corner1_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Corner1_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Corner1_png" name="Corner1_png">
+      <init_from>Corner1.png</init_from>
+    </image>
+    <image id="Corner2_png" name="Corner2_png">
+      <init_from>Corner2.png</init_from>
+    </image>
+    <image id="Corner3_png" name="Corner3_png">
+      <init_from>Corner3.png</init_from>
+    </image>
+    <image id="Corner4_png" name="Corner4_png">
+      <init_from>Corner4.png</init_from>
+    </image>
+    <image id="Crossing3Way1_png" name="Crossing3Way1_png">
+      <init_from>Crossing3Way1.png</init_from>
+    </image>
+    <image id="Crossing3Way2_png" name="Crossing3Way2_png">
+      <init_from>Crossing3Way2.png</init_from>
+    </image>
+    <image id="Crossing3Way3_png" name="Crossing3Way3_png">
+      <init_from>Crossing3Way3.png</init_from>
+    </image>
+    <image id="Crossing3Way4_png" name="Crossing3Way4_png">
+      <init_from>Crossing3Way4.png</init_from>
+    </image>
+    <image id="Crossing4Way_png" name="Crossing4Way_png">
+      <init_from>Crossing4Way.png</init_from>
+    </image>
+    <image id="Grass_png" name="Grass_png">
+      <init_from>Grass.png</init_from>
+    </image>
+    <image id="Stone_png" name="Stone_png">
+      <init_from>Stone.png</init_from>
+    </image>
+    <image id="Street1_png" name="Street1_png">
+      <init_from>Street1.png</init_from>
+    </image>
+    <image id="Street2_png" name="Street2_png">
+      <init_from>Street2.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="StonesMaterial-material" name="StonesMaterial">
+      <instance_effect url="#StonesMaterial-effect"/>
+    </material>
+    <material id="GrassMaterial-material" name="GrassMaterial">
+      <instance_effect url="#GrassMaterial-effect"/>
+    </material>
+    <material id="Street2Material-material" name="Street2Material">
+      <instance_effect url="#Street2Material-effect"/>
+    </material>
+    <material id="Street1Material-material" name="Street1Material">
+      <instance_effect url="#Street1Material-effect"/>
+    </material>
+    <material id="Crossing4WayMaterial-material" name="Crossing4WayMaterial">
+      <instance_effect url="#Crossing4WayMaterial-effect"/>
+    </material>
+    <material id="Crossing3Way4Material-material" name="Crossing3Way4Material">
+      <instance_effect url="#Crossing3Way4Material-effect"/>
+    </material>
+    <material id="Crossing3Way3Material-material" name="Crossing3Way3Material">
+      <instance_effect url="#Crossing3Way3Material-effect"/>
+    </material>
+    <material id="Crossing3Way2Material-material" name="Crossing3Way2Material">
+      <instance_effect url="#Crossing3Way2Material-effect"/>
+    </material>
+    <material id="Crossing3Way1Material-material" name="Crossing3Way1Material">
+      <instance_effect url="#Crossing3Way1Material-effect"/>
+    </material>
+    <material id="Corner4Material-material" name="Corner4Material">
+      <instance_effect url="#Corner4Material-effect"/>
+    </material>
+    <material id="Corner3Material-material" name="Corner3Material">
+      <instance_effect url="#Corner3Material-effect"/>
+    </material>
+    <material id="Corner2Material-material" name="Corner2Material">
+      <instance_effect url="#Corner2Material-effect"/>
+    </material>
+    <material id="Corner1Material-material" name="Corner1Material">
+      <instance_effect url="#Corner1Material-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="StonesMesh-mesh" name="StonesMesh">
+      <mesh>
+        <source id="StonesMesh-mesh-positions">
+          <float_array id="StonesMesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#StonesMesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StonesMesh-mesh-normals">
+          <float_array id="StonesMesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#StonesMesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StonesMesh-mesh-map-0">
+          <float_array id="StonesMesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#StonesMesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="StonesMesh-mesh-vertices">
+          <input semantic="POSITION" source="#StonesMesh-mesh-positions"/>
+        </vertices>
+        <triangles material="StonesMaterial-material" count="2">
+          <input semantic="VERTEX" source="#StonesMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#StonesMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#StonesMesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="GrassMesh-mesh" name="GrassMesh">
+      <mesh>
+        <source id="GrassMesh-mesh-positions">
+          <float_array id="GrassMesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#GrassMesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassMesh-mesh-normals">
+          <float_array id="GrassMesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#GrassMesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassMesh-mesh-map-0">
+          <float_array id="GrassMesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#GrassMesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="GrassMesh-mesh-vertices">
+          <input semantic="POSITION" source="#GrassMesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#GrassMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#GrassMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#GrassMesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="GrassHill4Mesh-mesh" name="GrassHill4Mesh">
+      <mesh>
+        <source id="GrassHill4Mesh-mesh-positions">
+          <float_array id="GrassHill4Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 2.5 -2.5 2.5 0 2.5 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#GrassHill4Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill4Mesh-mesh-normals">
+          <float_array id="GrassHill4Mesh-mesh-normals-array" count="3">-0.4472137 0 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#GrassHill4Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill4Mesh-mesh-map-0">
+          <float_array id="GrassHill4Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#GrassHill4Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="GrassHill4Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#GrassHill4Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#GrassHill4Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#GrassHill4Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#GrassHill4Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="GrassHill3Mesh-mesh" name="GrassHill3Mesh">
+      <mesh>
+        <source id="GrassHill3Mesh-mesh-positions">
+          <float_array id="GrassHill3Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 2.5 2.5 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#GrassHill3Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill3Mesh-mesh-normals">
+          <float_array id="GrassHill3Mesh-mesh-normals-array" count="3">0 -0.4472137 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#GrassHill3Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill3Mesh-mesh-map-0">
+          <float_array id="GrassHill3Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#GrassHill3Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="GrassHill3Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#GrassHill3Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#GrassHill3Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#GrassHill3Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#GrassHill3Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="GrassHill2Mesh-mesh" name="GrassHill2Mesh">
+      <mesh>
+        <source id="GrassHill2Mesh-mesh-positions">
+          <float_array id="GrassHill2Mesh-mesh-positions-array" count="12">-2.5 -2.5 2.5 2.5 -2.5 0 -2.5 2.5 2.5 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#GrassHill2Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill2Mesh-mesh-normals">
+          <float_array id="GrassHill2Mesh-mesh-normals-array" count="3">0.4472137 0 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#GrassHill2Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill2Mesh-mesh-map-0">
+          <float_array id="GrassHill2Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#GrassHill2Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="GrassHill2Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#GrassHill2Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#GrassHill2Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#GrassHill2Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#GrassHill2Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="GrassHill1Mesh-mesh" name="GrassHill1Mesh">
+      <mesh>
+        <source id="GrassHill1Mesh-mesh-positions">
+          <float_array id="GrassHill1Mesh-mesh-positions-array" count="12">-2.5 -2.5 2.5 2.5 -2.5 2.5 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#GrassHill1Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill1Mesh-mesh-normals">
+          <float_array id="GrassHill1Mesh-mesh-normals-array" count="3">0 0.4472137 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#GrassHill1Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GrassHill1Mesh-mesh-map-0">
+          <float_array id="GrassHill1Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#GrassHill1Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="GrassHill1Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#GrassHill1Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#GrassHill1Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#GrassHill1Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#GrassHill1Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="HillCorner4Mesh-mesh" name="HillCorner4Mesh">
+      <mesh>
+        <source id="HillCorner4Mesh-mesh-positions">
+          <float_array id="HillCorner4Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 2.5 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#HillCorner4Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner4Mesh-mesh-normals">
+          <float_array id="HillCorner4Mesh-mesh-normals-array" count="6">-0.4472137 0 0.8944273 0 0.4472137 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#HillCorner4Mesh-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner4Mesh-mesh-map-0">
+          <float_array id="HillCorner4Mesh-mesh-map-0-array" count="12">0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#HillCorner4Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="HillCorner4Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#HillCorner4Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#HillCorner4Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#HillCorner4Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#HillCorner4Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 1 1 3 3 1 4 2 1 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="HillCorner3Mesh-mesh" name="HillCorner3Mesh">
+      <mesh>
+        <source id="HillCorner3Mesh-mesh-positions">
+          <float_array id="HillCorner3Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#HillCorner3Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner3Mesh-mesh-normals">
+          <float_array id="HillCorner3Mesh-mesh-normals-array" count="6">0 -0.4472137 0.8944273 -0.4472137 0 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#HillCorner3Mesh-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner3Mesh-mesh-map-0">
+          <float_array id="HillCorner3Mesh-mesh-map-0-array" count="12">0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#HillCorner3Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="HillCorner3Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#HillCorner3Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#HillCorner3Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#HillCorner3Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#HillCorner3Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 3 0 1 0 0 2 2 1 3 0 1 4 3 1 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="HillCorner1Mesh-mesh" name="HillCorner1Mesh">
+      <mesh>
+        <source id="HillCorner1Mesh-mesh-positions">
+          <float_array id="HillCorner1Mesh-mesh-positions-array" count="12">-2.5 -2.5 2.5 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#HillCorner1Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner1Mesh-mesh-normals">
+          <float_array id="HillCorner1Mesh-mesh-normals-array" count="6">0 -0.4472137 -0.8944273 -0.4472137 0 -0.8944273</float_array>
+          <technique_common>
+            <accessor source="#HillCorner1Mesh-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner1Mesh-mesh-map-0">
+          <float_array id="HillCorner1Mesh-mesh-map-0-array" count="12">0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#HillCorner1Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="HillCorner1Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#HillCorner1Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#HillCorner1Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#HillCorner1Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#HillCorner1Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>2 0 0 3 0 1 0 0 2 1 1 3 0 1 4 3 1 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="HillCorner2Mesh-mesh" name="HillCorner2Mesh">
+      <mesh>
+        <source id="HillCorner2Mesh-mesh-positions">
+          <float_array id="HillCorner2Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 2.5 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#HillCorner2Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner2Mesh-mesh-normals">
+          <float_array id="HillCorner2Mesh-mesh-normals-array" count="6">0.4472137 0 0.8944273 0 -0.4472137 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#HillCorner2Mesh-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="HillCorner2Mesh-mesh-map-0">
+          <float_array id="HillCorner2Mesh-mesh-map-0-array" count="12">0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#HillCorner2Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="HillCorner2Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#HillCorner2Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="GrassMaterial-material" count="2">
+          <input semantic="VERTEX" source="#HillCorner2Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#HillCorner2Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#HillCorner2Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 2 0 1 1 0 2 2 1 3 0 1 4 1 1 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Street2Mesh-mesh" name="Street2Mesh">
+      <mesh>
+        <source id="Street2Mesh-mesh-positions">
+          <float_array id="Street2Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Street2Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Street2Mesh-mesh-normals">
+          <float_array id="Street2Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Street2Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Street2Mesh-mesh-map-0">
+          <float_array id="Street2Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Street2Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Street2Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Street2Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Street2Material-material" count="2">
+          <input semantic="VERTEX" source="#Street2Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Street2Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Street2Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Street1Mesh-mesh" name="Street1Mesh">
+      <mesh>
+        <source id="Street1Mesh-mesh-positions">
+          <float_array id="Street1Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Street1Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Street1Mesh-mesh-normals">
+          <float_array id="Street1Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Street1Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Street1Mesh-mesh-map-0">
+          <float_array id="Street1Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Street1Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Street1Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Street1Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Street1Material-material" count="2">
+          <input semantic="VERTEX" source="#Street1Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Street1Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Street1Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crossing4WayMesh-mesh" name="Crossing4WayMesh">
+      <mesh>
+        <source id="Crossing4WayMesh-mesh-positions">
+          <float_array id="Crossing4WayMesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Crossing4WayMesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing4WayMesh-mesh-normals">
+          <float_array id="Crossing4WayMesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing4WayMesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing4WayMesh-mesh-map-0">
+          <float_array id="Crossing4WayMesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing4WayMesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crossing4WayMesh-mesh-vertices">
+          <input semantic="POSITION" source="#Crossing4WayMesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Crossing4WayMaterial-material" count="2">
+          <input semantic="VERTEX" source="#Crossing4WayMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Crossing4WayMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Crossing4WayMesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="StreetHill3Mesh-mesh" name="StreetHill3Mesh">
+      <mesh>
+        <source id="StreetHill3Mesh-mesh-positions">
+          <float_array id="StreetHill3Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 2.5 2.5 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#StreetHill3Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill3Mesh-mesh-normals">
+          <float_array id="StreetHill3Mesh-mesh-normals-array" count="3">0 -0.4472137 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#StreetHill3Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill3Mesh-mesh-map-0">
+          <float_array id="StreetHill3Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#StreetHill3Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="StreetHill3Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#StreetHill3Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Street1Material-material" count="2">
+          <input semantic="VERTEX" source="#StreetHill3Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#StreetHill3Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#StreetHill3Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="StreetHill2Mesh-mesh" name="StreetHill2Mesh">
+      <mesh>
+        <source id="StreetHill2Mesh-mesh-positions">
+          <float_array id="StreetHill2Mesh-mesh-positions-array" count="12">-2.5 -2.5 2.5 2.5 -2.5 0 -2.5 2.5 2.5 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#StreetHill2Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill2Mesh-mesh-normals">
+          <float_array id="StreetHill2Mesh-mesh-normals-array" count="3">0.4472137 0 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#StreetHill2Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill2Mesh-mesh-map-0">
+          <float_array id="StreetHill2Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#StreetHill2Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="StreetHill2Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#StreetHill2Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Street2Material-material" count="2">
+          <input semantic="VERTEX" source="#StreetHill2Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#StreetHill2Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#StreetHill2Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="StreetHill1Mesh-mesh" name="StreetHill1Mesh">
+      <mesh>
+        <source id="StreetHill1Mesh-mesh-positions">
+          <float_array id="StreetHill1Mesh-mesh-positions-array" count="12">-2.5 -2.5 2.5 2.5 -2.5 2.5 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#StreetHill1Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill1Mesh-mesh-normals">
+          <float_array id="StreetHill1Mesh-mesh-normals-array" count="3">0 0.4472137 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#StreetHill1Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill1Mesh-mesh-map-0">
+          <float_array id="StreetHill1Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#StreetHill1Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="StreetHill1Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#StreetHill1Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Street1Material-material" count="2">
+          <input semantic="VERTEX" source="#StreetHill1Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#StreetHill1Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#StreetHill1Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="StreetHill4Mesh-mesh" name="StreetHill4Mesh">
+      <mesh>
+        <source id="StreetHill4Mesh-mesh-positions">
+          <float_array id="StreetHill4Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 2.5 -2.5 2.5 0 2.5 2.5 2.5</float_array>
+          <technique_common>
+            <accessor source="#StreetHill4Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill4Mesh-mesh-normals">
+          <float_array id="StreetHill4Mesh-mesh-normals-array" count="3">-0.4472137 0 0.8944273</float_array>
+          <technique_common>
+            <accessor source="#StreetHill4Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="StreetHill4Mesh-mesh-map-0">
+          <float_array id="StreetHill4Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#StreetHill4Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="StreetHill4Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#StreetHill4Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Street2Material-material" count="2">
+          <input semantic="VERTEX" source="#StreetHill4Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#StreetHill4Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#StreetHill4Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crossing3Way4Mesh-mesh" name="Crossing3Way4Mesh">
+      <mesh>
+        <source id="Crossing3Way4Mesh-mesh-positions">
+          <float_array id="Crossing3Way4Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way4Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way4Mesh-mesh-normals">
+          <float_array id="Crossing3Way4Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way4Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way4Mesh-mesh-map-0">
+          <float_array id="Crossing3Way4Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way4Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crossing3Way4Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Crossing3Way4Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Crossing3Way4Material-material" count="2">
+          <input semantic="VERTEX" source="#Crossing3Way4Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Crossing3Way4Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Crossing3Way4Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crossing3Way3Mesh-mesh" name="Crossing3Way3Mesh">
+      <mesh>
+        <source id="Crossing3Way3Mesh-mesh-positions">
+          <float_array id="Crossing3Way3Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way3Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way3Mesh-mesh-normals">
+          <float_array id="Crossing3Way3Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way3Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way3Mesh-mesh-map-0">
+          <float_array id="Crossing3Way3Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way3Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crossing3Way3Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Crossing3Way3Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Crossing3Way3Material-material" count="2">
+          <input semantic="VERTEX" source="#Crossing3Way3Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Crossing3Way3Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Crossing3Way3Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crossing3Way2Mesh-mesh" name="Crossing3Way2Mesh">
+      <mesh>
+        <source id="Crossing3Way2Mesh-mesh-positions">
+          <float_array id="Crossing3Way2Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way2Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way2Mesh-mesh-normals">
+          <float_array id="Crossing3Way2Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way2Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way2Mesh-mesh-map-0">
+          <float_array id="Crossing3Way2Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way2Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crossing3Way2Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Crossing3Way2Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Crossing3Way2Material-material" count="2">
+          <input semantic="VERTEX" source="#Crossing3Way2Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Crossing3Way2Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Crossing3Way2Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crossing3Way1Mesh-mesh" name="Crossing3Way1Mesh">
+      <mesh>
+        <source id="Crossing3Way1Mesh-mesh-positions">
+          <float_array id="Crossing3Way1Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way1Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way1Mesh-mesh-normals">
+          <float_array id="Crossing3Way1Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way1Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crossing3Way1Mesh-mesh-map-0">
+          <float_array id="Crossing3Way1Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Crossing3Way1Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crossing3Way1Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Crossing3Way1Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Crossing3Way1Material-material" count="2">
+          <input semantic="VERTEX" source="#Crossing3Way1Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Crossing3Way1Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Crossing3Way1Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Corner4Mesh-mesh" name="Corner4Mesh">
+      <mesh>
+        <source id="Corner4Mesh-mesh-positions">
+          <float_array id="Corner4Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Corner4Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner4Mesh-mesh-normals">
+          <float_array id="Corner4Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner4Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner4Mesh-mesh-map-0">
+          <float_array id="Corner4Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner4Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Corner4Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Corner4Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Corner4Material-material" count="2">
+          <input semantic="VERTEX" source="#Corner4Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Corner4Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Corner4Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Corner3Mesh-mesh" name="Corner3Mesh">
+      <mesh>
+        <source id="Corner3Mesh-mesh-positions">
+          <float_array id="Corner3Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Corner3Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner3Mesh-mesh-normals">
+          <float_array id="Corner3Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner3Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner3Mesh-mesh-map-0">
+          <float_array id="Corner3Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner3Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Corner3Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Corner3Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Corner3Material-material" count="2">
+          <input semantic="VERTEX" source="#Corner3Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Corner3Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Corner3Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Corner2Mesh-mesh" name="Corner2Mesh">
+      <mesh>
+        <source id="Corner2Mesh-mesh-positions">
+          <float_array id="Corner2Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Corner2Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner2Mesh-mesh-normals">
+          <float_array id="Corner2Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner2Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner2Mesh-mesh-map-0">
+          <float_array id="Corner2Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner2Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Corner2Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Corner2Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Corner2Material-material" count="2">
+          <input semantic="VERTEX" source="#Corner2Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Corner2Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Corner2Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Corner1Mesh-mesh" name="Corner1Mesh">
+      <mesh>
+        <source id="Corner1Mesh-mesh-positions">
+          <float_array id="Corner1Mesh-mesh-positions-array" count="12">-2.5 -2.5 0 2.5 -2.5 0 -2.5 2.5 0 2.5 2.5 0</float_array>
+          <technique_common>
+            <accessor source="#Corner1Mesh-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner1Mesh-mesh-normals">
+          <float_array id="Corner1Mesh-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner1Mesh-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Corner1Mesh-mesh-map-0">
+          <float_array id="Corner1Mesh-mesh-map-0-array" count="12">1 0 0 1 0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#Corner1Mesh-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Corner1Mesh-mesh-vertices">
+          <input semantic="POSITION" source="#Corner1Mesh-mesh-positions"/>
+        </vertices>
+        <triangles material="Corner1Material-material" count="2">
+          <input semantic="VERTEX" source="#Corner1Mesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Corner1Mesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Corner1Mesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 1 0 3 3 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Stones" name="Stones" type="NODE">
+        <matrix sid="transform">1 0 0 5 0 1 0 -10 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#StonesMesh-mesh" name="Stones">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="StonesMaterial-material" target="#StonesMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Grass" name="Grass" type="NODE">
+        <matrix sid="transform">1 0 0 -15 0 1 0 0 0 0 1 2.5 0 0 0 1</matrix>
+        <instance_geometry url="#GrassMesh-mesh" name="Grass">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="GrassHill4" name="GrassHill4" type="NODE">
+        <matrix sid="transform">1 0 0 10 0 1 0 -10 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#GrassHill4Mesh-mesh" name="GrassHill4">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="GrassHill3" name="GrassHill3" type="NODE">
+        <matrix sid="transform">1 0 0 -10 0 1 0 -10 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#GrassHill3Mesh-mesh" name="GrassHill3">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="GrassHill2" name="GrassHill2" type="NODE">
+        <matrix sid="transform">1 0 0 -15 0 1 0 -10 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#GrassHill2Mesh-mesh" name="GrassHill2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="GrassHill1" name="GrassHill1" type="NODE">
+        <matrix sid="transform">1 0 0 -20 0 1 0 -10 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#GrassHill1Mesh-mesh" name="GrassHill1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="HillCorner4" name="HillCorner4" type="NODE">
+        <matrix sid="transform">1 0 0 -20 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#HillCorner4Mesh-mesh" name="HillCorner4">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="HillCorner3" name="HillCorner3" type="NODE">
+        <matrix sid="transform">1 0 0 -20 0 1 0 -5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#HillCorner3Mesh-mesh" name="HillCorner3">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="HillCorner1" name="HillCorner1" type="NODE">
+        <matrix sid="transform">1 0 0 -10 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#HillCorner1Mesh-mesh" name="HillCorner1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="HillCorner2" name="HillCorner2" type="NODE">
+        <matrix sid="transform">1 0 0 -10 0 1 0 -5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#HillCorner2Mesh-mesh" name="HillCorner2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="GrassMaterial-material" target="#GrassMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street2" name="Street2" type="NODE">
+        <matrix sid="transform">1 0 0 -5 0 1 0 -10 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Street2Mesh-mesh" name="Street2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street2Material-material" target="#Street2Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Street1" name="Street1" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 -10 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Street1Mesh-mesh" name="Street1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street1Material-material" target="#Street1Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Crossing4Way" name="Crossing4Way" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Crossing4WayMesh-mesh" name="Crossing4Way">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Crossing4WayMaterial-material" target="#Crossing4WayMaterial-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="StreetHill3" name="StreetHill3" type="NODE">
+        <matrix sid="transform">1 0 0 -15 0 1 0 -5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#StreetHill3Mesh-mesh" name="StreetHill3">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street1Material-material" target="#Street1Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="StreetHill2" name="StreetHill2" type="NODE">
+        <matrix sid="transform">1 0 0 -10 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#StreetHill2Mesh-mesh" name="StreetHill2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street2Material-material" target="#Street2Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="StreetHill1" name="StreetHill1" type="NODE">
+        <matrix sid="transform">1 0 0 -15 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#StreetHill1Mesh-mesh" name="StreetHill1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street1Material-material" target="#Street1Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="StreetHill4" name="StreetHill4" type="NODE">
+        <matrix sid="transform">1 0 0 -20 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#StreetHill4Mesh-mesh" name="StreetHill4">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Street2Material-material" target="#Street2Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Crossing3Way4" name="Crossing3Way4" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Crossing3Way4Mesh-mesh" name="Crossing3Way4">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Crossing3Way4Material-material" target="#Crossing3Way4Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Crossing3Way3" name="Crossing3Way3" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 -5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Crossing3Way3Mesh-mesh" name="Crossing3Way3">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Crossing3Way3Material-material" target="#Crossing3Way3Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Crossing3Way2" name="Crossing3Way2" type="NODE">
+        <matrix sid="transform">1 0 0 -5 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Crossing3Way2Mesh-mesh" name="Crossing3Way2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Crossing3Way2Material-material" target="#Crossing3Way2Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Crossing3Way1" name="Crossing3Way1" type="NODE">
+        <matrix sid="transform">1 0 0 5 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Crossing3Way1Mesh-mesh" name="Crossing3Way1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Crossing3Way1Material-material" target="#Crossing3Way1Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Corner4" name="Corner4" type="NODE">
+        <matrix sid="transform">1 0 0 -5 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Corner4Mesh-mesh" name="Corner4">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Corner4Material-material" target="#Corner4Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Corner3" name="Corner3" type="NODE">
+        <matrix sid="transform">1 0 0 -5 0 1 0 -5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Corner3Mesh-mesh" name="Corner3">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Corner3Material-material" target="#Corner3Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Corner2" name="Corner2" type="NODE">
+        <matrix sid="transform">1 0 0 5 0 1 0 -5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Corner2Mesh-mesh" name="Corner2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Corner2Material-material" target="#Corner2Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Corner1" name="Corner1" type="NODE">
+        <matrix sid="transform">1 0 0 5 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Corner1Mesh-mesh" name="Corner1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Corner1Material-material" target="#Corner1Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

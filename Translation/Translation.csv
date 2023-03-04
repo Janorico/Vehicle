@@ -14,18 +14,22 @@ A Janorico product
 Author: Janosch Lion
 Publisher: Janorico
 License: GNU General Public License v3.0
-THIS PROGRAM CONTAIN FILES FROM
-GDSerialAsset (https://github.com/Superwaitsum/GDSerialAsset) AND
-Dreadpon's Spatial Gardener (https://github.com/dreadpon/godot_spatial_gardener)","Vehicle
+THIS PROGRAM CONTAIN CODE/FILES FROM
+GDSerialAsset (https://github.com/Superwaitsum/GDSerialAsset),
+Dreadpon's Spatial Gardener (https://github.com/dreadpon/godot_spatial_gardener),
+https://github.com/godotengine/godot-demo-projects/blob/3.5-9e68af3/3d/truck_town/follow_camera.gd AND
+http://kidscancode.org/godot_recipes/3.x/3d/interpolated_camera/","Vehicle
 
 Ein Janorico Produkt
 
 Autor: Janosch Lion
 Herausgeber: Janorico
 Lizenz: GNU General Public License v3.0
-THIS PROGRAM CONTAIN FILES FROM
-GDSerialAsset (https://github.com/Superwaitsum/GDSerialAsset) AND
-Dreadpon's Spatial Gardener (https://github.com/dreadpon/godot_spatial_gardener)"
+THIS PROGRAM CONTAIN CODE/FILES FROM
+GDSerialAsset (https://github.com/Superwaitsum/GDSerialAsset),
+Dreadpon's Spatial Gardener (https://github.com/dreadpon/godot_spatial_gardener),
+https://github.com/godotengine/godot-demo-projects/blob/3.5-9e68af3/3d/truck_town/follow_camera.gd AND
+http://kidscancode.org/godot_recipes/3.x/3d/interpolated_camera/"
 TRACTOR_KEY,Tractor,Traktor
 CHOOSE_VEHICLE_KEY,Choose vehicle,Fahrzeug wählen
 CHOOSE_WORLD_KEY,Choose world,Welt wählen
@@ -40,9 +44,9 @@ KEYBOARD_KEY,Keyboard,Tastatur
 MOUSE_KEY,Mouse,Maus
 CONTROL_DEVICE_KEY,Control device:,Steuerungsgerät:
 MINIBUS_KEY,Minibus,Kleinbus
-START_OFFLINE_GAME_KEY,Start offline game,Offline-Spiel starten
-HOST_NETWORK_GAME_KEY,Host network game,Netzwerk-Spiel hosten
-JOIN_NETWORK_GAME_KEY,Join network game,Netzwerk-Spiel beitreten
+START_SINGLE_PLAYER_GAME_KEY,Start single player game,Einzelspieler-Spiel starten
+HOST_MULTIPLAYER_GAME_KEY,Host multiplayer game,Multiplayer-Spiel hosten
+JOIN_MULTIPLAYER_GAME_KEY,Join multiplayer game,Multiplayer-Spiel beitreten
 SERVER_IP_KEY,Server IP: ,Server-IP: 
 INVALID_IP_ADDRESS_KEY,Invalid IP address!,Falsche/Ungültige IP-Adresse!
 MAXIMUM_PLAYERS_KEY,Maximum players: ,Maximale Spieler: 
@@ -59,7 +63,7 @@ PLAY_AGAIN_KEY,Play again,Nochmal spielen
 CONNECTION_SUCCESS_KEY,Connection success,Verbindung erfolgreich
 SERVER_DISCONNECTED_KEY,Server disconnected,Serververbindung entfernt
 CONNECTION_FAILED_KEY,Connection failed,Verbindung fehlgeschlagen
-STARTING_OFFLINE_GAME_KEY,Starting offline game...,Offline-Spiel starten...
+STARTING_SINGLE_PLAYER_GAME_KEY,Starting single player game...,Einzelspieler-Spiel starten...
 INVALID_NAME_KEY,Invalid name!,Falscher Name!
 SEND_MESSAGE_KEY, Send message,Nachricht senden
 MESSAGE_KEY,Message:,Nachricht:
@@ -70,3 +74,12 @@ REPLY_KEY,Reply,Antworten
 HIDE_KEY,Hide,Schließen
 CRASHS_REPORTED_KEY,Crashs reported:,Reportierte Crashs:
 CRASH_MONITOR_KEY,Crash monitor:,Auf Crashs überwachen:
+CAR_LEGACY_KEY,Car (Legacy),Auto (Legacy)
+UPDATE_AVAILABLE_KEY,Update available,Update verfügbar
+UPDATE_AVAILABLE_TEXT_KEY,An update is available. Do you want to update now?,Ein Update ist verfügbar. Wollen sie jetzt updaten?
+POWER_KEY,Power,Kraft
+BRAKE_KEY,Brake,Bemse
+PORT_KEY,Port: ,Port: 
+HELICOPTER_KEY,Helicopter,Helikopter
+DUMP_TRUCK_KEY,Dump truck,Kipper
+DOWNLOADING_UPDATE_KEY,Downloading update...,Update herunterladen...

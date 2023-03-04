@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Vehicles/Wheel_0.25_0.2.tres" type="CylinderMesh" id=2]
+
+[sub_resource type="CubeMesh" id=8]
+size = Vector3( 2, 0.6, 2 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CubeMesh" id=9]
+material = SubResource( 7 )
+size = Vector3( 0.1, 0.1, 0.2 )
+
+[sub_resource type="CubeMesh" id=10]
+size = Vector3( 2, 0.3, 3 )
+
+[sub_resource type="CubeMesh" id=11]
+size = Vector3( 1.5, 0.35, 3 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 1, 0.3, 1 )
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 0.05, 0.05, 0.1 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 1, 0.15, 1.5 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.75, 0.175, 1.5 )
+
+[node name="Spatial" instance=ExtResource( 1 )]
+
+[node name="Body" type="Spatial" parent="VehicleBody" index="12"]
+
+[node name="Upper" type="MeshInstance" parent="VehicleBody/Body" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.5 )
+mesh = SubResource( 8 )
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance" type="MeshInstance" parent="VehicleBody/Body" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 1.4 )
+mesh = SubResource( 9 )
+skeleton = NodePath("../../..")
+
+[node name="Center" type="MeshInstance" parent="VehicleBody/Body" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0 )
+mesh = SubResource( 10 )
+skeleton = NodePath("../../..")
+
+[node name="Lower" type="MeshInstance" parent="VehicleBody/Body" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0 )
+mesh = SubResource( 11 )
+skeleton = NodePath("../../..")
+
+[node name="UpperCollisionShape" type="CollisionShape" parent="VehicleBody" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.5 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape" type="CollisionShape" parent="VehicleBody" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 1.4 )
+shape = SubResource( 13 )
+
+[node name="CenterCollisionShape" type="CollisionShape" parent="VehicleBody" index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0 )
+shape = SubResource( 14 )
+
+[node name="LowerCollisionShape" type="CollisionShape" parent="VehicleBody" index="16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0 )
+shape = SubResource( 15 )
+
+[node name="WindscreenCamera" parent="VehicleBody" index="17"]
+transform = Transform( -1, -1.51808e-08, 8.60946e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 1.5, 0.5 )
+
+[node name="Wheel" parent="VehicleBody/LeftFrontWheel" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="Wheel" parent="VehicleBody/LeftBackWheel" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="Wheel" parent="VehicleBody/RightFrontWheel" index="0"]
+mesh = ExtResource( 2 )
+
+[node name="Wheel" parent="VehicleBody/RightBackWheel" index="0"]
+mesh = ExtResource( 2 )

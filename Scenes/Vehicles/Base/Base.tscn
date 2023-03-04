@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Sounds/Crash.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/Vehicles/Base.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/InterpolatedCamera.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/FollowCamera.gd" type="Script" id=4]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="VehicleBody" type="VehicleBody" parent="."]
+script = ExtResource( 2 )
+
+[node name="CrashSound" type="AudioStreamPlayer3D" parent="VehicleBody"]
+stream = ExtResource( 1 )
+unit_db = 80.0
+
+[node name="NameLabel3D" type="Label3D" parent="VehicleBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+visible = false
+billboard = 1
+
+[node name="WindscreenCamera" type="Camera" parent="VehicleBody"]
+transform = Transform( -1, -1.51808e-08, 8.60946e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 1.4, 0.4 )
+current = true
+far = 10000.0
+
+[node name="CenterCamera" type="Camera" parent="VehicleBody"]
+transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 3, -5 )
+far = 10000.0
+
+[node name="LeftCamera" type="Camera" parent="VehicleBody"]
+transform = Transform( -0.939693, -0.0593912, 0.336824, 0, 0.984808, 0.173648, -0.34202, 0.163176, -0.925417, 7, 4, -5 )
+far = 10000.0
+
+[node name="RightCamera" type="Camera" parent="VehicleBody"]
+transform = Transform( -0.939693, 0.0593912, -0.336824, 0, 0.984808, 0.173648, 0.34202, 0.163176, -0.925417, -7, 4, -5 )
+far = 10000.0
+
+[node name="FollowCamera" type="Camera" parent="VehicleBody"]
+transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 2, 1, -2 )
+far = 10000.0
+script = ExtResource( 4 )
+min_distance = 5.0
+max_distance = 6.0
+height = 2.0
+
+[node name="PreviewCamera" type="Camera" parent="VehicleBody"]
+transform = Transform( 0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, -0.122788, 0.696364, 2, 1, 2 )
+far = 10000.0
+
+[node name="InterpolatedCamera" type="Camera" parent="."]
+transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 2, 1, -2 )
+far = 10000.0
+script = ExtResource( 3 )
+lerp_speed = 5.0
+target_path = NodePath("../VehicleBody")
+offset = Vector3( 0, 3, -5 )
+
+[connection signal="body_entered" from="VehicleBody" to="VehicleBody" method="_crash"]

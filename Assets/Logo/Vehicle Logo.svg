@@ -1,90 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect id="Background" width="1000" height="1000" x="0" y="0" fill="#800080"/>
 
-<svg
-   width="1000mm"
-   height="1000mm"
-   viewBox="0 0 1000 1000"
-   version="1.1"
-   id="svg5"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="Vehicle Logo.svg"
-   inkscape:export-filename="Vehicle Logo.png"
-   inkscape:export-xdpi="25.4"
-   inkscape:export-ydpi="25.4"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#999999"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.20293468"
-     inkscape:cx="1739.476"
-     inkscape:cy="1902.0899"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs2" />
-  <g
-     inkscape:label="Ebene 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <rect
-       style="fill:#800080;stroke:none;stroke-width:0.264583"
-       id="rect298"
-       width="1000"
-       height="1000"
-       x="0"
-       y="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:299.861px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.264583"
-       x="9.5777206"
-       y="812.44836"
-       id="text80"><tspan
-         sodipodi:role="line"
-         id="tspan78"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:299.861px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.264583"
-         x="9.5777206"
-         y="812.44836">Vehicle</tspan></text>
-    <path
-       style="fill:#ffff00;stroke:none;stroke-width:0.264583"
-       d="M 150,150 H 550 V 275 H 850 V 400 H 150"
-       id="path485"
-       sodipodi:nodetypes="cccccc" />
-    <circle
-       style="fill:#000000;stroke:none;stroke-width:0.261898"
-       id="path695"
-       cx="325"
-       cy="400"
-       r="75" />
-    <circle
-       style="fill:#000000;stroke:none;stroke-width:0.261898"
-       id="path695-4"
-       cx="675"
-       cy="400"
-       r="75" />
-    <rect
-       style="fill:#ffffff;stroke:none;stroke-width:0.380388"
-       id="rect168"
-       width="162.5"
-       height="80"
-       x="362.5"
-       y="172.5" />
-    <rect
-       style="fill:#ffffff;stroke:none;stroke-width:0.380388"
-       id="rect224"
-       width="162.5"
-       height="80"
-       x="175"
-       y="172.5" />
-  </g>
+    <g id="VehicleText" fill="#000000">
+        <path id="Character-1"
+              d="M 189.49432,598.34762 113.02976,812.44836 H 86.042274 L 9.5777206,598.34762 H 37.764654 l 48.27762,137.33633 q 4.797776,13.19388 7.796386,24.88846 3.29847,11.39472 5.697358,21.88986 2.099032,-10.49514 5.397502,-22.18972 3.29847,-11.69458 8.09624,-25.18832 l 47.97776,-136.73661 z"/>
+
+        <path id="Character-2"
+              d="m 271.05649,648.72426 q 20.39055,0 35.38359,8.99583 14.99305,8.99583 22.78944,25.48819 8.09625,16.19249 8.09625,38.08234 v 15.89264 H 227.27678 q 0.59972,27.28735 13.79361,41.68067 13.49374,14.09347 37.48262,14.09347 15.29291,0 26.98749,-2.69875 11.99444,-2.99861 24.5886,-8.39611 v 23.0893 q -12.2943,5.3975 -24.28874,7.79639 -11.99444,2.69874 -28.48679,2.69874 -23.0893,0 -40.48124,-9.29569 -17.39193,-9.29569 -27.28735,-27.58721 -9.59555,-18.29152 -9.59555,-45.27901 0,-26.38777 8.69597,-45.27901 8.99583,-18.89124 24.88846,-29.08651 16.1925,-10.19528 37.48263,-10.19528 z m -0.29986,21.58999 q -18.89125,0 -29.9861,12.2943 -10.795,11.99444 -12.89403,33.58444 h 81.86206 q -0.29987,-20.39055 -9.59556,-32.98471 -9.29569,-12.89403 -29.38637,-12.89403 z"/>
+
+        <path id="Character-3"
+              d="m 404.49438,584.55401 v 66.869 q 0,11.99444 -1.4993,22.48958 h 1.79916 q 7.79639,-12.2943 20.99027,-18.59139 13.49375,-6.29708 29.08652,-6.29708 29.08652,0 43.7797,14.09347 14.99305,13.79361 14.99305,44.67929 v 104.65148 h -26.0879 V 709.59604 q 0,-38.68206 -35.98332,-38.68206 -26.98749,0 -37.18276,15.29291 -9.89542,14.99305 -9.89542,43.17998 v 83.06149 H 378.10662 V 584.55401 Z"/>
+
+        <path id="Character-4"
+              d="m 576.91445,591.45081 q 5.99722,0 10.49513,4.19806 4.79778,3.89819 4.79778,12.59416 0,8.69597 -4.79778,12.89402 -4.49791,3.89819 -10.49513,3.89819 -6.59694,0 -11.09486,-3.89819 -4.49791,-4.19805 -4.49791,-12.89402 0,-8.69597 4.49791,-12.59416 4.49792,-4.19806 11.09486,-4.19806 z m 12.89402,60.27206 V 812.44836 H 563.4207 V 651.72287 Z"/>
+
+        <path id="Character-5"
+              d="m 705.25477,815.44697 q -21.58999,0 -38.08235,-8.69596 -16.49235,-8.69597 -26.0879,-26.98749 -9.29569,-18.29152 -9.29569,-46.77832 0,-29.68624 9.59555,-48.27762 9.89541,-18.59138 26.98749,-27.28735 17.09207,-8.69597 38.68206,-8.69597 11.99444,0 23.38916,2.69875 11.69458,2.39889 18.89124,5.99722 l -8.09624,21.88985 q -7.19667,-2.69875 -16.79222,-5.09763 -9.59555,-2.39889 -17.99166,-2.39889 -47.37803,0 -47.37803,60.87178 0,29.08652 11.39471,44.67929 11.69458,15.29291 34.48402,15.29291 12.89402,0 23.08929,-2.69875 10.19528,-2.69875 18.59139,-6.59694 v 23.38916 q -8.09625,4.19805 -17.99166,6.29708 -9.59556,2.39888 -23.38916,2.39888 z"/>
+
+        <path id="Character-6"
+              d="M 811.10559,812.44836 H 784.71782 V 584.55401 h 26.38777 z"/>
+
+        <path id="Character-7"
+              d="m 924.153,648.72426 q 20.39055,0 35.3836,8.99583 14.99305,8.99583 22.78943,25.48819 8.09625,16.19249 8.09625,38.08234 v 15.89264 H 880.37329 q 0.59973,27.28735 13.79361,41.68067 13.49374,14.09347 37.48262,14.09347 15.29291,0 26.98749,-2.69875 11.99444,-2.99861 24.58861,-8.39611 v 23.0893 q -12.29431,5.3975 -24.28875,7.79639 -11.99444,2.69874 -28.48679,2.69874 -23.0893,0 -40.48123,-9.29569 -17.39194,-9.29569 -27.28735,-27.58721 -9.59556,-18.29152 -9.59556,-45.27901 0,-26.38777 8.69597,-45.27901 8.99583,-18.89124 24.88847,-29.08651 16.19249,-10.19528 37.48262,-10.19528 z m -0.29986,21.58999 q -18.89124,0 -29.9861,12.2943 -10.795,11.99444 -12.89402,33.58444 h 81.86205 q -0.29986,-20.39055 -9.59555,-32.98471 -9.29569,-12.89403 -29.38638,-12.89403 z"/>
+    </g>
+
+    <g id="Vehicle">
+        <path id="Body" fill="#FFFF00" d="M 150,150 H 550 V 275 H 850 V 400 H 150"/>
+
+        <g id="Wheels">
+            <circle id="BackWheel" r="75" cx="325" cy="400" fill="#000000"/>
+            <circle id="FrontWheel" r="75" cx="675" cy="400" fill="#000000"/>
+        </g>
+
+        <g id="Windows">
+            <rect id="FrontWindow" x="362.5" y="172.5" width="162.5" height="80" fill="#FFFFFF"/>
+
+            <rect id="BackWindow" x="175" y="172.5" width="162.5" height="80" fill="#FFFFFF"/>
+        </g>
+    </g>
 </svg>

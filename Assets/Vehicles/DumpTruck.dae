@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.1 commit date:2022-12-19, commit time:17:00, hash:55485cb379f7</authoring_tool>
+    </contributor>
+    <created>2023-02-22T10:09:55</created>
+    <modified>2023-02-22T10:09:55</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="DumpTruckBody-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 0 0 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Screen-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color sid="alpha">0 0 0 0.5</color>
+            </transparent>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="DumpTruckBody-material" name="DumpTruckBody">
+      <instance_effect url="#DumpTruckBody-effect"/>
+    </material>
+    <material id="Screen-material" name="Screen">
+      <instance_effect url="#Screen-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="BackFlapMesh-mesh" name="BackFlapMesh">
+      <mesh>
+        <source id="BackFlapMesh-mesh-positions">
+          <float_array id="BackFlapMesh-mesh-positions-array" count="51">-1 0 0 -0.9807852 0 -0.2926355 -0.9238795 0 -0.5740252 -0.8314695 0 -0.8333554 -0.7071067 0 -1.06066 -0.5555702 0 -1.247204 -0.3826834 0 -1.385819 -0.1950903 0 -1.471178 0 0 -1.5 0.1950903 0 -1.471178 0.3826834 0 -1.385819 0.5555702 0 -1.247204 0.7071067 0 -1.06066 0.8314695 0 -0.8333554 0.9238795 0 -0.5740252 0.9807852 0 -0.2926355 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#BackFlapMesh-mesh-positions-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BackFlapMesh-mesh-normals">
+          <float_array id="BackFlapMesh-mesh-normals-array" count="24">0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -2.06801e-6 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#BackFlapMesh-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BackFlapMesh-mesh-map-0">
+          <float_array id="BackFlapMesh-mesh-map-0-array" count="90">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#BackFlapMesh-mesh-map-0-array" count="45" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="BackFlapMesh-mesh-vertices">
+          <input semantic="POSITION" source="#BackFlapMesh-mesh-positions"/>
+        </vertices>
+        <triangles material="DumpTruckBody-material" count="15">
+          <input semantic="VERTEX" source="#BackFlapMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#BackFlapMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#BackFlapMesh-mesh-map-0" offset="2" set="0"/>
+          <p>2 0 0 1 0 1 15 0 2 1 1 3 0 1 4 16 1 5 16 2 6 15 2 7 1 2 8 15 0 9 14 0 10 2 0 11 14 3 12 13 3 13 3 3 14 13 0 15 12 0 16 4 0 17 12 0 18 11 0 19 4 0 20 11 0 21 10 0 22 5 0 23 4 4 24 11 4 25 5 4 26 10 5 27 9 5 28 7 5 29 9 6 30 8 6 31 7 6 32 7 0 33 6 0 34 10 0 35 6 0 36 5 0 37 10 0 38 4 0 39 3 0 40 13 0 41 3 7 42 2 7 43 14 7 44</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="BackMesh-mesh" name="BackMesh">
+      <mesh>
+        <source id="BackMesh-mesh-positions">
+          <float_array id="BackMesh-mesh-positions-array" count="102">-1 -4.400001 1.5 -0.9807853 -4.400001 1.207365 -0.9238795 -4.400001 0.9259749 -0.8314696 -4.400001 0.6666446 -0.7071068 -4.400001 0.4393399 -0.5555703 -4.400001 0.2527956 -0.3826835 -4.400001 0.1141808 -0.1950903 -4.400001 0.02882218 0 -4.400001 0 0.1950903 -4.400001 0.02882218 0.3826835 -4.400001 0.1141808 0.5555703 -4.400001 0.2527956 0.7071068 -4.400001 0.4393399 0.8314696 -4.400001 0.6666446 0.9238795 -4.400001 0.9259749 0.9807853 -4.400001 1.207365 1 -4.400001 1.5 -1 0 1.5 -0.9807853 0 1.207365 -0.9238795 0 0.9259749 -0.8314696 0 0.6666446 -0.7071068 0 0.4393399 -0.5555703 0 0.2527956 -0.3826835 0 0.1141808 -0.1950903 0 0.02882218 0 0 0 0.1950903 0 0.02882218 0.3826835 0 0.1141808 0.5555703 0 0.2527956 0.7071068 0 0.4393399 0.8314696 0 0.6666446 0.9238795 0 0.9259749 0.9807853 0 1.207365 1 0 1.5</float_array>
+          <technique_common>
+            <accessor source="#BackMesh-mesh-positions-array" count="34" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BackMesh-mesh-normals">
+          <float_array id="BackMesh-mesh-normals-array" count="120">0 1 2.21142e-6 0.9978513 0 0.06551998 -0.9978513 0 0.06551992 -0.1461513 0 0.9892623 0.980158 0 0.1982185 -0.4141609 0 0.9102038 0.941981 0 0.3356661 -0.625535 0 0.7801963 0.877281 0 0.4799773 -0.7761765 0 0.6305158 0.7761766 0 0.6305156 -0.877281 0 0.4799774 0.625535 0 0.7801961 -0.941981 0 0.3356662 0.4141609 0 0.9102038 -0.9801579 0 0.1982183 0.1461513 0 0.9892623 0 1 0 0 1 7.89269e-7 0 1 -3.98045e-6 0 1 -4.60097e-6 0 1 -7.29883e-6 0 1 4.4946e-6 0 1 1.43172e-5 0.9978513 0 0.06551992 -0.9978513 0 0.06551998 -0.1461513 0 0.9892623 0.9801579 0 0.1982183 -0.4141609 0 0.9102038 0.941981 0 0.3356662 -0.625535 0 0.7801961 0.877281 0 0.4799774 -0.7761766 0 0.6305156 0.7761765 0 0.6305158 -0.877281 0 0.4799773 0.625535 0 0.7801963 -0.941981 0 0.3356661 0.4141609 0 0.9102038 -0.980158 0 0.1982185 0.1461513 0 0.9892623</float_array>
+          <technique_common>
+            <accessor source="#BackMesh-mesh-normals-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BackMesh-mesh-map-0">
+          <float_array id="BackMesh-mesh-map-0-array" count="282">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#BackMesh-mesh-map-0-array" count="141" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="BackMesh-mesh-vertices">
+          <input semantic="POSITION" source="#BackMesh-mesh-positions"/>
+        </vertices>
+        <triangles material="DumpTruckBody-material" count="47">
+          <input semantic="VERTEX" source="#BackMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#BackMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#BackMesh-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 2 0 1 13 0 2 1 1 3 17 1 4 0 1 5 16 2 6 32 2 7 15 2 8 9 3 9 25 3 10 8 3 11 2 4 12 18 4 13 1 4 14 10 5 15 26 5 16 9 5 17 3 6 18 19 6 19 2 6 20 11 7 21 27 7 22 10 7 23 4 8 24 20 8 25 3 8 26 12 9 27 28 9 28 11 9 29 5 10 30 21 10 31 4 10 32 13 11 33 29 11 34 12 11 35 6 12 36 22 12 37 5 12 38 14 13 39 30 13 40 13 13 41 7 14 42 23 14 43 6 14 44 15 15 45 31 15 46 14 15 47 8 16 48 24 16 49 7 16 50 2 17 51 1 17 52 15 17 53 1 17 54 0 17 55 15 17 56 0 18 57 16 18 58 15 18 59 15 17 60 14 17 61 2 17 62 14 19 63 13 19 64 2 19 65 13 17 66 12 17 67 4 17 68 12 20 69 11 20 70 5 20 71 11 17 72 10 17 73 5 17 74 10 21 75 9 21 76 6 21 77 5 22 78 10 22 79 6 22 80 9 17 81 8 17 82 7 17 83 7 23 84 6 23 85 9 23 86 5 17 87 4 17 88 12 17 89 4 17 90 3 17 91 13 17 92 1 24 93 18 24 94 17 24 95 16 25 96 33 25 97 32 25 98 9 26 99 26 26 100 25 26 101 2 27 102 19 27 103 18 27 104 10 28 105 27 28 106 26 28 107 3 29 108 20 29 109 19 29 110 11 30 111 28 30 112 27 30 113 4 31 114 21 31 115 20 31 116 12 32 117 29 32 118 28 32 119 5 33 120 22 33 121 21 33 122 13 34 123 30 34 124 29 34 125 6 35 126 23 35 127 22 35 128 14 36 129 31 36 130 30 36 131 7 37 132 24 37 133 23 37 134 15 38 135 32 38 136 31 38 137 8 39 138 25 39 139 24 39 140</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="BodyMesh-mesh" name="BodyMesh">
+      <mesh>
+        <source id="BodyMesh-mesh-positions">
+          <float_array id="BodyMesh-mesh-positions-array" count="192">1 -3 0 -1 -3 0 1 -2.5 0 -1 -2.5 0 0.5 -2.5 0 -0.5 -2.5 0 0.5 2.5 0 -0.5 2.5 0 1 2.5 0 1 3 0 -1 2.5 0 -1 3 0 0.5 0.6 0 0.5 -1.5 0 -0.5 -1.5 0 -0.5 0.6 0 1 0.6 0 1 -1.5 0 -1 -1.5 0 -1 0.6 0 1 -3 0.5 1 -2.5 0.5 -1 -3 0.5 -1 -2.5 0.5 0.5 -2.5 0.5 -0.5 -2.5 0.5 -1 -1.6 2.4 1 -1.6 2.4 1 -1.5 0.5 -1 -1.5 0.5 -0.7 -1.5 2.2 -0.7 -1.5 1.3 0.7 -1.5 1.3 0.7 -1.5 2.2 0.5 -1.5 0.5 -0.5 -1.5 0.5 0.5 2.5 0.5 1 2.5 0.5 0.5 0.6 0.5 1 0.6 0.5 -0.5 2.5 0.5 -1 2.5 0.5 -0.5 0.6 0.5 -1 0.6 0.5 1 3 0.5 -1 3 0.5 1 -2.854397 1.3 -1 -2.854397 1.3 1 -2.43132 2.4 -1 -2.43132 2.4 0.9 -2.964102 1.293335 -0.9 -2.964102 1.293335 0.9 -2.535898 2.406665 -0.9 -2.535898 2.406665 1 -1.6 1.3 -1 -1.6 1.3 1 -1.5 1.2 1 -1.5 2.5 1 -2.5 2.5 1 -3 1.2 -1 -1.5 1.2 -1 -1.5 2.5 -1 -2.5 2.5 -1 -3 1.2</float_array>
+          <technique_common>
+            <accessor source="#BodyMesh-mesh-positions-array" count="64" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BodyMesh-mesh-normals">
+          <float_array id="BodyMesh-mesh-normals-array" count="54">0 0 -1 0 0 1 1 0 0 -1 0 0 0 -1 0 0 1 0 0 1 1.13533e-6 0 0.9333457 -0.358979 0 0.9333466 -0.3589764 0 0.9333471 -0.3589754 0 0.9333455 -0.3589795 1.24922e-7 0.9333459 -0.3589785 0 1 -2.66092e-7 0 1 2.23517e-7 0 1 -6.95388e-7 0 0.9333447 -0.3589817 0 0.9333448 -0.3589813 -1.24922e-7 0.9333459 -0.3589785</float_array>
+          <technique_common>
+            <accessor source="#BodyMesh-mesh-normals-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BodyMesh-mesh-map-0">
+          <float_array id="BodyMesh-mesh-map-0-array" count="828">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#BodyMesh-mesh-map-0-array" count="414" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="BodyMesh-mesh-vertices">
+          <input semantic="POSITION" source="#BodyMesh-mesh-positions"/>
+        </vertices>
+        <triangles material="DumpTruckBody-material" count="130">
+          <input semantic="VERTEX" source="#BodyMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#BodyMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#BodyMesh-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 5 0 1 4 0 2 18 1 3 15 1 4 19 1 5 7 0 6 11 0 7 9 0 8 12 0 9 14 0 10 15 0 11 17 0 12 12 0 13 16 0 14 2 2 15 20 2 16 0 2 17 1 3 18 23 3 19 3 3 20 0 4 21 22 4 22 1 4 23 24 5 24 2 5 25 4 5 26 5 5 27 23 5 28 25 5 29 5 0 30 13 0 31 4 0 32 17 4 33 34 4 34 13 4 35 31 5 36 29 5 37 60 5 38 35 5 39 29 5 40 31 5 41 56 5 42 32 5 43 33 5 44 61 6 45 33 6 46 30 6 47 25 1 51 22 1 52 20 1 53 29 5 54 14 5 55 18 5 56 34 2 57 4 2 58 13 2 59 5 3 60 35 3 61 14 3 62 21 0 63 34 0 64 28 0 65 23 1 66 35 1 67 29 1 68 24 0 69 35 0 70 34 0 71 12 5 72 39 5 73 16 5 74 6 2 75 38 2 76 12 2 77 8 4 78 36 4 79 6 4 80 15 4 81 43 4 82 19 4 83 7 4 84 41 4 85 10 4 86 15 3 87 40 3 88 7 3 89 11 5 90 44 5 91 9 5 92 44 2 93 8 2 94 9 2 95 10 3 96 45 3 97 11 3 98 39 2 99 17 2 100 16 2 101 43 2 102 18 2 103 19 2 104 40 1 105 36 1 106 44 1 107 42 1 108 41 1 109 43 1 110 36 0 111 39 0 112 38 0 113 35 0 114 43 0 115 42 0 116 36 0 117 42 0 118 40 0 119 22 5 120 59 5 121 20 5 122 62 1 126 57 1 127 61 1 128 50 8 129 63 8 130 51 8 131 53 9 132 58 9 133 52 9 134 53 10 135 63 10 136 62 10 137 52 11 138 59 11 139 50 11 140 23 2 144 29 2 145 60 2 146 21 3 147 59 3 148 56 3 149 54 2 153 57 2 154 27 2 155 27 2 156 58 2 157 48 2 158 46 2 159 58 2 160 59 2 161 46 2 162 56 2 163 54 2 164 55 3 165 61 3 166 60 3 167 26 3 168 62 3 169 61 3 170 47 3 171 62 3 172 49 3 173 47 3 174 60 3 175 63 3 176 2 0 177 0 0 178 4 0 179 0 0 180 1 0 181 4 0 182 1 0 183 3 0 184 5 0 185 18 1 186 14 1 187 15 1 188 9 0 189 8 0 190 6 0 191 7 0 192 10 0 193 11 0 194 9 0 195 6 0 196 7 0 197 7 0 198 6 0 199 12 0 200 12 0 201 13 0 202 14 0 203 15 0 204 7 0 205 12 0 206 17 0 207 13 0 208 12 0 209 2 2 210 21 2 211 20 2 212 1 3 213 22 3 214 23 3 215 0 4 216 20 4 217 22 4 218 24 5 219 21 5 220 2 5 221 5 5 222 3 5 223 23 5 224 5 0 225 14 0 226 13 0 227 17 4 228 28 4 229 34 4 230 60 5 231 61 5 232 30 5 233 30 5 234 31 5 235 60 5 236 31 12 237 32 12 238 34 12 239 32 5 240 28 5 241 34 5 242 34 13 243 35 13 244 31 13 245 33 5 246 57 5 247 56 5 248 56 5 249 28 5 250 32 5 251 61 14 252 57 14 253 33 14 254 20 1 258 21 1 259 24 1 260 25 1 261 23 1 262 22 1 263 20 1 264 24 1 265 25 1 266 29 5 267 35 5 268 14 5 269 34 2 270 24 2 271 4 2 272 5 3 273 25 3 274 35 3 275 21 0 276 24 0 277 34 0 278 23 1 279 25 1 280 35 1 281 24 0 282 25 0 283 35 0 284 12 5 285 38 5 286 39 5 287 6 2 288 36 2 289 38 2 290 8 4 291 37 4 292 36 4 293 15 4 294 42 4 295 43 4 296 7 4 297 40 4 298 41 4 299 15 3 300 42 3 301 40 3 302 11 5 303 45 5 304 44 5 305 44 2 306 37 2 307 8 2 308 10 3 309 41 3 310 45 3 311 39 2 312 28 2 313 17 2 314 43 2 315 29 2 316 18 2 317 36 1 318 37 1 319 44 1 320 44 1 321 45 1 322 40 1 323 45 1 324 41 1 325 40 1 326 42 1 327 40 1 328 41 1 329 36 0 330 37 0 331 39 0 332 28 0 333 34 0 334 39 0 335 34 0 336 35 0 337 38 0 338 39 0 339 34 0 340 38 0 341 35 0 342 29 0 343 43 0 344 42 0 345 38 0 346 35 0 347 36 0 348 38 0 349 42 0 350 22 5 351 63 5 352 59 5 353 62 1 357 58 1 358 57 1 359 50 15 360 59 15 361 63 15 362 53 16 363 62 16 364 58 16 365 53 17 366 51 17 367 63 17 368 52 10 369 58 10 370 59 10 371 60 2 375 63 2 376 23 2 377 63 2 378 22 2 379 23 2 380 56 3 381 28 3 382 21 3 383 21 3 384 20 3 385 59 3 386 54 2 390 56 2 391 57 2 392 27 2 393 57 2 394 58 2 395 46 2 396 48 2 397 58 2 398 46 2 399 59 2 400 56 2 401 55 3 402 26 3 403 61 3 404 26 3 405 49 3 406 62 3 407 47 3 408 63 3 409 62 3 410 47 3 411 55 3 412 60 3 413</p>
+        </triangles>
+        <triangles material="Screen-material" count="8">
+          <input semantic="VERTEX" source="#BodyMesh-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#BodyMesh-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#BodyMesh-mesh-map-0" offset="2" set="0"/>
+          <p>33 5 48 31 5 49 30 5 50 51 7 123 52 7 124 50 7 125 55 3 141 49 3 142 26 3 143 54 2 150 48 2 151 46 2 152 33 5 255 32 5 256 31 5 257 51 7 354 53 7 355 52 7 356 55 3 372 47 3 373 49 3 374 54 2 387 27 2 388 48 2 389</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Back" name="Back" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 3 0 0 1 0.6 0 0 0 1</matrix>
+        <instance_geometry url="#BackMesh-mesh" name="Back">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="DumpTruckBody-material" target="#DumpTruckBody-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="BackFlap" name="BackFlap" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 1.5 0 0 0 1</matrix>
+          <instance_geometry url="#BackFlapMesh-mesh" name="BackFlap">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="DumpTruckBody-material" target="#DumpTruckBody-material">
+                  <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+      <node id="Body" name="Body" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#BodyMesh-mesh" name="Body">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="DumpTruckBody-material" target="#DumpTruckBody-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Screen-material" target="#Screen-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

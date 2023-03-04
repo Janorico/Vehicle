@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Startup.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Vehicles/Images/Truck.png" type="Texture" id=2]
@@ -10,12 +10,45 @@
 [ext_resource path="res://Assets/Worlds/Images/GridMapWorld.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Worlds/Images/RealWorld.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Vehicles/Images/LargeDumpTruck.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Vehicles/Images/CarLegacy.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Vehicles/Images/Helicopter.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Vehicles/Images/DumpTruck.png" type="Texture" id=13]
+[ext_resource path="res://Assets/2D/Download.svg" type="Texture" id=14]
 
 [sub_resource type="ButtonGroup" id=1]
 resource_name = "ChooseVehicleButtonGroup"
 
 [sub_resource type="ButtonGroup" id=2]
 resource_name = "ChooseWorldButtonGroup"
+
+[sub_resource type="Animation" id=3]
+resource_name = "Inderterminate"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterContainer/VBoxContainer/TextureProgress:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 100.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CenterContainer/VBoxContainer/TextureProgress:fill_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 4 ]
+}
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -30,6 +63,9 @@ truck_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VB
 tractor_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/TractorButton")
 minibus_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/MinibusButton")
 large_dump_truck_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/LargeDumpTruckButton")
+car_legacy_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/CarLegacyButton")
+helicopter_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/HelicopterButton")
+dump_truck_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/DumpTruckButton")
 sketchup_world_button = NodePath("Page/OptionsAndButtons/ChooseWorld/ScrollContainer/VBoxContainer/SketchUpWorldButton")
 gridmap_world_button = NodePath("Page/OptionsAndButtons/ChooseWorld/ScrollContainer/VBoxContainer/GridMapWorldButton")
 real_world_button = NodePath("Page/OptionsAndButtons/ChooseWorld/ScrollContainer/VBoxContainer/RealWorldButton")
@@ -86,7 +122,7 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page/OptionsAndButtons/ChooseVehicle/ScrollContainer"]
 margin_right = 240.0
-margin_bottom = 1324.0
+margin_bottom = 1921.0
 rect_min_size = Vector2( 240, 0 )
 alignment = 1
 
@@ -156,6 +192,39 @@ group = SubResource( 1 )
 icon = ExtResource( 10 )
 icon_align = 1
 
+[node name="CarLegacyButton" type="Button" parent="Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer"]
+margin_top = 1328.0
+margin_right = 240.0
+margin_bottom = 1529.0
+rect_min_size = Vector2( 240, 201 )
+hint_tooltip = "CAR_LEGACY_KEY"
+toggle_mode = true
+group = SubResource( 1 )
+icon = ExtResource( 11 )
+icon_align = 1
+
+[node name="HelicopterButton" type="Button" parent="Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer"]
+margin_top = 1533.0
+margin_right = 240.0
+margin_bottom = 1689.0
+rect_min_size = Vector2( 240, 156 )
+hint_tooltip = "HELICOPTER_KEY"
+toggle_mode = true
+group = SubResource( 1 )
+icon = ExtResource( 12 )
+icon_align = 1
+
+[node name="DumpTruckButton" type="Button" parent="Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer"]
+margin_top = 1693.0
+margin_right = 240.0
+margin_bottom = 1921.0
+rect_min_size = Vector2( 240, 228 )
+hint_tooltip = "DUMP_TRUCK_KEY"
+toggle_mode = true
+group = SubResource( 1 )
+icon = ExtResource( 13 )
+icon_align = 1
+
 [node name="ChooseWorld" type="VBoxContainer" parent="Page/OptionsAndButtons"]
 margin_left = 256.0
 margin_right = 508.0
@@ -219,70 +288,70 @@ icon_align = 1
 
 [node name="Buttons" type="VBoxContainer" parent="Page/OptionsAndButtons"]
 margin_left = 512.0
-margin_right = 689.0
+margin_right = 726.0
 margin_bottom = 834.0
 size_flags_horizontal = 4
 
 [node name="DayNightCycle" type="CheckBox" parent="Page/OptionsAndButtons/Buttons"]
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 16.0
 text = "DAY_NIGHT_CYCLE_KEY"
 
 [node name="HSeparator" type="HSeparator" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 20.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 24.0
 
 [node name="StartOfflineGameButton" type="Button" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 28.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 42.0
-text = "START_OFFLINE_GAME_KEY"
+text = "START_SINGLE_PLAYER_GAME_KEY"
 
 [node name="HostNetworkGameButton" type="Button" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 46.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 60.0
-text = "HOST_NETWORK_GAME_KEY"
+text = "HOST_MULTIPLAYER_GAME_KEY"
 
 [node name="JoinNetworkGameButton" type="Button" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 64.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 78.0
-text = "JOIN_NETWORK_GAME_KEY"
+text = "JOIN_MULTIPLAYER_GAME_KEY"
 
 [node name="HSeparator2" type="HSeparator" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 82.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 86.0
 
 [node name="VersionLabel" type="Label" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 90.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 104.0
-text = "10.0.0.0"
+text = "11.0.0.0"
 align = 1
 
 [node name="HSeparator3" type="HSeparator" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 108.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 112.0
 
 [node name="AboutGameButton" type="Button" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 116.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 130.0
 text = "ABOUT_GAME_KEY"
 
 [node name="LicenseInformationButton" type="Button" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 134.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 148.0
 text = "License information"
 
 [node name="ExitGameButton" type="Button" parent="Page/OptionsAndButtons/Buttons"]
 margin_top = 152.0
-margin_right = 177.0
+margin_right = 214.0
 margin_bottom = 166.0
 text = "EXIT_GAME_KEY"
 
@@ -297,7 +366,7 @@ margin_right = 478.0
 margin_bottom = 245.0
 window_title = "License information"
 dialog_text = "Vehicle is a car driving computer game, that is createt with Godot Engine.
-Copyright (C) 2022 Janosch Lion
+Copyright (C) 2022-2023 Janosch Lion
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -316,14 +385,29 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 [node name="JoinNetworkGameDialog" type="ConfirmationDialog" parent="."]
 margin_right = 200.0
 margin_bottom = 70.0
-window_title = "JOIN_NETWORK_GAME_KEY"
+window_title = "JOIN_MULTIPLAYER_GAME_KEY"
 
 [node name="GridContainer" type="GridContainer" parent="JoinNetworkGameDialog"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 270.0
-margin_bottom = 60.0
+margin_bottom = 88.0
 columns = 2
+
+[node name="PortLabel" type="Label" parent="JoinNetworkGameDialog/GridContainer"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 54.0
+margin_bottom = 6.0
+text = "PORT_KEY"
+
+[node name="PortSpinBox" type="SpinBox" parent="JoinNetworkGameDialog/GridContainer"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 66.0
+margin_bottom = 16.0
+max_value = 65355.0
+value = 31400.0
 
 [node name="IPLabel" type="Label" parent="JoinNetworkGameDialog/GridContainer"]
 margin_right = 40.0
@@ -360,14 +444,29 @@ dialog_text = "INVALID_NAME_KEY"
 [node name="HostNetworkGameDialog" type="ConfirmationDialog" parent="."]
 margin_right = 200.0
 margin_bottom = 70.0
-window_title = "HOST_NETWORK_GAME_KEY"
+window_title = "HOST_MULTIPLAYER_GAME_KEY"
 
 [node name="GridContainer" type="GridContainer" parent="HostNetworkGameDialog"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 317.0
-margin_bottom = 60.0
+margin_bottom = 88.0
 columns = 2
+
+[node name="PortLabel" type="Label" parent="HostNetworkGameDialog/GridContainer"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 32.0
+margin_bottom = 6.0
+text = "PORT_KEY"
+
+[node name="PortSpinBox" type="SpinBox" parent="HostNetworkGameDialog/GridContainer"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 66.0
+margin_bottom = 16.0
+max_value = 65355.0
+value = 31400.0
 
 [node name="MaximumPlayersLabel" type="Label" parent="HostNetworkGameDialog/GridContainer"]
 margin_right = 40.0
@@ -383,7 +482,7 @@ min_value = 2.0
 value = 20.0
 
 [node name="NameLabel" type="Label" parent="HostNetworkGameDialog/GridContainer"]
-margin_right = 40.0
+margin_right = 108.0
 margin_bottom = 14.0
 text = "YOUR_NAME_KEY"
 
@@ -391,6 +490,52 @@ text = "YOUR_NAME_KEY"
 margin_right = 150.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 150, 0 )
+
+[node name="UpdateDialog" type="ConfirmationDialog" parent="."]
+margin_right = 203.0
+margin_bottom = 40.0
+window_title = "UPDATE_AVAILABLE_KEY"
+dialog_text = "UPDATE_AVAILABLE_TEXT_KEY"
+
+[node name="UpdateUnsuccessDialog" type="AcceptDialog" parent="."]
+margin_right = 83.0
+margin_bottom = 52.0
+dialog_text = "Can't get updates: "
+
+[node name="DownloadingUpdateRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="DownloadingUpdateRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DownloadingUpdateRect/CenterContainer"]
+margin_left = 704.0
+margin_top = 409.0
+margin_right = 895.0
+margin_bottom = 491.0
+
+[node name="Label" type="Label" parent="DownloadingUpdateRect/CenterContainer/VBoxContainer"]
+margin_right = 191.0
+margin_bottom = 14.0
+text = "DOWNLOADING_UPDATE_KEY"
+align = 1
+valign = 1
+
+[node name="TextureProgress" type="TextureProgress" parent="DownloadingUpdateRect/CenterContainer/VBoxContainer"]
+margin_left = 63.0
+margin_top = 18.0
+margin_right = 127.0
+margin_bottom = 82.0
+size_flags_horizontal = 4
+texture_progress = ExtResource( 14 )
+fill_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DownloadingUpdateRect"]
+anims/Inderterminate = SubResource( 3 )
 
 [connection signal="pressed" from="Page/OptionsAndButtons/Buttons/StartOfflineGameButton" to="." method="_start_offline_game"]
 [connection signal="pressed" from="Page/OptionsAndButtons/Buttons/HostNetworkGameButton" to="HostNetworkGameDialog" method="popup_centered"]
@@ -401,3 +546,4 @@ rect_min_size = Vector2( 150, 0 )
 [connection signal="confirmed" from="LicenseInformationDialog" to="." method="_license_agreed"]
 [connection signal="confirmed" from="JoinNetworkGameDialog" to="." method="_join_network_game"]
 [connection signal="confirmed" from="HostNetworkGameDialog" to="." method="_host_network_game"]
+[connection signal="confirmed" from="UpdateDialog" to="." method="_update"]

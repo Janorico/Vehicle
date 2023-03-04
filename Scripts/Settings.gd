@@ -1,5 +1,7 @@
 extends ConfirmationDialog
 
+signal changed
+
 export(String) var settings_file_path = "user://vehicle_settings.json"
 onready var engine_force_value_spin_box = $GridContainer/EngineForceValueSpinBox
 onready var brake_value_spin_box = $GridContainer/BrakeValueSpinBox
@@ -14,7 +16,7 @@ func _setup():
 	control_device_option_button.add_item("KEYBOARD_KEY", 0)
 	control_device_option_button.add_item("MOUSE_KEY", 1)
 	var vehicle = get_vehicle()
-	if vehicle != null:
+	if vehicle != null and vehicle is Vehicle:
 		for port_name in vehicle.get_ports():
 			control_device_option_button.add_item(str(port_name))
 	if not Net.is_offline:
@@ -85,3 +87,4 @@ func change_settings(engine_force_value: int, brake_value: float, steer_limit: f
 	steer_speed_spin_box.value = steer_speed * 10
 	crash_monitor_check_button.pressed = crash_monitor
 	crashs_reported_spin_box.value = crashs_reported
+	emit_signal("changed")

@@ -36,7 +36,7 @@ Vehicle contain files from:
 ## License information
 
     Vehicle is a car driving computer game, that is created with Godot Engine.
-    Copyright (C) 2022 Janosch Lion
+    Copyright (C) 2022-2023 Janosch Lion
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -58,30 +58,53 @@ Vehicle contain files from:
   * [License information](#license-information)
   * [Index](#index)
   * [Version History](#version-history)
-    * [Vehicle 10.0.0.0](#vehicle-10000)
+    * [Vehicle 11.0.0.0](#vehicle-11000)
       * [What's new](#whats-new)
-    * [Vehicle 9.0.0.0](#vehicle-9000)
+    * [Vehicle 10.0.0.0](#vehicle-10000)
       * [What's new](#whats-new-1)
-    * [Vehicle 8.0.0.0](#vehicle-8000)
+    * [Vehicle 9.0.0.0](#vehicle-9000)
       * [What's new](#whats-new-2)
-    * [Vehicle 7.0.0.0](#vehicle-7000)
+    * [Vehicle 8.0.0.0](#vehicle-8000)
       * [What's new](#whats-new-3)
-    * [Vehicle 6.0.0.0](#vehicle-6000)
+    * [Vehicle 7.0.0.0](#vehicle-7000)
       * [What's new](#whats-new-4)
-    * [Vehicle 5.5.0.0](#vehicle-5500)
+    * [Vehicle 6.0.0.0](#vehicle-6000)
       * [What's new](#whats-new-5)
-    * [Vehicle 5.0.0.0](#vehicle-5000)
+    * [Vehicle 5.5.0.0](#vehicle-5500)
       * [What's new](#whats-new-6)
-    * [Vehicle 4.0.0.0](#vehicle-4000)
+    * [Vehicle 5.0.0.0](#vehicle-5000)
       * [What's new](#whats-new-7)
-    * [Vehicle 3.0.0.0](#vehicle-3000)
+    * [Vehicle 4.0.0.0](#vehicle-4000)
       * [What's new](#whats-new-8)
+    * [Vehicle 3.0.0.0](#vehicle-3000)
+      * [What's new](#whats-new-9)
     * [Vehicle 2.5.0.0](#vehicle-2500)
     * [Vehicle 2.0.0.0](#vehicle-2000)
     * [Vehicle 1.0.0.0](#vehicle-1000)
 <!-- TOC -->
 
 ## Version History
+
+### Vehicle 11.0.0.0
+
+#### What's new
+
+* The old car was renamed to 'Car (Legacy)' and a new car was added ('Car').
+* Fix invalid tile on GridMap World.
+* The clock.
+* Adding 'Power' item to dashboard.
+* Adding 'Brake' LED to dashboard.
+* Changes on 'GridMap World':
+    * Bigger World
+    * Actualized Map
+    * Hills
+* Changes on 'SketchUp World'
+* (For developers) Re-structuring vehicle base.
+* Improve startpage
+* Make port selectable (Includes a new key for ``user://last_states.json`` (``last_port``).).
+* The helicopter.
+* The dump truck.
+* Two new views.
 
 ### Vehicle 10.0.0.0
 

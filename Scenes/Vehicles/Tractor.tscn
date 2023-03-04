@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/Vehicles/Vehicle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Vehicles/Wheel_0.7_0.3.tres" type="CylinderMesh" id=2]
 [ext_resource path="res://Scenes/Vehicles/Wheel_0.4_0.25.tres" type="CylinderMesh" id=3]
 [ext_resource path="res://Assets/Vehicles/Tractor.dae" type="PackedScene" id=4]

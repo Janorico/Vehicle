@@ -27,13 +27,13 @@ remote func emit(id, index):
 			emitting_tile.name = str("ID", id, "_INDEX", index)
 
 func start_emitting(body):
-	if emit_scene != null and body is Vehicle and (body.is_master or Net.is_offline):
+	if emit_scene != null and body is VehicleBase and (body.is_master or Net.is_offline):
 		print_stack()
 		print("Sart emitting...")
 		$EmitTimer.start()
 
 func stop_emitting(body):
-	if body is Vehicle and (body.is_master or Net.is_offline):
+	if body is VehicleBase and (body.is_master or Net.is_offline):
 		print_stack()
 		print("Stop emitting...")
 		$EmitTimer.stop()

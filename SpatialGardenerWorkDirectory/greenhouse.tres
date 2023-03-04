@@ -48,6 +48,8 @@ rotation/rotation_random_y = 180.0
 rotation/rotation_random_x = 0.0
 rotation/rotation_random_z = 0.0
 slope/slope_allowed_range = [ 0.0, 180.0 ]
+import_export/export_button = false
+import_export/export_button = false
 
 [sub_resource type="Resource" id=147]
 resource_name = "Greenhouse_PlantState"
@@ -55,7 +57,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "class": "Greenhouse_PlantState"
 }
-plant/plant_brush_active = true
+plant/plant_brush_active = false
 plant/plant_label = "Conifer"
 plant/plant = SubResource( 146 )
 
@@ -101,6 +103,8 @@ rotation/rotation_random_y = 180.0
 rotation/rotation_random_x = 0.0
 rotation/rotation_random_z = 0.0
 slope/slope_allowed_range = [ 0.0, 180.0 ]
+import_export/export_button = false
+import_export/export_button = false
 
 [sub_resource type="Resource" id=149]
 resource_name = "Greenhouse_PlantState"

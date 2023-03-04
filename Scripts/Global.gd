@@ -8,7 +8,10 @@ enum Vehicles {
 	TRUCK = 2,
 	TRACTOR = 3,
 	MINIBUS = 4,
-	LARGE_DUMP_TRUCK = 5
+	LARGE_DUMP_TRUCK = 5,
+	CAR_LEGACY = 6,
+	HELICOPTER = 7,
+	DUMP_TRUCK = 8
 }
 
 enum Worlds {
@@ -19,11 +22,20 @@ enum Worlds {
 
 # Last states
 var last_states_path := "user://last_states.json"
+# Keys
+const WINDOW_STATE_KEY = "window_state"
+const LAST_TYPED_NAME_KEY = "last_typed_name"
+const LAST_TYPED_SERVER_IP_KEY = "last_typed_server_ip"
+const LAST_PORT_KEY = "last_port"
+const LAST_MAX_PLAYERS_KEY = "last_max_players"
+const LAST_USED_VIEW_KEY = "last_used_view"
+# Values
 var window_state := "fullscreen"
 var last_typed_name := ""
 var last_typed_server_ip := ""
+var last_port := 31400
 var last_max_players := 20
-var last_used_view = Vehicle.CameraType.WINDSCREEN
+var last_used_view = VehicleBase.CameraType.WINDSCREEN
 # Setup
 var setted_up_bool := false
 var day_night_cycle := true
@@ -66,11 +78,12 @@ func load_last_states():
 		file.open(last_states_path, File.READ)
 		var data = parse_json(file.get_as_text())
 		file.close()
-		window_state = data["window_state"]
-		last_typed_name = data["last_typed_name"]
-		last_typed_server_ip = data["last_typed_server_ip"]
-		last_max_players = data["last_max_players"]
-		last_used_view = data["last_used_view"]
+		if data.has(WINDOW_STATE_KEY):			window_state = data[WINDOW_STATE_KEY]
+		if data.has(LAST_TYPED_NAME_KEY):		last_typed_name = data[LAST_TYPED_NAME_KEY]
+		if data.has(LAST_TYPED_SERVER_IP_KEY):	last_typed_server_ip = data[LAST_TYPED_SERVER_IP_KEY]
+		if data.has(LAST_PORT_KEY):				last_port = data[LAST_PORT_KEY]
+		if data.has(LAST_MAX_PLAYERS_KEY):		last_max_players = data[LAST_MAX_PLAYERS_KEY]
+		if data.has(LAST_USED_VIEW_KEY):		last_used_view = data[LAST_USED_VIEW_KEY]
 	set_window_state()
 
 func set_window_state():
@@ -103,11 +116,12 @@ func save_last_states():
 	var file = File.new()
 	file.open(last_states_path, File.WRITE)
 	var json_data = {
-		"window_state" : window_state,
-		"last_typed_name" : last_typed_name,
-		"last_typed_server_ip" : last_typed_server_ip,
-		"last_max_players" : last_max_players,
-		"last_used_view" : last_used_view
+		WINDOW_STATE_KEY: window_state,
+		LAST_TYPED_NAME_KEY: last_typed_name,
+		LAST_TYPED_SERVER_IP_KEY: last_typed_server_ip,
+		LAST_PORT_KEY: last_port,
+		LAST_MAX_PLAYERS_KEY: last_max_players,
+		LAST_USED_VIEW_KEY: last_used_view
 	}
 	file.store_line(to_json(json_data))
 	file.close()
@@ -120,6 +134,9 @@ func get_vehicle_path(vehicle):
 		Vehicles.TRACTOR: return "res://Scenes/Vehicles/Tractor.tscn"
 		Vehicles.MINIBUS: return "res://Scenes/Vehicles/Minibus.tscn"
 		Vehicles.LARGE_DUMP_TRUCK: return "res://Scenes/Vehicles/LargeDumpTruck.tscn"
+		Vehicles.CAR_LEGACY: return "res://Scenes/Vehicles/CarLegacy.tscn"
+		Vehicles.HELICOPTER: return "res://Scenes/Vehicles/Helicopter.tscn"
+		Vehicles.DUMP_TRUCK: return "res://Scenes/Vehicles/DumpTruck.tscn"
 
 func get_world_path():
 	match world:
@@ -137,7 +154,7 @@ func get_map_path():
 func get_map_divider():
 	match world:
 		Worlds.SKETCHUP_WORLD: return 48.0
-		Worlds.GRIDMAP_WORLD: return 1.6
+		Worlds.GRIDMAP_WORLD: return 4.0
 		Worlds.REAL_WORLD: return 4.0
 	return 48.0
 

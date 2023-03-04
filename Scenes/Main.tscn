@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Compass.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/VehicleOptions.gd" type="Script" id=2]
@@ -19,10 +19,12 @@
 [ext_resource path="res://Scripts/FPSPanel.gd" type="Script" id=17]
 [ext_resource path="res://Scenes/DashboardItem.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scripts/MainDashboard.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/Clock.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/StatusLED.gd" type="Script" id=21]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Day"
-length = 360.0
+length = 480.0
 loop = true
 step = 10.0
 tracks/0/type = "value"
@@ -32,10 +34,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 90, 270 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 120, 240, 360, 480 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( -60, 180, 0 ), Vector3( -30, 90, 0 ), Vector3( -30, 270, 0 ) ]
+"values": [ Vector3( -60, 180, 0 ), Vector3( -30, 90, 0 ), Vector3( -30, 0, 0 ), Vector3( -30, -90, 0 ), Vector3( -60, -180, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sun:light_energy")
@@ -44,7 +46,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 70, 90, 270, 290 ),
+"times": PoolRealArray( 100, 120, 360, 380 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0, 0.0, 1.0 ]
@@ -56,7 +58,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 70, 90, 270, 290 ),
+"times": PoolRealArray( 100, 120, 360, 380 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0, 0.0, 1.0 ]
@@ -68,42 +70,22 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 70, 90, 110, 140, 220, 250, 270, 290 ),
+"times": PoolRealArray( 100, 120, 140, 170, 310, 340, 360, 380 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.1, 0.01, 0.0, 0.0, 0.01, 0.1, 1.0 ]
 }
-tracks/4/type = "method"
-tracks/4/path = NodePath(".")
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/VBoxContainer/Clock/Label:hours")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 50, 100, 150, 200, 250, 300, 350 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "_update_day_night"
-}, {
-"args": [  ],
-"method": "_update_day_night"
-}, {
-"args": [  ],
-"method": "_update_day_night"
-}, {
-"args": [  ],
-"method": "_update_day_night"
-}, {
-"args": [  ],
-"method": "_update_day_night"
-}, {
-"args": [  ],
-"method": "_update_day_night"
-}, {
-"args": [  ],
-"method": "_update_day_night"
-} ]
+"times": PoolRealArray( 0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 239.9, 240.1, 260, 280, 300, 320, 340, 360, 380, 400, 420, 440, 460, 480 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0 ]
 }
 
 [node name="Main" type="Spatial"]
@@ -122,7 +104,7 @@ environment = ExtResource( 10 )
 script = ExtResource( 11 )
 background_energy = 1.0
 
-[node name="SunAnimator" type="AnimationPlayer" parent="."]
+[node name="DayAnimator" type="AnimationPlayer" parent="."]
 anims/Day = SubResource( 1 )
 
 [node name="Control" type="Control" parent="."]
@@ -237,50 +219,68 @@ align = 2
 margin_right = 117.0
 margin_bottom = 444.0
 
-[node name="SwitchViewButton" type="Button" parent="Control/VBoxContainer"]
+[node name="Clock" type="Panel" parent="Control/VBoxContainer"]
 margin_right = 127.0
-margin_bottom = 14.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 0, 18 )
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Clock"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+text = "12:00"
+align = 1
+valign = 1
+script = ExtResource( 20 )
+
+[node name="SwitchViewButton" type="Button" parent="Control/VBoxContainer"]
+margin_top = 22.0
+margin_right = 127.0
+margin_bottom = 36.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "SWITCH_VIEW_KEY"
 
 [node name="HandbrakeButton" type="Button" parent="Control/VBoxContainer"]
-margin_top = 18.0
+margin_top = 40.0
 margin_right = 127.0
-margin_bottom = 32.0
+margin_bottom = 54.0
 focus_mode = 0
 toggle_mode = true
 enabled_focus_mode = 0
 text = "HANDBRAKE_KEY"
 
 [node name="SettingsButton" type="Button" parent="Control/VBoxContainer"]
-margin_top = 36.0
+margin_top = 58.0
 margin_right = 127.0
-margin_bottom = 50.0
+margin_bottom = 72.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "SETTINGS_KEY"
 
 [node name="SendMessageButton" type="Button" parent="Control/VBoxContainer"]
-margin_top = 54.0
+margin_top = 76.0
 margin_right = 127.0
-margin_bottom = 68.0
+margin_bottom = 90.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "SEND_MESSAGE_KEY"
 
-[node name="ExitGameKey" type="Button" parent="Control/VBoxContainer"]
-margin_top = 72.0
+[node name="ExitGameButton" type="Button" parent="Control/VBoxContainer"]
+margin_top = 94.0
 margin_right = 127.0
-margin_bottom = 86.0
+margin_bottom = 108.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "EXIT_GAME_KEY"
 
 [node name="Light" type="VBoxContainer" parent="Control/VBoxContainer"]
-margin_top = 90.0
+margin_top = 112.0
 margin_right = 127.0
-margin_bottom = 218.0
+margin_bottom = 240.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/Light"]
 margin_right = 127.0
@@ -332,47 +332,51 @@ stretch_mode = 6
 script = ExtResource( 13 )
 
 [node name="Compass" type="TextureRect" parent="Control/VBoxContainer"]
-margin_top = 222.0
+margin_top = 244.0
 margin_right = 127.0
-margin_bottom = 322.0
+margin_bottom = 344.0
 rect_pivot_offset = Vector2( 58.5, 50 )
 texture = ExtResource( 6 )
 stretch_mode = 6
 script = ExtResource( 1 )
 
 [node name="SteeringWheel" type="TextureRect" parent="Control/VBoxContainer"]
-margin_top = 326.0
+margin_top = 348.0
 margin_right = 127.0
-margin_bottom = 426.0
+margin_bottom = 448.0
 rect_pivot_offset = Vector2( 58.5, 50 )
 texture = ExtResource( 8 )
 stretch_mode = 6
 script = ExtResource( 9 )
 
 [node name="Map" type="Control" parent="Control/VBoxContainer"]
-margin_top = 430.0
+margin_top = 452.0
 margin_right = 127.0
-margin_bottom = 680.0
+margin_bottom = 702.0
 rect_min_size = Vector2( 0, 250 )
 script = ExtResource( 3 )
 
-[node name="Dashboard" type="Panel" parent="Control"]
+[node name="DashboardPanel" type="Panel" parent="Control"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -105.0
-margin_top = -144.0
-margin_right = 105.0
+margin_left = -211.0
+margin_top = -170.0
+margin_right = 211.0
 
-[node name="Dashboard" type="HBoxContainer" parent="Control/Dashboard"]
+[node name="Dashboard" type="VBoxContainer" parent="Control/DashboardPanel"]
 margin_left = 5.0
 margin_top = 5.0
-margin_right = 205.0
-margin_bottom = 125.0
+margin_right = 417.0
+margin_bottom = 165.0
 script = ExtResource( 19 )
 
-[node name="Speedometer" parent="Control/Dashboard/Dashboard" instance=ExtResource( 18 )]
+[node name="Items" type="HBoxContainer" parent="Control/DashboardPanel/Dashboard"]
+margin_right = 412.0
+margin_bottom = 134.0
+
+[node name="Speedometer" parent="Control/DashboardPanel/Dashboard/Items" instance=ExtResource( 18 )]
 margin_left = 0.0
 margin_top = 0.0
 margin_right = 200.0
@@ -380,7 +384,7 @@ margin_bottom = 134.0
 title = "SPEED_KEY"
 content_text = "0 km/h"
 
-[node name="Button" type="Button" parent="Control/Dashboard/Dashboard/Speedometer"]
+[node name="Button" type="Button" parent="Control/DashboardPanel/Dashboard/Items/Speedometer"]
 margin_top = 120.0
 margin_right = 120.0
 margin_bottom = 134.0
@@ -388,6 +392,40 @@ rect_rotation = -90.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "CHANGE_UNIT_KEY"
+
+[node name="VSeparator" type="VSeparator" parent="Control/DashboardPanel/Dashboard/Items"]
+margin_left = 204.0
+margin_right = 208.0
+margin_bottom = 134.0
+
+[node name="Power" parent="Control/DashboardPanel/Dashboard/Items" instance=ExtResource( 18 )]
+margin_left = 212.0
+margin_top = 0.0
+margin_right = 412.0
+margin_bottom = 134.0
+title = "POWER_KEY"
+
+[node name="HSeparator" type="HSeparator" parent="Control/DashboardPanel/Dashboard"]
+margin_top = 138.0
+margin_right = 412.0
+margin_bottom = 142.0
+
+[node name="LEDs" type="HBoxContainer" parent="Control/DashboardPanel/Dashboard"]
+margin_top = 146.0
+margin_right = 412.0
+margin_bottom = 160.0
+
+[node name="BrakeLabel" type="Label" parent="Control/DashboardPanel/Dashboard/LEDs"]
+margin_right = 69.0
+margin_bottom = 14.0
+text = "BRAKE_KEY"
+
+[node name="BrakeLED" type="Control" parent="Control/DashboardPanel/Dashboard/LEDs"]
+margin_left = 73.0
+margin_right = 87.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 14, 14 )
+script = ExtResource( 21 )
 
 [node name="Message" type="Control" parent="Control"]
 script = ExtResource( 5 )
@@ -616,7 +654,7 @@ value = 20.0
 [connection signal="toggled" from="Control/VBoxContainer/HandbrakeButton" to="Vehicles" method="_handbreak_button_toggled"]
 [connection signal="pressed" from="Control/VBoxContainer/SettingsButton" to="Control/SettingsDialog" method="popup_centered"]
 [connection signal="pressed" from="Control/VBoxContainer/SendMessageButton" to="Control/Message" method="_send"]
-[connection signal="pressed" from="Control/VBoxContainer/ExitGameKey" to="Vehicles" method="_exit_game"]
+[connection signal="pressed" from="Control/VBoxContainer/ExitGameButton" to="Vehicles" method="_exit_game"]
 [connection signal="pressed" from="Control/VBoxContainer/Light/HBoxContainer/NoBeam" to="Vehicles" method="_no_beam"]
 [connection signal="pressed" from="Control/VBoxContainer/Light/HBoxContainer/NoBeam" to="Control/VBoxContainer/Light/RotarySwitch" method="_no_beam"]
 [connection signal="pressed" from="Control/VBoxContainer/Light/HBoxContainer/LowBeam" to="Vehicles" method="_low_beam"]
@@ -626,9 +664,11 @@ value = 20.0
 [connection signal="resized" from="Control/VBoxContainer/Light/RotarySwitch" to="Control/VBoxContainer/Light/RotarySwitch" method="_update_pivoit_offset"]
 [connection signal="resized" from="Control/VBoxContainer/Compass" to="Control/VBoxContainer/Compass" method="_update_pivoit_offset"]
 [connection signal="resized" from="Control/VBoxContainer/SteeringWheel" to="Control/VBoxContainer/SteeringWheel" method="_update_pivoit_offset"]
-[connection signal="pressed" from="Control/Dashboard/Dashboard/Speedometer/Button" to="Control/Dashboard/Dashboard" method="_change_speed_unit"]
-[connection signal="confirmed" from="Control/Message/SendMessageDialog" to="Control/Message" method="_approved"]
+[connection signal="pressed" from="Control/DashboardPanel/Dashboard/Items/Speedometer/Button" to="Control/DashboardPanel/Dashboard" method="_change_speed_unit"]
+[connection signal="confirmed" from="Control/Message/SendMessageDialog" to="Control/Message" method="_dialog_confirmed"]
+[connection signal="popup_hide" from="Control/Message/SendMessageDialog" to="Control/Message" method="_dialog_closed"]
 [connection signal="pressed" from="Control/Message/GetMessagePanel/GridContainer/ReplyButton" to="Control/Message" method="_send"]
 [connection signal="pressed" from="Control/Message/GetMessagePanel/GridContainer/HideButton" to="Control/Message/GetMessagePanel" method="hide"]
 [connection signal="timeout" from="Control/Message/GetMessagePanel/Timer" to="Control/Message/GetMessagePanel" method="hide"]
+[connection signal="changed" from="Control/SettingsDialog" to="Control/DashboardPanel/Dashboard" method="_refresh"]
 [connection signal="confirmed" from="Control/SettingsDialog" to="Control/SettingsDialog" method="_dialog_confirmed"]

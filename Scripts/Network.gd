@@ -5,28 +5,28 @@ signal connection_failed
 signal player_connected(id)
 signal player_disconnected(id)
 
-const RPC_PORT = 31400
-# Max players, used in initialize_server()
-var max_players = 20
 # Player info, associate ID to data
 var player_info = {}
 # Info we send to other players
 var my_info = {}
+# True, if single player game
 var is_offline = false
+# Player ID
 var net_id = null
+# True, if this a host
 var is_host = false
 
-func initialize_server(info: Dictionary):
+func initialize_server(info: Dictionary, port: int, max_players: int):
 	is_host = true
 	my_info = info
 	var peer = NetworkedMultiplayerENet.new()
-	peer.create_server(RPC_PORT, max_players)
+	peer.create_server(port, max_players)
 	get_tree().network_peer = peer
 
-func initialize_client(server_ip, info: Dictionary):
+func initialize_client(info: Dictionary, port: int, server_ip: String):
 	my_info = info
 	var peer = NetworkedMultiplayerENet.new()
-	peer.create_client(server_ip, RPC_PORT)
+	peer.create_client(server_ip, port)
 	get_tree().network_peer = peer
 
 # Connect all functions

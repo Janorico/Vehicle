@@ -16,4 +16,4 @@ func _physics_process(_delta):
 				rpc("play_animation", animation_name)
 
 remote func play_animation(name: String):
-	$Body/AnimationPlayer.play(name)
+	$AnimationPlayer.play(name)

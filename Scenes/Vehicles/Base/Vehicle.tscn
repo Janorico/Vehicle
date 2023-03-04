@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Vehicles/Base/Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Vehicles/Vehicle.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Vehicles/Base/Wheel.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+albedo_color = Color( 0.2, 0.2, 0.2, 0.6 )
+
+[sub_resource type="SphereMesh" id=3]
+material = SubResource( 4 )
+radius = 0.02
+height = 0.04
+
+[node name="Spatial" instance=ExtResource( 1 )]
+
+[node name="VehicleBody" parent="." index="0"]
+script = ExtResource( 2 )
+
+[node name="LeftMirrorPlaceHolder" type="Spatial" parent="VehicleBody" index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1, 0.4 )
+
+[node name="RightMirrorPlaceHolder" type="Spatial" parent="VehicleBody" index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1, 0.4 )
+
+[node name="LeftMirror" type="ViewportContainer" parent="VehicleBody" index="9"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 150.0
+margin_top = -200.0
+margin_right = 300.0
+rect_scale = Vector2( -1, 1 )
+
+[node name="Viewport" type="Viewport" parent="VehicleBody/LeftMirror" index="0"]
+size = Vector2( 150, 200 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera" type="Camera" parent="VehicleBody/LeftMirror/Viewport" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1, 0.4 )
+far = 1000.0
+
+[node name="RightMirror" type="ViewportContainer" parent="VehicleBody" index="10"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -200.0
+margin_right = 150.0
+rect_scale = Vector2( -1, 1 )
+
+[node name="Viewport" type="Viewport" parent="VehicleBody/RightMirror" index="0"]
+size = Vector2( 150, 200 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera" type="Camera" parent="VehicleBody/RightMirror/Viewport" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1, 0.4 )
+far = 1000.0
+
+[node name="Smoke" type="CPUParticles" parent="VehicleBody" index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.4, -1.6 )
+amount = 40
+lifetime = 5.0
+randomness = 1.0
+local_coords = false
+mesh = SubResource( 3 )
+flag_rotate_y = true
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 9.8, 0 )
+scale_amount = 5.0
+scale_amount_random = 1.0
+
+[node name="BackwardLight" type="SpotLight" parent="VehicleBody" index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -1.5 )
+light_color = Color( 1, 1, 0.588235, 1 )
+light_energy = 0.0
+spot_range = 30.0
+
+[node name="RightFrontLight" type="SpotLight" parent="VehicleBody" index="13"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.7, 0.75, 1.5 )
+light_energy = 0.0
+spot_range = 20.0
+spot_angle = 20.0
+
+[node name="RightBackLight" type="SpotLight" parent="VehicleBody" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.75, -1.5 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 0.0
+spot_range = 10.0
+spot_angle = 20.0
+
+[node name="LeftBackLight" type="SpotLight" parent="VehicleBody" index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.75, -1.5 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 0.0
+spot_range = 10.0
+spot_angle = 20.0
+
+[node name="LeftFrontLight" type="SpotLight" parent="VehicleBody" index="16"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.7, 0.75, 1.5 )
+light_energy = 0.0
+spot_range = 20.0
+spot_angle = 20.0
+
+[node name="LeftFrontWheel" parent="VehicleBody" index="17" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.25, 1 )
+use_as_steering = true
+
+[node name="LeftBackWheel" parent="VehicleBody" index="18" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.25, -1 )
+
+[node name="RightFrontWheel" parent="VehicleBody" index="19" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.25, 1 )
+use_as_steering = true
+
+[node name="RightBackWheel" parent="VehicleBody" index="20" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.25, -1 )
+
+[editable path="VehicleBody/LeftFrontWheel"]
+[editable path="VehicleBody/LeftBackWheel"]
+[editable path="VehicleBody/RightFrontWheel"]
+[editable path="VehicleBody/RightBackWheel"]

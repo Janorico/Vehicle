@@ -9,9 +9,10 @@ func _send():
 	for player in Net.player_info:
 		to_option_button.add_item("%s (ID: %s)" % [Net.player_info[player]["name"], str(player)], player)
 	$SendMessageDialog/GridContainer/MessageTextEdit.text = ""
+	get_node("../../Vehicles").get_vehicle().enabled = false
 	$SendMessageDialog.popup_centered()
 
-func _approved():
+func _dialog_confirmed():
 	var to = to_option_button.get_selected_id()
 	var text = message_text_edit.text
 	if to == 0:
@@ -28,3 +29,6 @@ remote func get_message(from, to, message):
 	$GetMessagePanel.rect_position = Vector2(((viewport_size.x - panel_size.x) / 2), (viewport_size.y - panel_size.y))
 	$GetMessagePanel.show()
 	$GetMessagePanel/Timer.start()
+
+func _dialog_closed():
+	get_node("../../Vehicles").get_vehicle().enabled = true
