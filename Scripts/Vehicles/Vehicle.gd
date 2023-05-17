@@ -6,6 +6,7 @@ var backward_light_on := false
 const SERCOMM = preload("res://bin/GDsercomm.gdns")
 onready var port = SERCOMM.new()
 
+
 func _ready():
 	if OS.is_debug_build() and capturing:
 		$Smoke.emitting = false
@@ -14,6 +15,7 @@ func _ready():
 		$RightMirrorPlaceHolder.queue_free()
 		$LeftMirrorPlaceHolder.queue_free()
 
+
 func initialize(id):
 	.initialize(id)
 	if not is_master:
@@ -21,6 +23,7 @@ func initialize(id):
 		$RightMirrorPlaceHolder.queue_free()
 		$LeftMirror.queue_free()
 		$LeftMirrorPlaceHolder.queue_free()
+
 
 func _physics_process(delta):
 	if (is_master or Net.is_offline) and enabled:
@@ -99,8 +102,10 @@ func control_with_serial_port(port_name):
 		input_type = InputType.SERIAL_PORT
 		set_physics_process(true)
 
+
 func get_ports():
 	return port.list_ports()
+
 
 func set_engine_force_value(value):
 	.set_engine_force_value(value)
@@ -117,6 +122,7 @@ func accelerate(value: float):
 		engine_force = clamp(value * 5 / speed, 0, power_max)
 	else:
 		engine_force = value
+
 
 func accelerate_back(value: float):
 	# Increase engine force at low speeds to make the initial acceleration faster.
