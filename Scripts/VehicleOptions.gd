@@ -1,11 +1,15 @@
 extends Spatial
 
+export(NodePath) var view_button: NodePath
 export(NodePath) var handbrake_button: NodePath
 
-func _switch_view():
+func _ready():
+	get_node(view_button).select(Global.last_used_view)
+
+func _set_view(view: int):
 	var vehicle = get_vehicle()
 	if vehicle != null:
-		vehicle.switch_view()
+		vehicle.set_view(view)
 
 func _no_beam():
 	var vehicle = get_vehicle()

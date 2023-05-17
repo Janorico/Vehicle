@@ -113,8 +113,8 @@ func control_with_mouse():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	input_type = InputType.MOUSE
 
-func switch_view():
-	camera = (camera + 1) % 6
+func set_view(view: int):
+	camera = view
 	update_camera()
 	Global.last_used_view = camera
 	Global.save_last_states()

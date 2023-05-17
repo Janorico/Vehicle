@@ -2,7 +2,12 @@
 LIGHT_KEY,Light,Licht
 EXIT_GAME_KEY,Exit game,Spiel beenden
 WELCOME_TO_VEHICLE_KEY,Welcome to Vehicle!,Willkommen bei Vehicle!
-SWITCH_VIEW_KEY,Switch view,Ansicht wechseln
+WINDSCREEN_KEY,Windscreen,Windschutzscheibe
+LEFT_KEY,Left,Links
+RIGHT_KEY,Right,Rechts
+CENTER_KEY,Center,Mitte
+INTERPOLATED_KEY,Interpolated,Interpoliert
+FOLLOW_KEY,Follow,Folgend
 CAR_KEY,Car,Auto
 QUAD_BIKE_KEY,Quad bike,Quad
 TRUCK_KEY,Truck,LKW

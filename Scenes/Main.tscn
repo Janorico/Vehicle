@@ -93,6 +93,7 @@ script = ExtResource( 7 )
 
 [node name="Vehicles" type="Spatial" parent="."]
 script = ExtResource( 2 )
+view_button = NodePath("../Control/VBoxContainer/ViewOptionButton")
 handbrake_button = NodePath("../Control/VBoxContainer/HandbrakeButton")
 
 [node name="Sun" type="DirectionalLight" parent="."]
@@ -236,13 +237,15 @@ align = 1
 valign = 1
 script = ExtResource( 20 )
 
-[node name="SwitchViewButton" type="Button" parent="Control/VBoxContainer"]
+[node name="ViewOptionButton" type="OptionButton" parent="Control/VBoxContainer"]
 margin_top = 22.0
 margin_right = 127.0
 margin_bottom = 36.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "SWITCH_VIEW_KEY"
+text = "WINDSCREEN_KEY"
+items = [ "WINDSCREEN_KEY", null, false, 0, null, "LEFT_KEY", null, false, 1, null, "RIGHT_KEY", null, false, 2, null, "CENTER_KEY", null, false, 3, null, "INTERPOLATED_KEY", null, false, 4, null, "FOLLOW_KEY", null, false, 5, null ]
+selected = 0
 
 [node name="HandbrakeButton" type="Button" parent="Control/VBoxContainer"]
 margin_top = 40.0
@@ -650,7 +653,7 @@ value = 20.0
 
 [connection signal="setup_ready" from="." to="Control/DebugInfoPanel" method="set_vehicle"]
 [connection signal="setup_ready" from="." to="Control/SettingsDialog" method="_setup"]
-[connection signal="pressed" from="Control/VBoxContainer/SwitchViewButton" to="Vehicles" method="_switch_view"]
+[connection signal="item_selected" from="Control/VBoxContainer/ViewOptionButton" to="Vehicles" method="_set_view"]
 [connection signal="toggled" from="Control/VBoxContainer/HandbrakeButton" to="Vehicles" method="_handbreak_button_toggled"]
 [connection signal="pressed" from="Control/VBoxContainer/SettingsButton" to="Control/SettingsDialog" method="popup_centered"]
 [connection signal="pressed" from="Control/VBoxContainer/SendMessageButton" to="Control/Message" method="_send"]
