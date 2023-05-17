@@ -18,11 +18,15 @@ height = 0.04
 [node name="VehicleBody" parent="." index="0"]
 script = ExtResource( 2 )
 
-[node name="LeftMirrorPlaceHolder" type="Spatial" parent="VehicleBody" index="7"]
+[node name="LeftMirrorPlaceHolder" type="RemoteTransform" parent="VehicleBody" index="7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1, 0.4 )
+remote_path = NodePath("../LeftMirror/Viewport/Camera")
+update_scale = false
 
-[node name="RightMirrorPlaceHolder" type="Spatial" parent="VehicleBody" index="8"]
+[node name="RightMirrorPlaceHolder" type="RemoteTransform" parent="VehicleBody" index="8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1, 0.4 )
+remote_path = NodePath("../RightMirror/Viewport/Camera")
+update_scale = false
 
 [node name="LeftMirror" type="ViewportContainer" parent="VehicleBody" index="9"]
 anchor_top = 1.0

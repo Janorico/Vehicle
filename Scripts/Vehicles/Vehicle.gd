@@ -81,10 +81,6 @@ func _physics_process(delta):
 		if engine_force > 0.0 and backward_light_on == true:
 			update_backward_light_energy(false)
 			backward_light_on = false
-		$LeftMirror/Viewport/Camera.global_transform = $LeftMirrorPlaceHolder.global_transform
-		$RightMirror/Viewport/Camera.global_transform = $RightMirrorPlaceHolder.global_transform
-		$LeftMirror/Viewport/Camera.translation += (linear_velocity / 80)
-		$RightMirror/Viewport/Camera.translation += (linear_velocity / 80)
 
 func control_with_mouse():
 	.control_with_mouse()
