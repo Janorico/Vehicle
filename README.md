@@ -6,8 +6,7 @@ created with
 [Godot Engine (https://www.godotengine.org)](https://www.godotengine.org)
 and programmed by Janosch Lion.
 
-If you have a question, an error report or another issue,
-you can write an e-mail to [Janorico@posteo.de](mailto:Janorico@posteo.de)
+If you run into an issue, you can report it on [GitHub](https://github.com/Janorico/Vehicle/issues/new).
 
 Thanks to:
 
