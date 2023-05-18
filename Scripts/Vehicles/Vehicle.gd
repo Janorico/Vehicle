@@ -1,10 +1,12 @@
 class_name Vehicle extends VehicleBase
 
+
 var handbrake := false
 var braking := false
 var backward_light_on := false
 const SERCOMM = preload("res://bin/GDsercomm.gdns")
 onready var port = SERCOMM.new()
+onready var horn_sound: AudioStreamPlayer3D = $HornSound
 
 
 func _ready():
@@ -84,6 +86,16 @@ func _physics_process(delta):
 		if engine_force > 0.0 and backward_light_on == true:
 			update_backward_light_energy(false)
 			backward_light_on = false
+		# Horn
+		if Input.is_action_pressed("horn"):
+			if not horn_sound.playing:
+				horn_sound.play()
+				if not Net.is_offline:
+					rpc("update_horn", true)
+		elif horn_sound.playing:
+			horn_sound.stop()
+			if not Net.is_offline:
+				rpc("update_horn", false)
 
 func control_with_mouse():
 	.control_with_mouse()
@@ -114,6 +126,15 @@ func set_engine_force_value(value):
 
 
 func get_power(): return engine_force
+
+
+remote func update_horn(horning: bool):
+	if horning:
+		if not horn_sound.playing:
+			horn_sound.play()
+	elif horn_sound.playing:
+		horn_sound.stop()
+
 
 func accelerate(value: float):
 	# Increase engine force at low speeds to make the initial acceleration faster.
