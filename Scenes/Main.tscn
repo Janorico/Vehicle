@@ -652,6 +652,7 @@ min_value = 1.0
 value = 20.0
 
 [connection signal="setup_ready" from="." to="Control/DebugInfoPanel" method="set_vehicle"]
+[connection signal="setup_ready" from="." to="Control/VBoxContainer/Map" method="_initialize"]
 [connection signal="setup_ready" from="." to="Control/SettingsDialog" method="_setup"]
 [connection signal="item_selected" from="Control/VBoxContainer/ViewOptionButton" to="Vehicles" method="_set_view"]
 [connection signal="toggled" from="Control/VBoxContainer/HandbrakeButton" to="Vehicles" method="_handbreak_button_toggled"]

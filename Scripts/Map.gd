@@ -1,6 +1,7 @@
 extends Control
 
 
+var ready_to_draw: bool = false
 var map_texture: Texture
 var map_divider: float
 var map_size: Vector2 = Vector2.ZERO
@@ -8,22 +9,17 @@ var center_x: float
 var center_y: float
 
 
-func _ready():
-	if not Global.setted_up_bool and not Net.is_offline and not Net.is_host:
-		yield(Global, "setted_up")
+func _initialize():
 	map_texture = load(Global.get_map_path())
 	map_divider = Global.get_map_divider()
 	map_size = map_texture.get_size()
 	center_x = (map_size.x / 2)
 	center_y = ((map_size.y / 2))
+	ready_to_draw = true
 
 
 func _process(_delta):
 	update()
-
-
-func get_vehicle():
-	return get_vehicles_node().get_vehicle()
 
 
 func get_vehicles():
@@ -35,10 +31,12 @@ func get_vehicles_node():
 
 
 func _draw():
+	if not ready_to_draw:
+		return
 	draw_rect(Rect2(0, 0, map_size.x, map_size.y), Color.black)
 	draw_texture(map_texture, Vector2(0, 0))
 	if Net.is_offline:
-		draw_circle(get_circle_position(get_vehicle().translation), 3, Color.red)
+		draw_circle(get_circle_position(get_vehicles_node().get_vehicle().translation), 3, Color.red)
 	else:
 		for vehicle in get_vehicles():
 			vehicle = vehicle.get_child(0)
