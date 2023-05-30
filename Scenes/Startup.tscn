@@ -329,7 +329,7 @@ margin_bottom = 86.0
 margin_top = 90.0
 margin_right = 214.0
 margin_bottom = 104.0
-text = "11.0.0.0"
+text = "12.0.0.0"
 align = 1
 
 [node name="HSeparator3" type="HSeparator" parent="Page/OptionsAndButtons/Buttons"]

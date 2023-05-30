@@ -40,7 +40,7 @@ func check_for_updates():
 func _update_check_completed(result: int, _response_code: int, _headers: PoolStringArray, body: PoolByteArray):
 	if result == HTTPRequest.RESULT_SUCCESS:
 		update_data = parse_json(body.get_string_from_utf8())
-		if int(update_data["newest_version_key"]) > 11000:
+		if int(update_data["newest_version_key"]) > 12000:
 			$UpdateDialog.popup_centered()
 	else:
 		$UpdateUnsuccessDialog.dialog_text += str(result)
