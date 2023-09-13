@@ -1,4 +1,4 @@
-[gd_scene load_steps=159 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Worlds/GridMapWorld/GeneralLandscapeMeshs.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://Scenes/Silo/SiloWithConstruction.tscn" type="PackedScene" id=2]
@@ -18,15 +18,20 @@ script = ExtResource( 8 )
 __meta__ = {
 "class": "Greenhouse_LODVariant"
 }
+mesh = ExtResource( 7 )
 spawned_spatial = ExtResource( 3 )
 cast_shadow = 1
 
-[sub_resource type="Resource" id=215]
+[sub_resource type="Resource" id=290]
+resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource( 12 )
 __meta__ = {
 "class": "MMIOctreeNode"
 }
+member_origin_offsets = PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+member_surface_normals = PoolVector3Array( 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0 )
+member_octants = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 0, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 )
 child_nodes = [  ]
 max_members = 75
 min_leaf_extent = 1.0
@@ -39,17 +44,15 @@ max_bounds_to_center_dist = 443.405
 min_bounds_to_center_dist = 256.0
 active_LOD_index = 0
 MMI_name = "MultiMeshInstance"
-member_origin_offsets = PoolRealArray( 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 )
-member_surface_normals = PoolVector3Array( 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0 )
-member_octants = PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 0, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 )
 
-[sub_resource type="Resource" id=216]
+[sub_resource type="Resource" id=291]
+resource_local_to_scene = true
 resource_name = "MMIOctreeManager"
 script = ExtResource( 10 )
 __meta__ = {
 "class": "MMIOctreeManager"
 }
-root_octree_node = SubResource( 215 )
+root_octree_node = SubResource( 290 )
 LOD_variants = [ SubResource( 22 ) ]
 LOD_max_distance = 10.0
 LOD_kill_distance = -1.0
@@ -60,15 +63,20 @@ script = ExtResource( 8 )
 __meta__ = {
 "class": "Greenhouse_LODVariant"
 }
+mesh = ExtResource( 6 )
 spawned_spatial = ExtResource( 4 )
 cast_shadow = 1
 
-[sub_resource type="Resource" id=286]
+[sub_resource type="Resource" id=292]
+resource_local_to_scene = true
 resource_name = "MMIOctreeNode"
 script = ExtResource( 12 )
 __meta__ = {
 "class": "MMIOctreeNode"
 }
+member_origin_offsets = PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+member_surface_normals = PoolVector3Array( 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0 )
+member_octants = PoolByteArray( 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 4, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 )
 child_nodes = [  ]
 max_members = 75
 min_leaf_extent = 1.0
@@ -81,17 +89,15 @@ max_bounds_to_center_dist = 443.405
 min_bounds_to_center_dist = 256.0
 active_LOD_index = 0
 MMI_name = "MultiMeshInstance2"
-member_origin_offsets = PoolRealArray( 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 )
-member_surface_normals = PoolVector3Array( 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0 )
-member_octants = PoolByteArray( 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 4, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 )
 
-[sub_resource type="Resource" id=287]
+[sub_resource type="Resource" id=293]
+resource_local_to_scene = true
 resource_name = "MMIOctreeManager"
 script = ExtResource( 10 )
 __meta__ = {
 "class": "MMIOctreeManager"
 }
-root_octree_node = SubResource( 286 )
+root_octree_node = SubResource( 292 )
 LOD_variants = [ SubResource( 145 ) ]
 LOD_max_distance = 10.0
 LOD_kill_distance = -1.0
@@ -99,11 +105,13 @@ LOD_kill_distance = -1.0
 [sub_resource type="MultiMesh" id=288]
 transform_format = 1
 instance_count = 69
+mesh = ExtResource( 6 )
 transform_array = PoolVector3Array( 0.079552, 0, 1.3725, 0, 1.37481, 0, -1.3725, 0, 0.079552, 9.7085, 7.62939e-06, -61.084, -0.289559, 0, 0.809018, 0, 0.859276, 0, -0.809018, 0, -0.289559, -48.0657, 7.62939e-06, 2.41628, 0.22258, 0, 0.920061, 0, 0.946601, 0, -0.920061, 0, 0.22258, -6.32997, 7.62939e-06, 17.7926, 0.979654, 0, 0.146022, 0, 0.990476, 0, -0.146022, 0, 0.979654, 6.70331, 7.62939e-06, -19.6963, -0.681762, 0, 1.07835, 0, 1.27579, 0, -1.07835, 0, -0.681762, 15.0505, 7.62939e-06, -3.14849, -0.777637, 0, -0.710911, 0, 1.05362, 0, 0.710911, 0, -0.777637, 14.1718, 7.62939e-06, -13.2529, -0.191711, 0, -0.596108, 0, 0.626177, 0, 0.596108, 0, -0.191711, 28.523, 7.62939e-06, -1.97696, 0.00695598, 0, -1.27935, 0, 1.27937, 0, 1.27935, 0, 0.00695598, 22.519, 7.62939e-06, -7.83461, -0.314395, 0, -0.600181, 0, 0.677541, 0, 0.600181, 0, -0.314395, 26.4729, 7.62939e-06, -20.1357, 0.865448, 0, 0.646684, 0, 1.08037, 0, -0.646684, 0, 0.865448, 19.0044, 7.62939e-06, -21.3072, -0.670753, 0, -0.545619, 0, 0.864644, 0, 0.545619, 0, -0.670753, 13.7325, 7.62939e-06, -21.0143, 0.53852, 0, 0.313874, 0, 0.623314, 0, -0.313874, 0, 0.53852, 21.6403, 7.62939e-06, -15.8889, 0.501885, 0, 0.51585, 0, 0.719715, 0, -0.51585, 0, 0.501885, 20.2523, 7.62939e-06, -61.8162, -1.06571, 0, 0.430341, 0, 1.14932, 0, -0.430341, 0, -1.06571, 10.4407, 7.62939e-06, -50.5403, -0.131886, 0, 1.04216, 0, 1.05047, 0, -1.04216, 0, -0.131886, 6.77967, 7.62939e-06, -43.804, -0.67624, 0, -0.0764965, 0, 0.680553, 0, 0.0764965, 0, -0.67624, 7.07255, 7.62939e-06, -38.9714, -0.14802, 0, 0.711491, 0, 0.726725, 0, -0.711491, 0, -0.14802, 6.77967, 7.62939e-06, -29.1598, 0.796047, 0, -0.507431, 0, 0.944021, 0, 0.507431, 0, 0.796047, 27.8672, 7.62939e-06, -29.7456, -0.959754, 0, -0.167553, 0, 0.97427, 0, 0.167553, 0, -0.959754, 20.5451, 7.62939e-06, -27.549, -0.532765, 0, -0.471323, 0, 0.711325, 0, 0.471323, 0, -0.532765, 14.6875, 7.62939e-06, -35.8961, 0.0342906, 0, 0.619703, 0, 0.620651, 0, -0.619703, 0, 0.0342906, 31.5282, 7.62939e-06, -62.1091, -1.24738, 0, -0.577026, 0, 1.37438, 0, 0.577026, 0, -1.24738, 40.0218, 7.62939e-06, -62.6949, -1.11732, 0, 0.473056, 0, 1.21334, 0, -0.473056, 0, -1.11732, 49.9798, 7.62939e-06, -62.9878, -0.551395, 0, 1.04677, 0, 1.18312, 0, -1.04677, 0, -0.551395, 57.8877, 7.62939e-06, -63.5735, 0.0772714, 0, -0.792816, 0, 0.796572, 0, 0.792816, 0, 0.0772714, 63.1595, 7.62939e-06, -55.0799, -0.390898, 0, -0.775641, 0, 0.868573, 0, 0.775641, 0, -0.390898, 63.1595, 7.62939e-06, -48.4901, 0.392719, 0, 0.955454, 0, 1.03302, 0, -0.955454, 0, 0.392719, 53.2015, 7.62939e-06, -42.9253, -0.748604, 0, 0.320684, 0, 0.814399, 0, -0.320684, 0, -0.748604, 52.3229, 7.62939e-06, -55.2264, 0.690025, 0, -0.124698, 0, 0.701202, 0, 0.124698, 0, 0.690025, 47.051, 7.62939e-06, -48.6365, -0.194759, 0, -0.775476, 0, 0.799558, 0, 0.775476, 0, -0.194759, 41.4862, 7.62939e-06, -43.2182, 0.165521, 0, 0.579666, 0, 0.602835, 0, -0.579666, 0, 0.165521, 30.5031, 7.62939e-06, -43.804, 0.234612, 0, 1.0872, 0, 1.11223, 0, -1.0872, 0, 0.234612, 25.9635, 7.62939e-06, -37.2141, 0.00720345, 0, -0.839331, 0, 0.839362, 0, 0.839331, 0, 0.00720345, 19.9594, 7.62939e-06, -41.7538, -0.314981, 0, -1.19921, 0, 1.23989, 0, 1.19921, 0, -0.314981, 19.3736, 7.62939e-06, -54.4942, 0.900124, 0, 0.946459, 0, 1.30614, 0, -0.946459, 0, 0.900124, 30.2103, 7.62939e-06, -52.8833, 0.796022, 0, 0.300624, 0, 0.850897, 0, -0.300624, 0, 0.796022, 38.7039, 7.62939e-06, -53.9084, -0.724229, 0, -0.397222, 0, 0.826011, 0, 0.397222, 0, -0.724229, 12.0516, 7.62939e-06, -43.2182, 0.432614, 0, -0.714706, 0, 0.83544, 0, 0.714706, 0, 0.432614, 7.219, 7.62939e-06, -54.6406, 0.890907, 0, 0.490698, 0, 1.0171, 0, -0.490698, 0, 0.890907, 25.5241, 7.62939e-06, -47.9043, 0.782316, 0, 0.0913841, 0, 0.787636, 0, -0.0913841, 0, 0.782316, 35.3357, 7.62939e-06, -48.1972, 0.430967, 0, 0.425871, 0, 0.605887, 0, -0.425871, 0, 0.430967, 45.5866, 7.62939e-06, -56.105, -0.695175, 0, -0.263835, 0, 0.743557, 0, 0.263835, 0, -0.695175, 54.666, 7.62939e-06, -48.4901, -1.01044, 0, -0.237563, 0, 1.03799, 0, 0.237563, 0, -1.01044, 59.645, 7.62939e-06, -41.0216, -0.39037, 0, 1.01675, 0, 1.08912, 0, -1.01675, 0, -0.39037, -43.5221, 7.62939e-06, 45.1571, 0.0514228, 0, -0.947803, 0, 0.949197, 0, 0.947803, 0, 0.0514228, -26.0486, 7.62939e-06, 50.9079, 0.184545, 0, 1.01489, 0, 1.03153, 0, -1.01489, 0, 0.184545, -34.0112, 7.62939e-06, 56.2162, 0.544008, 0, -0.335296, 0, 0.639037, 0, 0.335296, 0, 0.544008, -32.2417, 7.62939e-06, 67.7177, 1.01575, 0, -0.399689, 0, 1.09156, 0, 0.399689, 0, 1.01575, -23.6156, 7.62939e-06, 71.699, 0.423304, 0, 0.659718, 0, 0.783846, 0, -0.659718, 0, 0.423304, -24.058, 7.62939e-06, 84.7488, -0.626867, 0, -1.16066, 0, 1.31913, 0, 1.16066, 0, -0.626867, -24.2792, 7.62939e-06, 97.5774, 0.481194, 0, -0.457591, 0, 0.664031, 0, 0.457591, 0, 0.481194, -34.0112, 7.62939e-06, 95.5867, -0.0423949, 0, 1.21524, 0, 1.21598, 0, -1.21524, 0, -0.0423949, -45.7339, 7.62939e-06, 84.5276, -0.0348917, 0, 1.10434, 0, 1.10489, 0, -1.10434, 0, -0.0348917, -37.7713, 7.62939e-06, 87.1818, -0.711576, 0, -0.722325, 0, 1.01395, 0, 0.722325, 0, -0.711576, -28.0393, 7.62939e-06, 90.4995, -1.10445, 0, 0.162264, 0, 1.11631, 0, -0.162264, 0, -1.10445, -38.656, 7.62939e-06, 72.1414, 0.921692, 0, 0.63928, 0, 1.12169, 0, -0.63928, 0, 0.921692, -37.7713, 7.62939e-06, 27.6837, -0.259135, 0, -0.606296, 0, 0.659352, 0, 0.606296, 0, -0.259135, -26.491, 7.62939e-06, 28.5684, 0.163547, 0, -0.851575, 0, 0.867138, 0, 0.851575, 0, 0.163547, -35.3383, 7.62939e-06, 35.8674, 0.293234, 0, -0.627588, 0, 0.692714, 0, 0.627588, 0, 0.293234, -34.6748, 7.62939e-06, 45.3783, 0.000651839, 0, -0.654824, 0, 0.654824, 0, 0.654824, 0, 0.000651839, -37.7713, 7.62939e-06, 2.2477, -0.605742, 0, -0.0261721, 0, 0.606307, 0, 0.0261721, 0, -0.605742, -25.8275, 7.62939e-06, 2.46888, 0.132487, 0, 1.26157, 0, 1.2685, 0, -1.26157, 0, 0.132487, -11.893, 7.62939e-06, 2.69007, 1.07201, 0, 0.584501, 0, 1.221, 0, -0.584501, 0, 1.07201, -16.3166, 7.62939e-06, 15.7398, -0.305869, 0, 0.541963, 0, 0.622318, 0, -0.541963, 0, -0.305869, -36.8866, 7.62939e-06, 16.1822, 1.22254, 0, -0.28857, 0, 1.25614, 0, 0.28857, 0, 1.22254, -46.8398, 7.62939e-06, 13.9704, 0.468071, 0, 0.800516, 0, 0.927317, 0, -0.800516, 0, 0.468071, -22.2885, 7.62939e-06, 33.2133, 0.109668, 0, 0.736373, 0, 0.744494, 0, -0.736373, 0, 0.109668, -23.8368, 7.62939e-06, 19.0576, 0.253869, 0, 0.928522, 0, 0.962602, 0, -0.928522, 0, 0.253869, -45.9551, 7.62939e-06, 52.8985, -0.544655, 0, -0.937773, 0, 1.08447, 0, 0.937773, 0, -0.544655, -47.5033, 7.62939e-06, 67.7177 )
 
 [sub_resource type="MultiMesh" id=289]
 transform_format = 1
 instance_count = 69
+mesh = ExtResource( 7 )
 transform_array = PoolVector3Array( 0.891089, 0, 0.638589, 0, 1.09628, 0, -0.638589, 0, 0.891089, -37.6485, 7.62939e-06, 51.3889, 0.257927, 0, 1.23783, 0, 1.26441, 0, -1.23783, 0, 0.257927, -31.1358, 7.62939e-06, 78.1133, 0.238126, 0, 0.771033, 0, 0.806967, 0, -0.771033, 0, 0.238126, -43.0797, 7.62939e-06, 94.9232, -0.37155, 0, -1.17578, 0, 1.23309, 0, 1.17578, 0, -0.37155, -30.9147, 7.62939e-06, 9.32554, -0.706586, 0, -1.19191, 0, 1.38561, 0, 1.19191, 0, -0.706586, -43.7432, 7.62939e-06, 23.7024, 0.511127, 0, 1.22048, 0, 1.32318, 0, -1.22048, 0, 0.511127, -28.0393, 7.62939e-06, 39.6276, -0.153905, 0, -1.07738, 0, 1.08832, 0, 1.07738, 0, -0.153905, -41.9738, 7.62939e-06, 36.0886, -0.617213, 0, -0.2615, 0, 0.670324, 0, 0.2615, 0, -0.617213, -24.7215, 7.62939e-06, 61.967, 0.0200388, 0, 0.702521, 0, 0.702807, 0, -0.702521, 0, 0.0200388, -44.628, 7.62939e-06, 76.565, 1.17143, 0, -0.122329, 0, 1.1778, 0, 0.122329, 0, 1.17143, -43.7432, 7.62939e-06, 61.0823, -0.901207, 0, -0.364742, 0, 0.97222, 0, 0.364742, 0, -0.901207, -29.8087, 7.62939e-06, 21.2694, -1.07686, 0, -0.681232, 0, 1.27424, 0, 0.681232, 0, -1.07686, -19.192, 7.62939e-06, 11.3162, -0.839077, 0, 0.248088, 0, 0.874984, 0, -0.248088, 0, -0.839077, -40.6467, 7.62939e-06, 11.9797, -0.885008, 0, -0.332095, 0, 0.945265, 0, 0.332095, 0, -0.885008, 14.2939, 7.62939e-06, 58.638, -0.905417, 0, -0.357901, 0, 0.973587, 0, 0.357901, 0, -0.905417, 14.8558, 7.62939e-06, 65.84, -0.647321, 0, -1.13355, 0, 1.30536, 0, 1.13355, 0, -0.647321, 42.3961, 7.62939e-06, 62.0205, -0.676759, 0, -0.353916, 0, 0.763714, 0, 0.353916, 0, -0.676759, 27.3193, 7.62939e-06, 59.2062, -0.956287, 0, -0.474159, 0, 1.06739, 0, 0.474159, 0, -0.956287, 19.4793, 7.62939e-06, 72.0717, -0.875526, 0, -0.451861, 0, 0.985254, 0, 0.451861, 0, -0.875526, 26.9172, 7.62939e-06, 71.2676, -0.0761177, 0, -1.01771, 0, 1.02055, 0, 1.01771, 0, -0.0761177, 33.7521, 7.62939e-06, 65.2369, -0.560149, 0, -0.443504, 0, 0.714467, 0, 0.443504, 0, -0.560149, 38.9787, 7.62939e-06, 72.2728, 0.950613, 0, 0.00681771, 0, 0.950638, 0, -0.00681771, 0, 0.950613, 53.0504, 7.62939e-06, 59.6082, -1.11111, 0, -0.397671, 0, 1.18013, 0, 0.397671, 0, -1.11111, 52.4474, 7.62939e-06, 66.6441, 0.718052, 0, 1.04644, 0, 1.26911, 0, -1.04644, 0, 0.718052, 45.6125, 7.62939e-06, 72.2728, 0.9896, 0, -0.439001, 0, 1.0826, 0, 0.439001, 0, 0.9896, 62.6996, 7.62939e-06, 57.799, 0.667805, 0, 0.316299, 0, 0.738924, 0, -0.316299, 0, 0.667805, 73.756, 7.62939e-06, 56.9949, 0.141867, 0, -1.14989, 0, 1.15861, 0, 1.14989, 0, 0.141867, 81.7969, 7.62939e-06, 56.5928, 0.172194, 0, -1.38446, 0, 1.39513, 0, 1.38446, 0, 0.172194, 82.601, 7.62939e-06, 73.0768, 0.119797, 0, 1.33995, 0, 1.3453, 0, -1.33995, 0, 0.119797, 73.1529, 7.62939e-06, 70.8656, -1.02106, 0, -0.612867, 0, 1.19087, 0, 0.612867, 0, -1.02106, 61.0914, 7.62939e-06, 70.0615, -0.00338296, 0, 0.906836, 0, 0.906842, 0, -0.906836, 0, -0.00338296, 67.3232, 7.62939e-06, 62.8246, 0.360855, 0, 1.13749, 0, 1.19335, 0, -1.13749, 0, 0.360855, 73.957, 7.62939e-06, 62.8246, 0.370302, 0, 0.754314, 0, 0.840306, 0, -0.754314, 0, 0.370302, 80.7918, 7.62939e-06, 63.2267, -1.21214, 0, 0.380565, 0, 1.27048, 0, -0.380565, 0, -1.21214, 21.0875, 7.62939e-06, 63.6287, 0.463068, 0, 0.832128, 0, 0.952297, 0, -0.832128, 0, 0.463068, 34.5562, 7.62939e-06, 58.201, -0.728355, 0, -0.628897, 0, 0.962295, 0, 0.628897, 0, -0.728355, 34.5562, 7.62939e-06, 69.4584, -0.0339625, 0, 1.21131, 0, 1.21178, 0, -1.21131, 0, -0.0339625, 28.7772, 7.62939e-06, 64.4123, 0.978392, 0, -0.834011, 0, 1.28562, 0, 0.834011, 0, 0.978392, 18.6004, 7.62939e-06, 57.2885, -0.871185, 0, 0.18026, 0, 0.889639, 0, -0.18026, 0, -0.871185, 47.9098, 7.62939e-06, 56.4743, -0.223248, 0, 0.717316, 0, 0.751253, 0, -0.717316, 0, -0.223248, 59.5289, 7.62939e-06, 63.6967, 1.09149, 0, -0.300998, 0, 1.13224, 0, 0.300998, 0, 1.09149, 91.9289, 7.62939e-06, 72.9079, -0.548299, 0, 0.451467, 0, 0.710249, 0, -0.451467, 0, -0.548299, 91.6942, 7.62939e-06, 58.1204, -0.203353, 0, 0.851001, 0, 0.87496, 0, -0.851001, 0, -0.203353, 91.9289, 7.62939e-06, 64.2232, 0.0976704, 0, -1.24652, 0, 1.25034, 0, 1.24652, 0, 0.0976704, 103.9, 7.62939e-06, 58.3551, 0.993442, 0, 0.384216, 0, 1.06515, 0, -0.384216, 0, 0.993442, 98.5011, 7.62939e-06, 62.3454, 0.21214, 0, 0.61502, 0, 0.650578, 0, -0.61502, 0, 0.21214, 100.144, 7.62939e-06, 69.3871, -0.676928, 0, 0.139172, 0, 0.691086, 0, -0.139172, 0, -0.676928, 113.523, 7.62939e-06, 65.1621, 0.631823, 0, 0.313217, 0, 0.705199, 0, -0.313217, 0, 0.631823, 107.421, 7.62939e-06, 63.2843, 0.306166, 0, 0.553048, 0, 0.632139, 0, -0.553048, 0, 0.306166, 107.421, 7.62939e-06, 67.744, 0.525933, 0, 0.394296, 0, 0.657324, 0, -0.394296, 0, 0.525933, 113.523, 7.62939e-06, 71.7343, -0.0279448, 0, -0.96716, 0, 0.967563, 0, 0.96716, 0, -0.0279448, 112.115, 7.62939e-06, 58.5899, -0.425704, 0, -0.936806, 0, 1.02899, 0, 0.936806, 0, -0.425704, 121.973, 7.62939e-06, 55.3038, -0.00619251, 0, 0.600013, 0, 0.600045, 0, -0.600013, 0, -0.00619251, 122.912, 7.62939e-06, 64.4579, 0.688471, 0, -0.203644, 0, 0.717958, 0, 0.203644, 0, 0.688471, 127.19, 7.62939e-06, 72.9009, 0.922849, 0, 0.156403, 0, 0.936009, 0, -0.156403, 0, 0.922849, 120.525, 7.62939e-06, 72.3882, 1.04405, 0, 0.81396, 0, 1.32385, 0, -0.81396, 0, 1.04405, 116.551, 7.62939e-06, 61.6209, -0.55404, 0, 0.395191, 0, 0.680541, 0, -0.395191, 0, -0.55404, 119.115, 7.62939e-06, 43.2909, -0.871987, 0, -0.680805, 0, 1.10628, 0, 0.680805, 0, -0.871987, 125.139, 7.62939e-06, 44.7009, 1.34579, 0, -0.212617, 0, 1.36248, 0, 0.212617, 0, 1.34579, 128.344, 7.62939e-06, 50.3409, 0.0735293, 0, -1.10251, 0, 1.10496, 0, 1.10251, 0, 0.0735293, 117.961, 7.62939e-06, 49.5718, 0.441703, 0, 0.789688, 0, 0.904825, 0, -0.789688, 0, 0.441703, 128.985, 7.62939e-06, 59.9545, 0.410648, 0, 0.661307, 0, 0.778434, 0, -0.661307, 0, 0.410648, 117.978, 7.62939e-06, 34.47, -0.430419, 0, 0.663256, 0, 0.790677, 0, -0.663256, 0, -0.430419, 127.207, 7.62939e-06, 36.3927, 1.20891, 0, -0.081205, 0, 1.21164, 0, 0.081205, 0, 1.20891, 123.105, 7.62939e-06, 31.1373, -0.284076, 0, -0.789023, 0, 0.838604, 0, 0.789023, 0, -0.284076, 128.361, 7.62939e-06, 27.2918, 0.772754, 0, 0.549761, 0, 0.948359, 0, -0.549761, 0, 0.772754, 116.696, 7.62939e-06, 21.5236, -0.175032, 0, 1.09064, 0, 1.10459, 0, -1.09064, 0, -0.175032, 127.464, 7.62939e-06, 21.2673, -0.0920108, 0, -0.753683, 0, 0.759279, 0, 0.753683, 0, -0.0920108, 121.567, 7.62939e-06, 25.2409, 0.011487, 0, -0.781087, 0, 0.781172, 0, 0.781087, 0, 0.011487, 115.799, 7.62939e-06, 28.5736 )
 
 [node name="GridMapWorld" type="GridMap"]
@@ -131,6 +139,7 @@ __meta__ = {
 }
 file_management/garden_work_directory = "res://SpatialGardenerWorkDirectory/"
 gardening/gardening_collision_mask = 1.0
+plugin_version = "1.2.0"
 storage_version = 2
 
 [node name="Arborist" type="Spatial" parent="Gardener"]
@@ -138,564 +147,426 @@ script = ExtResource( 11 )
 __meta__ = {
 "class": "Arborist"
 }
-octree_managers = [ SubResource( 216 ), SubResource( 287 ) ]
+octree_managers = [ SubResource( 291 ), SubResource( 293 ) ]
 
 [node name="MMI_container" type="Spatial" parent="Gardener/Arborist"]
 
 [node name="MultiMeshInstance2" type="MultiMeshInstance" parent="Gardener/Arborist/MMI_container"]
 multimesh = SubResource( 288 )
 
-[node name="DecidousTree" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.079552, 0, 1.3725, 0, 1.37481, 0, -1.3725, 0, 0.079552, 9.7085, 7.62939e-06, -61.084 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree2" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree2" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.289559, 0, 0.809018, 0, 0.859276, 0, -0.809018, 0, -0.289559, -48.0657, 7.62939e-06, 2.41628 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree3" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree3" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.22258, 0, 0.920061, 0, 0.946601, 0, -0.920061, 0, 0.22258, -6.32997, 7.62939e-06, 17.7926 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree4" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree4" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.979654, 0, 0.146022, 0, 0.990476, 0, -0.146022, 0, 0.979654, 6.70331, 7.62939e-06, -19.6963 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree5" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree5" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.681762, 0, 1.07835, 0, 1.27579, 0, -1.07835, 0, -0.681762, 15.0505, 7.62939e-06, -3.14849 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree6" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree6" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.777637, 0, -0.710911, 0, 1.05362, 0, 0.710911, 0, -0.777637, 14.1718, 7.62939e-06, -13.2529 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree7" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree7" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.191711, 0, -0.596108, 0, 0.626177, 0, 0.596108, 0, -0.191711, 28.523, 7.62939e-06, -1.97696 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree8" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree8" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.00695598, 0, -1.27935, 0, 1.27937, 0, 1.27935, 0, 0.00695598, 22.519, 7.62939e-06, -7.83461 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree9" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree9" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.314395, 0, -0.600181, 0, 0.677541, 0, 0.600181, 0, -0.314395, 26.4729, 7.62939e-06, -20.1357 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree10" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree10" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.865448, 0, 0.646684, 0, 1.08037, 0, -0.646684, 0, 0.865448, 19.0044, 7.62939e-06, -21.3072 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree11" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree11" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.670753, 0, -0.545619, 0, 0.864644, 0, 0.545619, 0, -0.670753, 13.7325, 7.62939e-06, -21.0143 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree12" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree12" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.53852, 0, 0.313874, 0, 0.623314, 0, -0.313874, 0, 0.53852, 21.6403, 7.62939e-06, -15.8889 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree13" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree13" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.501885, 0, 0.51585, 0, 0.719715, 0, -0.51585, 0, 0.501885, 20.2523, 7.62939e-06, -61.8162 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree14" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree14" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -1.06571, 0, 0.430341, 0, 1.14932, 0, -0.430341, 0, -1.06571, 10.4407, 7.62939e-06, -50.5403 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree15" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree15" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.131886, 0, 1.04216, 0, 1.05047, 0, -1.04216, 0, -0.131886, 6.77967, 7.62939e-06, -43.804 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree16" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree16" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.67624, 0, -0.0764965, 0, 0.680553, 0, 0.0764965, 0, -0.67624, 7.07255, 7.62939e-06, -38.9714 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree17" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree17" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.14802, 0, 0.711491, 0, 0.726725, 0, -0.711491, 0, -0.14802, 6.77967, 7.62939e-06, -29.1598 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree18" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree18" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.796047, 0, -0.507431, 0, 0.944021, 0, 0.507431, 0, 0.796047, 27.8672, 7.62939e-06, -29.7456 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree19" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree19" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.959754, 0, -0.167553, 0, 0.97427, 0, 0.167553, 0, -0.959754, 20.5451, 7.62939e-06, -27.549 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree20" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree20" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.532765, 0, -0.471323, 0, 0.711325, 0, 0.471323, 0, -0.532765, 14.6875, 7.62939e-06, -35.8961 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree21" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree21" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.0342906, 0, 0.619703, 0, 0.620651, 0, -0.619703, 0, 0.0342906, 31.5282, 7.62939e-06, -62.1091 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree22" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree22" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -1.24738, 0, -0.577026, 0, 1.37438, 0, 0.577026, 0, -1.24738, 40.0218, 7.62939e-06, -62.6949 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree23" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree23" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -1.11732, 0, 0.473056, 0, 1.21334, 0, -0.473056, 0, -1.11732, 49.9798, 7.62939e-06, -62.9878 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree24" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree24" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.551395, 0, 1.04677, 0, 1.18312, 0, -1.04677, 0, -0.551395, 57.8877, 7.62939e-06, -63.5735 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree25" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree25" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.0772714, 0, -0.792816, 0, 0.796572, 0, 0.792816, 0, 0.0772714, 63.1595, 7.62939e-06, -55.0799 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree26" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree26" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.390898, 0, -0.775641, 0, 0.868573, 0, 0.775641, 0, -0.390898, 63.1595, 7.62939e-06, -48.4901 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree27" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree27" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.392719, 0, 0.955454, 0, 1.03302, 0, -0.955454, 0, 0.392719, 53.2015, 7.62939e-06, -42.9253 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree28" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree28" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.748604, 0, 0.320684, 0, 0.814399, 0, -0.320684, 0, -0.748604, 52.3229, 7.62939e-06, -55.2264 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree29" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree29" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.690025, 0, -0.124698, 0, 0.701202, 0, 0.124698, 0, 0.690025, 47.051, 7.62939e-06, -48.6365 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree30" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree30" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.194759, 0, -0.775476, 0, 0.799558, 0, 0.775476, 0, -0.194759, 41.4862, 7.62939e-06, -43.2182 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree31" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree31" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.165521, 0, 0.579666, 0, 0.602835, 0, -0.579666, 0, 0.165521, 30.5031, 7.62939e-06, -43.804 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree32" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree32" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.234612, 0, 1.0872, 0, 1.11223, 0, -1.0872, 0, 0.234612, 25.9635, 7.62939e-06, -37.2141 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree33" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree33" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.00720345, 0, -0.839331, 0, 0.839362, 0, 0.839331, 0, 0.00720345, 19.9594, 7.62939e-06, -41.7538 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree34" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree34" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.314981, 0, -1.19921, 0, 1.23989, 0, 1.19921, 0, -0.314981, 19.3736, 7.62939e-06, -54.4942 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree35" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree35" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.900124, 0, 0.946459, 0, 1.30614, 0, -0.946459, 0, 0.900124, 30.2103, 7.62939e-06, -52.8833 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree36" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree36" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.796022, 0, 0.300624, 0, 0.850897, 0, -0.300624, 0, 0.796022, 38.7039, 7.62939e-06, -53.9084 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree37" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree37" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.724229, 0, -0.397222, 0, 0.826011, 0, 0.397222, 0, -0.724229, 12.0516, 7.62939e-06, -43.2182 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree38" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree38" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.432614, 0, -0.714706, 0, 0.83544, 0, 0.714706, 0, 0.432614, 7.219, 7.62939e-06, -54.6406 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree39" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree39" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.890907, 0, 0.490698, 0, 1.0171, 0, -0.490698, 0, 0.890907, 25.5241, 7.62939e-06, -47.9043 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree40" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree40" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.782316, 0, 0.0913841, 0, 0.787636, 0, -0.0913841, 0, 0.782316, 35.3357, 7.62939e-06, -48.1972 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree41" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree41" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.430967, 0, 0.425871, 0, 0.605887, 0, -0.425871, 0, 0.430967, 45.5866, 7.62939e-06, -56.105 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree42" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree42" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.695175, 0, -0.263835, 0, 0.743557, 0, 0.263835, 0, -0.695175, 54.666, 7.62939e-06, -48.4901 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree43" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree43" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -1.01044, 0, -0.237563, 0, 1.03799, 0, 0.237563, 0, -1.01044, 59.645, 7.62939e-06, -41.0216 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree44" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree44" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.39037, 0, 1.01675, 0, 1.08912, 0, -1.01675, 0, -0.39037, -43.5221, 7.62939e-06, 45.1571 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree45" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree45" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.0514228, 0, -0.947803, 0, 0.949197, 0, 0.947803, 0, 0.0514228, -26.0486, 7.62939e-06, 50.9079 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree46" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree46" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.184545, 0, 1.01489, 0, 1.03153, 0, -1.01489, 0, 0.184545, -34.0112, 7.62939e-06, 56.2162 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree47" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree47" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.544008, 0, -0.335296, 0, 0.639037, 0, 0.335296, 0, 0.544008, -32.2417, 7.62939e-06, 67.7177 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree48" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree48" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 1.01575, 0, -0.399689, 0, 1.09156, 0, 0.399689, 0, 1.01575, -23.6156, 7.62939e-06, 71.699 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree49" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree49" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.423304, 0, 0.659718, 0, 0.783846, 0, -0.659718, 0, 0.423304, -24.058, 7.62939e-06, 84.7488 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree50" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree50" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.626867, 0, -1.16066, 0, 1.31913, 0, 1.16066, 0, -0.626867, -24.2792, 7.62939e-06, 97.5774 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree51" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree51" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.481194, 0, -0.457591, 0, 0.664031, 0, 0.457591, 0, 0.481194, -34.0112, 7.62939e-06, 95.5867 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree52" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree52" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.0423949, 0, 1.21524, 0, 1.21598, 0, -1.21524, 0, -0.0423949, -45.7339, 7.62939e-06, 84.5276 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree53" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree53" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.0348917, 0, 1.10434, 0, 1.10489, 0, -1.10434, 0, -0.0348917, -37.7713, 7.62939e-06, 87.1818 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree54" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree54" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.711576, 0, -0.722325, 0, 1.01395, 0, 0.722325, 0, -0.711576, -28.0393, 7.62939e-06, 90.4995 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree55" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree55" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -1.10445, 0, 0.162264, 0, 1.11631, 0, -0.162264, 0, -1.10445, -38.656, 7.62939e-06, 72.1414 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree56" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree56" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.921692, 0, 0.63928, 0, 1.12169, 0, -0.63928, 0, 0.921692, -37.7713, 7.62939e-06, 27.6837 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree57" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree57" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.259135, 0, -0.606296, 0, 0.659352, 0, 0.606296, 0, -0.259135, -26.491, 7.62939e-06, 28.5684 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree58" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree58" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.163547, 0, -0.851575, 0, 0.867138, 0, 0.851575, 0, 0.163547, -35.3383, 7.62939e-06, 35.8674 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree59" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree59" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.293234, 0, -0.627588, 0, 0.692714, 0, 0.627588, 0, 0.293234, -34.6748, 7.62939e-06, 45.3783 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree60" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree60" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.000651839, 0, -0.654824, 0, 0.654824, 0, 0.654824, 0, 0.000651839, -37.7713, 7.62939e-06, 2.2477 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree61" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree61" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.605742, 0, -0.0261721, 0, 0.606307, 0, 0.0261721, 0, -0.605742, -25.8275, 7.62939e-06, 2.46888 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree62" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree62" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.132487, 0, 1.26157, 0, 1.2685, 0, -1.26157, 0, 0.132487, -11.893, 7.62939e-06, 2.69007 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree63" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree63" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 1.07201, 0, 0.584501, 0, 1.221, 0, -0.584501, 0, 1.07201, -16.3166, 7.62939e-06, 15.7398 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree64" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree64" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.305869, 0, 0.541963, 0, 0.622318, 0, -0.541963, 0, -0.305869, -36.8866, 7.62939e-06, 16.1822 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree65" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree65" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 1.22254, 0, -0.28857, 0, 1.25614, 0, 0.28857, 0, 1.22254, -46.8398, 7.62939e-06, 13.9704 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree66" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree66" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.468071, 0, 0.800516, 0, 0.927317, 0, -0.800516, 0, 0.468071, -22.2885, 7.62939e-06, 33.2133 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree67" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree67" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.109668, 0, 0.736373, 0, 0.744494, 0, -0.736373, 0, 0.109668, -23.8368, 7.62939e-06, 19.0576 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree68" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree68" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( 0.253869, 0, 0.928522, 0, 0.962602, 0, -0.928522, 0, 0.253869, -45.9551, 7.62939e-06, 52.8985 )
-mesh = ExtResource( 6 )
 
-[node name="DecidousTree69" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
+[node name="DecidousTree69" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance2" instance=ExtResource( 4 )]
 transform = Transform( -0.544655, 0, -0.937773, 0, 1.08447, 0, 0.937773, 0, -0.544655, -47.5033, 7.62939e-06, 67.7177 )
-mesh = ExtResource( 6 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="Gardener/Arborist/MMI_container"]
 multimesh = SubResource( 289 )
 
-[node name="Conifer" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.891089, 0, 0.638589, 0, 1.09628, 0, -0.638589, 0, 0.891089, -37.6485, 7.62939e-06, 51.3889 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer2" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer2" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.257927, 0, 1.23783, 0, 1.26441, 0, -1.23783, 0, 0.257927, -31.1358, 7.62939e-06, 78.1133 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer3" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer3" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.238126, 0, 0.771033, 0, 0.806967, 0, -0.771033, 0, 0.238126, -43.0797, 7.62939e-06, 94.9232 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer4" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer4" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.37155, 0, -1.17578, 0, 1.23309, 0, 1.17578, 0, -0.37155, -30.9147, 7.62939e-06, 9.32554 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer5" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer5" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.706586, 0, -1.19191, 0, 1.38561, 0, 1.19191, 0, -0.706586, -43.7432, 7.62939e-06, 23.7024 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer6" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer6" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.511127, 0, 1.22048, 0, 1.32318, 0, -1.22048, 0, 0.511127, -28.0393, 7.62939e-06, 39.6276 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer7" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer7" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.153905, 0, -1.07738, 0, 1.08832, 0, 1.07738, 0, -0.153905, -41.9738, 7.62939e-06, 36.0886 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer8" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer8" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.617213, 0, -0.2615, 0, 0.670324, 0, 0.2615, 0, -0.617213, -24.7215, 7.62939e-06, 61.967 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer9" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer9" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.0200388, 0, 0.702521, 0, 0.702807, 0, -0.702521, 0, 0.0200388, -44.628, 7.62939e-06, 76.565 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer10" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer10" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 1.17143, 0, -0.122329, 0, 1.1778, 0, 0.122329, 0, 1.17143, -43.7432, 7.62939e-06, 61.0823 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer11" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer11" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.901207, 0, -0.364742, 0, 0.97222, 0, 0.364742, 0, -0.901207, -29.8087, 7.62939e-06, 21.2694 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer12" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer12" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -1.07686, 0, -0.681232, 0, 1.27424, 0, 0.681232, 0, -1.07686, -19.192, 7.62939e-06, 11.3162 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer13" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer13" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.839077, 0, 0.248088, 0, 0.874984, 0, -0.248088, 0, -0.839077, -40.6467, 7.62939e-06, 11.9797 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer14" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer14" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.885008, 0, -0.332095, 0, 0.945265, 0, 0.332095, 0, -0.885008, 14.2939, 7.62939e-06, 58.638 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer15" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer15" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.905417, 0, -0.357901, 0, 0.973587, 0, 0.357901, 0, -0.905417, 14.8558, 7.62939e-06, 65.84 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer16" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer16" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.647321, 0, -1.13355, 0, 1.30536, 0, 1.13355, 0, -0.647321, 42.3961, 7.62939e-06, 62.0205 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer17" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer17" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.676759, 0, -0.353916, 0, 0.763714, 0, 0.353916, 0, -0.676759, 27.3193, 7.62939e-06, 59.2062 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer18" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer18" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.956287, 0, -0.474159, 0, 1.06739, 0, 0.474159, 0, -0.956287, 19.4793, 7.62939e-06, 72.0717 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer19" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer19" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.875526, 0, -0.451861, 0, 0.985254, 0, 0.451861, 0, -0.875526, 26.9172, 7.62939e-06, 71.2676 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer20" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer20" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.0761177, 0, -1.01771, 0, 1.02055, 0, 1.01771, 0, -0.0761177, 33.7521, 7.62939e-06, 65.2369 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer21" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer21" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.560149, 0, -0.443504, 0, 0.714467, 0, 0.443504, 0, -0.560149, 38.9787, 7.62939e-06, 72.2728 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer22" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer22" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.950613, 0, 0.00681771, 0, 0.950638, 0, -0.00681771, 0, 0.950613, 53.0504, 7.62939e-06, 59.6082 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer23" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer23" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -1.11111, 0, -0.397671, 0, 1.18013, 0, 0.397671, 0, -1.11111, 52.4474, 7.62939e-06, 66.6441 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer24" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer24" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.718052, 0, 1.04644, 0, 1.26911, 0, -1.04644, 0, 0.718052, 45.6125, 7.62939e-06, 72.2728 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer25" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer25" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.9896, 0, -0.439001, 0, 1.0826, 0, 0.439001, 0, 0.9896, 62.6996, 7.62939e-06, 57.799 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer26" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer26" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.667805, 0, 0.316299, 0, 0.738924, 0, -0.316299, 0, 0.667805, 73.756, 7.62939e-06, 56.9949 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer27" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer27" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.141867, 0, -1.14989, 0, 1.15861, 0, 1.14989, 0, 0.141867, 81.7969, 7.62939e-06, 56.5928 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer28" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer28" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.172194, 0, -1.38446, 0, 1.39513, 0, 1.38446, 0, 0.172194, 82.601, 7.62939e-06, 73.0768 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer29" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer29" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.119797, 0, 1.33995, 0, 1.3453, 0, -1.33995, 0, 0.119797, 73.1529, 7.62939e-06, 70.8656 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer30" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer30" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -1.02106, 0, -0.612867, 0, 1.19087, 0, 0.612867, 0, -1.02106, 61.0914, 7.62939e-06, 70.0615 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer31" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer31" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.00338296, 0, 0.906836, 0, 0.906842, 0, -0.906836, 0, -0.00338296, 67.3232, 7.62939e-06, 62.8246 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer32" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer32" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.360855, 0, 1.13749, 0, 1.19335, 0, -1.13749, 0, 0.360855, 73.957, 7.62939e-06, 62.8246 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer33" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer33" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.370302, 0, 0.754314, 0, 0.840306, 0, -0.754314, 0, 0.370302, 80.7918, 7.62939e-06, 63.2267 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer34" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer34" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -1.21214, 0, 0.380565, 0, 1.27048, 0, -0.380565, 0, -1.21214, 21.0875, 7.62939e-06, 63.6287 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer35" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer35" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.463068, 0, 0.832128, 0, 0.952297, 0, -0.832128, 0, 0.463068, 34.5562, 7.62939e-06, 58.201 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer36" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer36" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.728355, 0, -0.628897, 0, 0.962295, 0, 0.628897, 0, -0.728355, 34.5562, 7.62939e-06, 69.4584 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer37" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer37" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.0339625, 0, 1.21131, 0, 1.21178, 0, -1.21131, 0, -0.0339625, 28.7772, 7.62939e-06, 64.4123 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer38" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer38" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.978392, 0, -0.834011, 0, 1.28562, 0, 0.834011, 0, 0.978392, 18.6004, 7.62939e-06, 57.2885 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer39" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer39" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.871185, 0, 0.18026, 0, 0.889639, 0, -0.18026, 0, -0.871185, 47.9098, 7.62939e-06, 56.4743 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer40" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer40" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.223248, 0, 0.717316, 0, 0.751253, 0, -0.717316, 0, -0.223248, 59.5289, 7.62939e-06, 63.6967 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer41" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer41" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 1.09149, 0, -0.300998, 0, 1.13224, 0, 0.300998, 0, 1.09149, 91.9289, 7.62939e-06, 72.9079 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer42" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer42" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.548299, 0, 0.451467, 0, 0.710249, 0, -0.451467, 0, -0.548299, 91.6942, 7.62939e-06, 58.1204 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer43" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer43" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.203353, 0, 0.851001, 0, 0.87496, 0, -0.851001, 0, -0.203353, 91.9289, 7.62939e-06, 64.2232 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer44" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer44" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.0976704, 0, -1.24652, 0, 1.25034, 0, 1.24652, 0, 0.0976704, 103.9, 7.62939e-06, 58.3551 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer45" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer45" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.993442, 0, 0.384216, 0, 1.06515, 0, -0.384216, 0, 0.993442, 98.5011, 7.62939e-06, 62.3454 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer46" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer46" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.21214, 0, 0.61502, 0, 0.650578, 0, -0.61502, 0, 0.21214, 100.144, 7.62939e-06, 69.3871 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer47" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer47" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.676928, 0, 0.139172, 0, 0.691086, 0, -0.139172, 0, -0.676928, 113.523, 7.62939e-06, 65.1621 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer48" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer48" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.631823, 0, 0.313217, 0, 0.705199, 0, -0.313217, 0, 0.631823, 107.421, 7.62939e-06, 63.2843 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer49" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer49" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.306166, 0, 0.553048, 0, 0.632139, 0, -0.553048, 0, 0.306166, 107.421, 7.62939e-06, 67.744 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer50" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer50" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.525933, 0, 0.394296, 0, 0.657324, 0, -0.394296, 0, 0.525933, 113.523, 7.62939e-06, 71.7343 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer51" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer51" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.0279448, 0, -0.96716, 0, 0.967563, 0, 0.96716, 0, -0.0279448, 112.115, 7.62939e-06, 58.5899 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer52" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer52" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.425704, 0, -0.936806, 0, 1.02899, 0, 0.936806, 0, -0.425704, 121.973, 7.62939e-06, 55.3038 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer53" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer53" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.00619251, 0, 0.600013, 0, 0.600045, 0, -0.600013, 0, -0.00619251, 122.912, 7.62939e-06, 64.4579 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer54" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer54" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.688471, 0, -0.203644, 0, 0.717958, 0, 0.203644, 0, 0.688471, 127.19, 7.62939e-06, 72.9009 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer55" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer55" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.922849, 0, 0.156403, 0, 0.936009, 0, -0.156403, 0, 0.922849, 120.525, 7.62939e-06, 72.3882 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer56" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer56" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 1.04405, 0, 0.81396, 0, 1.32385, 0, -0.81396, 0, 1.04405, 116.551, 7.62939e-06, 61.6209 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer57" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer57" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.55404, 0, 0.395191, 0, 0.680541, 0, -0.395191, 0, -0.55404, 119.115, 7.62939e-06, 43.2909 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer58" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer58" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.871987, 0, -0.680805, 0, 1.10628, 0, 0.680805, 0, -0.871987, 125.139, 7.62939e-06, 44.7009 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer59" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer59" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 1.34579, 0, -0.212617, 0, 1.36248, 0, 0.212617, 0, 1.34579, 128.344, 7.62939e-06, 50.3409 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer60" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer60" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.0735293, 0, -1.10251, 0, 1.10496, 0, 1.10251, 0, 0.0735293, 117.961, 7.62939e-06, 49.5718 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer61" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer61" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.441703, 0, 0.789688, 0, 0.904825, 0, -0.789688, 0, 0.441703, 128.985, 7.62939e-06, 59.9545 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer62" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer62" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.410648, 0, 0.661307, 0, 0.778434, 0, -0.661307, 0, 0.410648, 117.978, 7.62939e-06, 34.47 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer63" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer63" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.430419, 0, 0.663256, 0, 0.790677, 0, -0.663256, 0, -0.430419, 127.207, 7.62939e-06, 36.3927 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer64" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer64" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 1.20891, 0, -0.081205, 0, 1.21164, 0, 0.081205, 0, 1.20891, 123.105, 7.62939e-06, 31.1373 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer65" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer65" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.284076, 0, -0.789023, 0, 0.838604, 0, 0.789023, 0, -0.284076, 128.361, 7.62939e-06, 27.2918 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer66" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer66" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.772754, 0, 0.549761, 0, 0.948359, 0, -0.549761, 0, 0.772754, 116.696, 7.62939e-06, 21.5236 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer67" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer67" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.175032, 0, 1.09064, 0, 1.10459, 0, -1.09064, 0, -0.175032, 127.464, 7.62939e-06, 21.2673 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer68" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer68" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( -0.0920108, 0, -0.753683, 0, 0.759279, 0, 0.753683, 0, -0.0920108, 121.567, 7.62939e-06, 25.2409 )
-mesh = ExtResource( 7 )
 
-[node name="Conifer69" type="MeshInstance" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
+[node name="Conifer69" type="StaticBody" parent="Gardener/Arborist/MMI_container/MultiMeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.011487, 0, -0.781087, 0, 0.781172, 0, 0.781087, 0, 0.011487, 115.799, 7.62939e-06, 28.5736 )
-mesh = ExtResource( 7 )
