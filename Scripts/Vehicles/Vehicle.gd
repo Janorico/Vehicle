@@ -1,8 +1,6 @@
 class_name Vehicle extends VehicleBase
 
-
 var handbrake := false
-var braking := false
 var backward_light_on := false
 const SERCOMM = preload("res://bin/GDsercomm.gdns")
 onready var port = SERCOMM.new()
@@ -30,24 +28,13 @@ func initialize(id):
 func _physics_process(delta):
 	if (is_master or Net.is_offline) and enabled:
 		if input_type == InputType.KEYBOARD:
-			# Steering
-			steering = move_toward(steering, steer_target * steer_limit, steer_speed * delta)
-			# Accelerate
-			if Input.is_action_pressed("accelerate"): accelerate(engine_force_value)
-			else: engine_force = 0
-			# Accelerate back
-			if Input.is_action_pressed("accelerate_back"): accelerate_back(engine_force_value)
-			# Brake
-			if Input.is_action_just_released("handbreak"):
+			# Handbrake
+			if Input.is_action_just_released("handbrake"):
 				handbrake = not handbrake
 				get_node("../..").handbrake_toggled(handbrake)
-			braking = Input.is_action_pressed("brake") or handbrake
+			process_input(Input.get_axis("accelerate_back", "accelerate"), Input.get_axis("steer_right", "steer_left"), Input.get_action_strength("brake"), delta)
 		elif input_type == InputType.MOUSE:
-			steering = clamp(steer_target, -steer_limit, steer_limit)
-			if Input.is_action_pressed("mouse_accelerate"): accelerate(engine_force_value)
-			else: engine_force = 0
-			if Input.is_action_pressed("mouse_accelerate_back"): accelerate_back(engine_force_value)
-			braking = Input.is_action_pressed("mouse_brake")
+			process_input(Input.get_axis("mouse_accelerate_back", "mouse_accelerate"), steer_target, Input.get_action_strength("mouse_brake"), null)
 		elif input_type == InputType.SERIAL_PORT:
 			var input = ""
 			if port.get_available() > 0:
@@ -64,21 +51,17 @@ func _physics_process(delta):
 				var engine_force_input = float(input[1])
 				var backward_input = int(input[2])
 				if engine_force_input > 0.0 and engine_force_input <= 1.0:
-					accelerate(engine_force_value * engine_force_input)
+#					accelerate(engine_force_value * engine_force_input)
 					if backward_input == 1:
 						engine_force = -engine_force
 				else:
 					engine_force = 0
 				# Brake
 				var brake_input = int(input[3])
-				braking =  brake_input == 1
 		else:
 			steer_target = 0
 			engine_force = 0
 			brake = 0
-		# Braking
-		if braking: brake = brake_value
-		else: brake = 0.0
 		# Backward light
 		if engine_force < 0.0 and backward_light_on == false and light == true:
 			update_backward_light_energy(true)
@@ -136,19 +119,27 @@ remote func update_horn(horning: bool):
 		horn_sound.stop()
 
 
-func accelerate(value: float):
-	# Increase engine force at low speeds to make the initial acceleration faster.
-	var speed = linear_velocity.length()
-	if speed < 5 and speed != 0:
-		engine_force = clamp(value * 5 / speed, 0, power_max)
+func process_input(engine_force_input: float, steer_input: float, brake_input: float, delta):
+	var speed = local_velocity.z
+	if delta:
+		steering = move_toward(steering, steer_input * steer_limit, steer_speed * delta)
 	else:
-		engine_force = value
-
-
-func accelerate_back(value: float):
-	# Increase engine force at low speeds to make the initial acceleration faster.
-	var speed = linear_velocity.length()
-	if speed < 5 and speed != 0:
-		engine_force = -clamp(value * 5 / speed, 0, power_max)
+		steering = clamp(steer_target, -steer_limit, steer_limit)
+	if handbrake:
+		brake_input = 1.0
+	if brake_input == 0.0:
+		brake = 0.0
+		print(engine_force_input, ";", speed)
+		if abs(speed) > 3 and ((engine_force_input < 0.0 and speed > 0.0) or (engine_force_input > 0.0 and speed < 0.0)):
+			engine_force = 0.0
+			brake = abs(engine_force_input) * brake_value
+		else:
+			# Increase engine force at low speeds to make the initial acceleration faster.
+			if abs(speed) < 5 and speed != 0:
+				engine_force = clamp(engine_force_value * 5 / abs(speed), engine_force_value, power_max)
+			else:
+				engine_force = engine_force_value
+			engine_force *= engine_force_input
 	else:
-		engine_force = -value
+		engine_force = 0.0
+		brake = brake_input * brake_value

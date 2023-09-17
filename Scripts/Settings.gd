@@ -72,7 +72,7 @@ func _dialog_confirmed():
 func get_vehicle():
 	return get_node("../../Vehicles").get_vehicle()
 
-func change_settings(engine_force_value: int, brake_value: float, steer_limit: float, steer_speed: float, crash_monitor: bool, crashs_reported: int):
+func change_settings(engine_force_value: float, brake_value: float, steer_limit: float, steer_speed: float, crash_monitor: bool, crashs_reported: int):
 	var vehicle = get_vehicle()
 	if vehicle != null:
 		vehicle.engine_force_value = engine_force_value

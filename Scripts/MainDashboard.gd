@@ -14,7 +14,7 @@ func _process(_delta):
 	var vehicle = get_vehicle()
 	if vehicle != null:
 		# Speed
-		speed = vehicle.linear_velocity.length()
+		speed = vehicle.local_velocity.z
 		match speed_unit:
 			SpeedUnit.METERS_PER_SECOND: $Items/Speedometer.content_text = "%.1f m/s" % speed
 			SpeedUnit.KILOMETERS_PER_HOUR:
@@ -30,7 +30,7 @@ func _process(_delta):
 		$Items/Power.content_text = "%.2f" % power
 		# Braking
 		if vehicle is Vehicle:
-			$LEDs/BrakeLED.enabled = vehicle.braking
+			$LEDs/BrakeLED.enabled = vehicle.brake > 0.0
 
 func get_vehicle(): return get_node("../../../Vehicles").get_vehicle()
 

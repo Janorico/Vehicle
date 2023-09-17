@@ -37,13 +37,15 @@ export(float) var steer_speed := 1.5
 export(float) var steer_limit := 0.4
 var steer_target := 0.0
 # Engine force and brake options
-export(int) var engine_force_value: float = 40 setget set_engine_force_value
+export(float, 20.0, 100.0) var engine_force_value: float = 40.0 setget set_engine_force_value
 export(float) var brake_value := 1.0
 # Control (Keyboard/Mouse/Serial port)
 var input_type = InputType.KEYBOARD
 var enabled: bool = true
 # Only for capturing
 var capturing := false
+# Other
+var local_velocity := Vector3.ZERO
 
 func _ready():
 	if Net.is_offline:
@@ -59,17 +61,19 @@ func _ready():
 		$PreviewCamera.queue_free()
 
 func _physics_process(_delta):
-	if (is_master or Net.is_offline) and enabled:
-		if input_type == InputType.KEYBOARD:
-			steer_target = Input.get_action_strength("steer_left") - Input.get_action_strength("steer_right")
-		if Input.is_action_just_released("reset"):
-			translation = start_translation
-			rotation_degrees = start_rotation
-			linear_velocity = Vector3.ZERO
-			angular_velocity = Vector3.ZERO
-			sleeping = false
-		if not Net.is_offline:
-			rpc("update_all", translation, rotation_degrees, steering, engine_force, brake)
+	if not (is_master or Net.is_offline) or not enabled:
+		return
+	local_velocity = transform.basis.xform_inv(linear_velocity)
+	if input_type == InputType.KEYBOARD:
+		steer_target = Input.get_action_strength("steer_left") - Input.get_action_strength("steer_right")
+	if Input.is_action_just_released("reset"):
+		translation = start_translation
+		rotation_degrees = start_rotation
+		linear_velocity = Vector3.ZERO
+		angular_velocity = Vector3.ZERO
+		sleeping = false
+	if not Net.is_offline:
+		rpc("update_all", translation, rotation_degrees, steering, engine_force, brake)
 
 func _input(event):
 	if input_type == InputType.MOUSE and event is InputEventMouseMotion:
