@@ -43,7 +43,7 @@ export(float) var brake_value := 1.0
 var input_type = InputType.KEYBOARD
 var enabled: bool = true
 # Only for capturing
-var capturing := false
+export var capturing := false
 # Other
 var local_velocity := Vector3.ZERO
 
@@ -57,6 +57,11 @@ func _ready():
 		rotation = start_rotation
 		$PreviewCamera.make_current()
 		$Smoke.emitting = false
+		yield(get_tree(), "idle_frame")
+		yield(get_tree(), "idle_frame")
+		var image = get_viewport().get_texture().get_data()
+		image.flip_y()
+		image.save_png("res://capture.png")
 	else:
 		$PreviewCamera.queue_free()
 
