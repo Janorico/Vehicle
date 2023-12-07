@@ -66,6 +66,7 @@ func _ready():
 		$PreviewCamera.queue_free()
 
 func _physics_process(_delta):
+	$EngineSound.pitch_scale = get_pitch_scale()
 	if not (is_master or Net.is_offline) or not enabled:
 		return
 	local_velocity = transform.basis.xform_inv(linear_velocity)
@@ -83,6 +84,11 @@ func _physics_process(_delta):
 func _input(event):
 	if input_type == InputType.MOUSE and event is InputEventMouseMotion:
 		steer_target += Global.inverse(event.relative.x * 0.001)
+
+
+func get_pitch_scale() -> float:
+	return 1.0
+
 
 func set_engine_force_value(value: float):
 	engine_force_value = value

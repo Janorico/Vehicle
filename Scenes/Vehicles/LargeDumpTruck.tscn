@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Vehicles/LargeDumpTruck.glb" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Vehicles/Wheel_0.8_0.6.tres" type="CylinderMesh" id=3]
 [ext_resource path="res://Scripts/Vehicles/DumpTruck.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Sounds/TruckEngineLoop.wav" type="AudioStream" id=5]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 1.5, 1.30382, 2.99273, -2.02783, 0.974281, 1.44536, -2.02783, 1.25252, 1.44536, -2.02783, 1.25252, 3.50491, 1.95402, 0.926425, 3.51811, 2.03608, 0.974281, 1.44536, -1.94635, 0.92637, 3.51841, 2.03608, 1.25252, 1.44536, 2.03608, 1.25252, 3.50491, -1.5, 0.921943, 1.46375, 0.0868659, 1.30821, 1.44536, 1.5, 0.922943, 1.46918, 2.03608, 0.918557, 3.05971, 0.0868659, 1.30821, 3.004, -2.02783, 0.918557, 3.05971, 1.45541, 1.29815, 1.5 )
@@ -88,31 +89,29 @@ shape = SubResource( 5 )
 anims/Tipping = SubResource( 6 )
 anims/UndoTipping = SubResource( 7 )
 
-[node name="NameLabel3D" parent="VehicleBody" index="8"]
+[node name="EngineSound" parent="VehicleBody" index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 2.5 )
+stream = ExtResource( 5 )
+
+[node name="NameLabel3D" parent="VehicleBody" index="10"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2, 0 )
 
-[node name="WindscreenCamera" parent="VehicleBody" index="9"]
+[node name="WindscreenCamera" parent="VehicleBody" index="11"]
 transform = Transform( -1, -1.51808e-08, 8.60947e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0.8, 3, 2.4 )
 
-[node name="CenterCamera" parent="VehicleBody" index="10"]
+[node name="CenterCamera" parent="VehicleBody" index="12"]
 transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 6, -8 )
 
-[node name="LeftCamera" parent="VehicleBody" index="11"]
+[node name="LeftCamera" parent="VehicleBody" index="13"]
 transform = Transform( -0.939693, -0.0593912, 0.336824, 0, 0.984808, 0.173648, -0.34202, 0.163176, -0.925417, 5, 4, -6 )
 
-[node name="RightCamera" parent="VehicleBody" index="12"]
+[node name="RightCamera" parent="VehicleBody" index="14"]
 transform = Transform( -0.939693, 0.0593912, -0.336824, 0, 0.984808, 0.173648, 0.34202, 0.163176, -0.925417, -5, 4, -6 )
 
-[node name="FollowCamera" parent="VehicleBody" index="13"]
-transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 4, 2.75, -5 )
-min_distance = 7.0
-max_distance = 9.0
-height = 4.0
-
-[node name="LeftMirrorPlaceHolder" parent="VehicleBody" index="14"]
+[node name="LeftMirrorPlaceHolder" parent="VehicleBody" index="15"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.25, 3.25 )
 
-[node name="RightMirrorPlaceHolder" parent="VehicleBody" index="15"]
+[node name="RightMirrorPlaceHolder" parent="VehicleBody" index="16"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.25, 3.25 )
 
 [node name="Camera" parent="VehicleBody/LeftMirror/Viewport" index="0"]
@@ -121,20 +120,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.25, 3.25 )
 [node name="Camera" parent="VehicleBody/RightMirror/Viewport" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.25, 3.25 )
 
-[node name="RightFrontLight" parent="VehicleBody" index="20"]
+[node name="RightFrontLight" parent="VehicleBody" index="21"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.4, 0.9, 3.7 )
 
-[node name="LeftFrontLight" parent="VehicleBody" index="23"]
+[node name="LeftFrontLight" parent="VehicleBody" index="24"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.4, 0.9, 3.7 )
 
-[node name="LeftFrontWheel" parent="VehicleBody" index="24"]
+[node name="LeftFrontWheel" parent="VehicleBody" index="25"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85, 0.8, 2.2 )
 wheel_radius = 0.8
 
 [node name="Wheel" parent="VehicleBody/LeftFrontWheel" index="0"]
 mesh = ExtResource( 3 )
 
-[node name="LeftBackWheel" parent="VehicleBody" index="25"]
+[node name="LeftBackWheel" parent="VehicleBody" index="26"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.425, 0.8, -1 )
 wheel_radius = 0.8
 
@@ -146,14 +145,14 @@ mesh = ExtResource( 3 )
 transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.325, 0, 0 )
 mesh = ExtResource( 3 )
 
-[node name="RightFrontWheel" parent="VehicleBody" index="26"]
+[node name="RightFrontWheel" parent="VehicleBody" index="27"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85, 0.8, 2.2 )
 wheel_radius = 0.8
 
 [node name="Wheel" parent="VehicleBody/RightFrontWheel" index="0"]
 mesh = ExtResource( 3 )
 
-[node name="RightBackWheel" parent="VehicleBody" index="27"]
+[node name="RightBackWheel" parent="VehicleBody" index="28"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42519, 0.8, -1 )
 wheel_radius = 0.8
 
@@ -165,7 +164,13 @@ mesh = ExtResource( 3 )
 transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.325, 0, 0 )
 mesh = ExtResource( 3 )
 
-[node name="PreviewCamera" parent="VehicleBody" index="28"]
+[node name="FollowCamera" parent="VehicleBody" index="29"]
+transform = Transform( -0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, 0.122788, -0.696364, 4, 2.75, -5 )
+min_distance = 7.0
+max_distance = 9.0
+height = 4.0
+
+[node name="PreviewCamera" parent="VehicleBody" index="30"]
 transform = Transform( 0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, -0.122788, 0.696364, 4, 2.75, 5 )
 
 [node name="InterpolatedCamera" parent="." index="1"]

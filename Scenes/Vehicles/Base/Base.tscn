@@ -14,6 +14,10 @@ script = ExtResource( 2 )
 stream = ExtResource( 1 )
 unit_db = 80.0
 
+[node name="EngineSound" type="AudioStreamPlayer3D" parent="VehicleBody"]
+unit_db = 30.0
+autoplay = true
+
 [node name="NameLabel3D" type="Label3D" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 visible = false

@@ -80,6 +80,11 @@ func _physics_process(delta):
 			if not Net.is_offline:
 				rpc("update_horn", false)
 
+
+func get_pitch_scale() -> float:
+	return range_lerp(abs(engine_force), 0, engine_force_value, 0.9, 1.1)
+
+
 func control_with_mouse():
 	.control_with_mouse()
 	port.close()
