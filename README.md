@@ -24,6 +24,8 @@ Thanks to:
   [Sketchup Importer](https://github.com/RedHaloStudio/Sketchup_Importer)
   Blender addon - without this addon the SketchUp world was gray.
 
+* Samuel Weywara for the Mini Snowplow car.
+
 Vehicle contain files from:
 
 * GDSerialAsset ([https://github.com/Superwaitsum/GDSerialAsset](https://github.com/Superwaitsum/GDSerialAsset)),

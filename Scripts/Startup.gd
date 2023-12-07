@@ -11,6 +11,7 @@ export(NodePath) var large_dump_truck_button: NodePath
 export(NodePath) var car_legacy_button: NodePath
 export(NodePath) var helicopter_button: NodePath
 export(NodePath) var dump_truck_button: NodePath
+export(NodePath) var mini_snowplow_button: NodePath
 # Worlds
 export(NodePath) var sketchup_world_button: NodePath
 export(NodePath) var gridmap_world_button: NodePath
@@ -131,6 +132,8 @@ func get_selected_vehicle():
 		return Global.Vehicles.HELICOPTER
 	elif get_node(dump_truck_button).is_pressed():
 		return Global.Vehicles.DUMP_TRUCK
+	elif get_node(mini_snowplow_button).is_pressed():
+		return Global.Vehicles.MINI_SNOWPLOW
 
 func get_selected_info(name: String): return {
 	"vehicle" : get_selected_vehicle(),

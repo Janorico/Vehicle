@@ -11,7 +11,8 @@ enum Vehicles {
 	LARGE_DUMP_TRUCK = 5,
 	CAR_LEGACY = 6,
 	HELICOPTER = 7,
-	DUMP_TRUCK = 8
+	DUMP_TRUCK = 8,
+	MINI_SNOWPLOW = 9
 }
 
 enum Worlds {
@@ -137,6 +138,7 @@ func get_vehicle_path(vehicle):
 		Vehicles.CAR_LEGACY: return "res://Scenes/Vehicles/CarLegacy.tscn"
 		Vehicles.HELICOPTER: return "res://Scenes/Vehicles/Helicopter.tscn"
 		Vehicles.DUMP_TRUCK: return "res://Scenes/Vehicles/DumpTruck.tscn"
+		Vehicles.MINI_SNOWPLOW: return "res://Scenes/Vehicles/MiniSnowplow.tscn"
 
 func get_world_path():
 	match world:

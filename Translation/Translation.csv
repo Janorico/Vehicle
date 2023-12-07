@@ -53,8 +53,8 @@ START_SINGLE_PLAYER_GAME_KEY,Start single player game,Einzelspieler-Spiel starte
 HOST_MULTIPLAYER_GAME_KEY,Host multiplayer game,Multiplayer-Spiel hosten
 JOIN_MULTIPLAYER_GAME_KEY,Join multiplayer game,Multiplayer-Spiel beitreten
 SERVER_IP_KEY,Server IP: ,Server-IP: 
-INVALID_IP_ADDRESS_KEY,Invalid IP address!,Falsche/Ungültige IP-Adresse!
-MAXIMUM_PLAYERS_KEY,Maximum players: ,Maximale Spieler: 
+INVALID_IP_ADDRESS_KEY,Invalid IP address!,Falsche/Ungültige IP-Adresse!
+MAXIMUM_PLAYERS_KEY,Maximum players: ,Maximale Spieler: 
 CONNECTING_TO_SERVER_KEY,Connecting to server...,Mit Server verbinden...
 REAL_WORLD_KEY,Real world,Realistische Welt
 CHANGE_UNIT_KEY,Change unit,Einheit ändern
@@ -88,3 +88,4 @@ PORT_KEY,Port: ,Port:
 HELICOPTER_KEY,Helicopter,Helikopter
 DUMP_TRUCK_KEY,Dump truck,Kipper
 DOWNLOADING_UPDATE_KEY,Downloading update...,Update herunterladen...
+MINI_SNOWPLOW_KEY,Mini Snowplow,Mini-Schneeplug

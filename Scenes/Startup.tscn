@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Startup.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Vehicles/Images/Truck.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Assets/Vehicles/Images/Helicopter.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Vehicles/Images/DumpTruck.png" type="Texture" id=13]
 [ext_resource path="res://Assets/2D/Download.svg" type="Texture" id=14]
+[ext_resource path="res://Assets/Vehicles/Images/MiniSnowplow.png" type="Texture" id=15]
 
 [sub_resource type="ButtonGroup" id=1]
 resource_name = "ChooseVehicleButtonGroup"
@@ -66,6 +67,7 @@ large_dump_truck_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollC
 car_legacy_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/CarLegacyButton")
 helicopter_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/HelicopterButton")
 dump_truck_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/DumpTruckButton")
+mini_snowplow_button = NodePath("Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer/MiniSnowplowButton")
 sketchup_world_button = NodePath("Page/OptionsAndButtons/ChooseWorld/ScrollContainer/VBoxContainer/SketchUpWorldButton")
 gridmap_world_button = NodePath("Page/OptionsAndButtons/ChooseWorld/ScrollContainer/VBoxContainer/GridMapWorldButton")
 real_world_button = NodePath("Page/OptionsAndButtons/ChooseWorld/ScrollContainer/VBoxContainer/RealWorldButton")
@@ -122,7 +124,7 @@ size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Page/OptionsAndButtons/ChooseVehicle/ScrollContainer"]
 margin_right = 240.0
-margin_bottom = 1921.0
+margin_bottom = 2082.0
 rect_min_size = Vector2( 240, 0 )
 alignment = 1
 
@@ -223,6 +225,17 @@ hint_tooltip = "DUMP_TRUCK_KEY"
 toggle_mode = true
 group = SubResource( 1 )
 icon = ExtResource( 13 )
+icon_align = 1
+
+[node name="MiniSnowplowButton" type="Button" parent="Page/OptionsAndButtons/ChooseVehicle/ScrollContainer/VBoxContainer"]
+margin_top = 1925.0
+margin_right = 240.0
+margin_bottom = 2082.0
+rect_min_size = Vector2( 240, 157 )
+hint_tooltip = "MINI_SNOWPLOW_KEY"
+toggle_mode = true
+group = SubResource( 1 )
+icon = ExtResource( 15 )
 icon_align = 1
 
 [node name="ChooseWorld" type="VBoxContainer" parent="Page/OptionsAndButtons"]
@@ -385,6 +398,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 [node name="JoinNetworkGameDialog" type="ConfirmationDialog" parent="."]
 margin_right = 200.0
 margin_bottom = 70.0
+rect_min_size = Vector2( 150, 52.5 )
 window_title = "JOIN_MULTIPLAYER_GAME_KEY"
 
 [node name="GridContainer" type="GridContainer" parent="JoinNetworkGameDialog"]
@@ -444,6 +458,7 @@ dialog_text = "INVALID_NAME_KEY"
 [node name="HostNetworkGameDialog" type="ConfirmationDialog" parent="."]
 margin_right = 200.0
 margin_bottom = 70.0
+rect_min_size = Vector2( 150, 52.5 )
 window_title = "HOST_MULTIPLAYER_GAME_KEY"
 
 [node name="GridContainer" type="GridContainer" parent="HostNetworkGameDialog"]
@@ -494,6 +509,7 @@ rect_min_size = Vector2( 150, 0 )
 [node name="UpdateDialog" type="ConfirmationDialog" parent="."]
 margin_right = 203.0
 margin_bottom = 40.0
+rect_min_size = Vector2( 150, 52.5 )
 window_title = "UPDATE_AVAILABLE_KEY"
 dialog_text = "UPDATE_AVAILABLE_TEXT_KEY"
 
