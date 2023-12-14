@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Vehicles/Base/Wheel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Vehicles/Wheel_0.25_0.2.tres" type="CylinderMesh" id=3]
+[ext_resource path="res://Assets/Sounds/TruckEngineLoop.wav" type="AudioStream" id=4]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 2, 1, 1 )
@@ -36,22 +37,22 @@ extents = Vector3( 0.75, 0.175, 1.5 )
 
 [node name="Spatial" instance=ExtResource( 1 )]
 
-[node name="NameLabel3D" parent="VehicleBody" index="1"]
+[node name="EngineSound" parent="VehicleBody" index="2"]
+stream = ExtResource( 4 )
+
+[node name="NameLabel3D" parent="VehicleBody" index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0 )
 
-[node name="WindscreenCamera" parent="VehicleBody" index="2"]
+[node name="WindscreenCamera" parent="VehicleBody" index="4"]
 transform = Transform( -1, -1.51808e-08, 8.60946e-08, 0, 0.984808, 0.173648, -8.74228e-08, 0.173648, -0.984808, 0, 1.5, 1 )
 
-[node name="CenterCamera" parent="VehicleBody" index="3"]
+[node name="CenterCamera" parent="VehicleBody" index="5"]
 transform = Transform( -1, 2.62201e-08, -1.48702e-07, 0, 0.984808, 0.173648, 1.50996e-07, 0.173648, -0.984808, 0, 3, -6 )
 
-[node name="PreviewCamera" parent="VehicleBody" index="6"]
-transform = Transform( 0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, -0.122788, 0.696364, 2, 1.2, 2.2 )
-
-[node name="LeftMirrorPlaceHolder" parent="VehicleBody" index="7"]
+[node name="LeftMirrorPlaceHolder" parent="VehicleBody" index="8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.25, 1.4 )
 
-[node name="RightMirrorPlaceHolder" parent="VehicleBody" index="8"]
+[node name="RightMirrorPlaceHolder" parent="VehicleBody" index="9"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.25, 1.4 )
 
 [node name="Camera" parent="VehicleBody/LeftMirror/Viewport" index="0"]
@@ -59,9 +60,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.25, 1.4 )
 
 [node name="Camera" parent="VehicleBody/RightMirror/Viewport" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.25, 1.4 )
-
-[node name="Smoke" parent="VehicleBody" index="11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.4, -2.6 )
 
 [node name="Body" type="Spatial" parent="VehicleBody" index="12"]
 
@@ -113,19 +111,19 @@ shape = SubResource( 6 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0 )
 shape = SubResource( 7 )
 
-[node name="BackwardLight" parent="VehicleBody" index="19"]
+[node name="Smoke" parent="VehicleBody" index="19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.4, -2.6 )
+
+[node name="BackwardLight" parent="VehicleBody" index="20"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, -2.5 )
 
-[node name="RightBackLight" parent="VehicleBody" index="21"]
+[node name="RightBackLight" parent="VehicleBody" index="22"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.65, -2.5 )
 
-[node name="LeftBackLight" parent="VehicleBody" index="22"]
+[node name="LeftBackLight" parent="VehicleBody" index="23"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.65, -2.5 )
 
 [node name="Wheel" parent="VehicleBody/LeftFrontWheel" index="0"]
-mesh = ExtResource( 3 )
-
-[node name="Wheel" parent="VehicleBody/LeftBackWheel" index="0"]
 mesh = ExtResource( 3 )
 
 [node name="LeftBackWheel2" parent="VehicleBody" index="26" instance=ExtResource( 2 )]
@@ -134,10 +132,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.25, -1.6 )
 [node name="Wheel" parent="VehicleBody/LeftBackWheel2" index="0"]
 mesh = ExtResource( 3 )
 
-[node name="Wheel" parent="VehicleBody/RightFrontWheel" index="0"]
+[node name="Wheel" parent="VehicleBody/LeftBackWheel" index="0"]
 mesh = ExtResource( 3 )
 
-[node name="Wheel" parent="VehicleBody/RightBackWheel" index="0"]
+[node name="Wheel" parent="VehicleBody/RightFrontWheel" index="0"]
 mesh = ExtResource( 3 )
 
 [node name="RightBackWheel2" parent="VehicleBody" index="29" instance=ExtResource( 2 )]
@@ -146,9 +144,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.25, -1.6 )
 [node name="Wheel" parent="VehicleBody/RightBackWheel2" index="0"]
 mesh = ExtResource( 3 )
 
+[node name="Wheel" parent="VehicleBody/RightBackWheel" index="0"]
+mesh = ExtResource( 3 )
+
+[node name="PreviewCamera" parent="VehicleBody" index="32"]
+transform = Transform( 0.707107, -0.122788, 0.696364, 0, 0.984808, 0.173648, -0.707107, -0.122788, 0.696364, 2, 1.2, 2.2 )
+
 [editable path="VehicleBody/LeftFrontWheel"]
-[editable path="VehicleBody/LeftBackWheel"]
 [editable path="VehicleBody/LeftBackWheel2"]
+[editable path="VehicleBody/LeftBackWheel"]
 [editable path="VehicleBody/RightFrontWheel"]
-[editable path="VehicleBody/RightBackWheel"]
 [editable path="VehicleBody/RightBackWheel2"]
+[editable path="VehicleBody/RightBackWheel"]
