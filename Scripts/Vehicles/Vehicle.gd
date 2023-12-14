@@ -5,6 +5,8 @@ var backward_light_on := false
 const SERCOMM = preload("res://bin/GDsercomm.gdns")
 onready var port = SERCOMM.new()
 onready var horn_sound: AudioStreamPlayer3D = $HornSound
+export var engine_sound_min_pitch_scale := 0.9
+export var engine_sound_max_pitch_scale := 1.1
 
 
 func _ready():
@@ -82,7 +84,7 @@ func _physics_process(delta):
 
 
 func get_pitch_scale() -> float:
-	return range_lerp(abs(engine_force), 0, engine_force_value, 0.9, 1.1)
+	return range_lerp(abs(engine_force), 0, engine_force_value, engine_sound_min_pitch_scale, engine_sound_max_pitch_scale)
 
 
 func control_with_mouse():

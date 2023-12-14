@@ -50,6 +50,11 @@ func _physics_process(delta):
 		if not Net.is_offline:
 			rpc("update_helicopter", power, rotation_x_target, steer_target, rotation_z_target, rotor.rotation_degrees.y, rotor_velocity)
 
+
+func get_pitch_scale() -> float:
+	return range_lerp(power, power_min, power_max, 0.6, 1)
+
+
 remote func update_helicopter(p: float, rot_x_t: float, rot_y_t: float, rot_z_t: float, rotor_deg: float, rotor_velo: float):
 	power = p
 	rotation_x_target = rot_x_t
