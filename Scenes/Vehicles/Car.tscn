@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Vehicles/Base/Vehicle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Vehicles/Wheel_0.25_0.2.tres" type="CylinderMesh" id=2]
 [ext_resource path="res://Assets/Vehicles/Car.dae" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Sounds/CarEngineLoop.wav" type="AudioStream" id=4]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 1, 0.649961, 1.5, 1, 0.349941, 1.5, 1, 1.25, 0.499804, -1, 0.649961, 1.5, 0.75, 0, 1.5, 1, 0.349941, -1.5, -1, 1.25, 0.499804, 1, 1.25, -1.5, -1, 0.349941, 1.5, -0.75, 0, 1.5, 0.75, 0, -1.5, -1, 1.25, -1.5, -1, 0.349941, -1.5, -0.75, 0, -1.5 )
@@ -16,6 +17,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0 )
 shape = SubResource( 1 )
 
+[node name="EngineSound" parent="VehicleBody" index="4"]
+stream = ExtResource( 4 )
+
 [node name="Wheel" parent="VehicleBody/LeftFrontWheel" index="0"]
 mesh = ExtResource( 2 )
 
@@ -27,3 +31,8 @@ mesh = ExtResource( 2 )
 
 [node name="Wheel" parent="VehicleBody/RightBackWheel" index="0"]
 mesh = ExtResource( 2 )
+
+[editable path="VehicleBody/LeftFrontWheel"]
+[editable path="VehicleBody/LeftBackWheel"]
+[editable path="VehicleBody/RightFrontWheel"]
+[editable path="VehicleBody/RightBackWheel"]
