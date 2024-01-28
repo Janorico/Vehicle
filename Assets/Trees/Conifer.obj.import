@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Conifer.obj-88d25cdba8a3ce593d9cea57d40121ef.mesh"
+
+[deps]
+
+files=[ "res://.import/Conifer.obj-88d25cdba8a3ce593d9cea57d40121ef.mesh" ]
+
+source_file="res://Assets/Trees/Conifer.obj"
+dest_files=[ "res://.import/Conifer.obj-88d25cdba8a3ce593d9cea57d40121ef.mesh", "res://.import/Conifer.obj-88d25cdba8a3ce593d9cea57d40121ef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
