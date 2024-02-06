@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=22 format=2]
+[gd_resource type="Theme" load_steps=23 format=2]
 
 [sub_resource type="Gradient" id=7]
 offsets = PoolRealArray( 0, 0.5, 1 )
@@ -8,8 +8,24 @@ colors = PoolColorArray( 1, 0, 0, 0.392157, 0, 1, 0, 0.392157, 0, 0, 1, 0.392157
 gradient = SubResource( 7 )
 
 [sub_resource type="StyleBoxTexture" id=9]
+resource_name = "ButtonDisabled"
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
 texture = SubResource( 8 )
 region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="Gradient" id=4]
 offsets = PoolRealArray( 0, 0.5, 1 )
@@ -19,6 +35,11 @@ colors = PoolColorArray( 0.784314, 0, 0, 1, 0, 0.784314, 0, 1, 0, 0, 0.784314, 1
 gradient = SubResource( 4 )
 
 [sub_resource type="StyleBoxTexture" id=6]
+resource_name = "ButtonHover"
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
 texture = SubResource( 5 )
 region_rect = Rect2( 0, 0, 64, 64 )
 
@@ -30,6 +51,11 @@ colors = PoolColorArray( 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1 )
 gradient = SubResource( 1 )
 
 [sub_resource type="StyleBoxTexture" id=3]
+resource_name = "ButtonNormal"
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
 texture = SubResource( 2 )
 region_rect = Rect2( 0, 0, 64, 64 )
 
@@ -41,6 +67,11 @@ colors = PoolColorArray( 0.392157, 0, 0, 1, 0, 0.392157, 0, 1, 0, 0, 0.392157, 1
 gradient = SubResource( 10 )
 
 [sub_resource type="StyleBoxTexture" id=12]
+resource_name = "ButtonPressed"
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
 texture = SubResource( 11 )
 region_rect = Rect2( 0, 0, 64, 64 )
 
@@ -74,6 +105,7 @@ Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
 Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
 Button/colors/font_color_pressed = Color( 1, 0, 1, 1 )
 Button/styles/disabled = SubResource( 9 )
+Button/styles/focus = SubResource( 22 )
 Button/styles/hover = SubResource( 6 )
 Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = SubResource( 12 )

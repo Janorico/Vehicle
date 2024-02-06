@@ -71,6 +71,7 @@ enabled=PoolStringArray( "res://addons/dreadpon.spatial_gardener/plugin.cfg" )
 
 common/drop_mouse_on_gui_input_disabled=true
 theme/custom="res://VehicleTheme.tres"
+theme/custom_font="res://Assets/2D/NovaMono.tres"
 
 [input]
 
