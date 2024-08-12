@@ -59,6 +59,8 @@ Vehicle contain files from:
   * [License information](#license-information)
   * [Index](#index)
   * [Version History](#version-history)
+    * [Vehicle 12.0.0.0](#vehicle-12000)
+      * [What's new](#whats-new)
     * [Vehicle 11.0.0.0](#vehicle-11000)
       * [What's new](#whats-new)
     * [Vehicle 10.0.0.0](#vehicle-10000)
@@ -85,6 +87,16 @@ Vehicle contain files from:
 <!-- TOC -->
 
 ## Version History
+
+### Vehicle 12.0.0.0
+
+#### What's new
+
+* More stable mirrors
+* Change view control to option button
+* Add horn
+* Add outlines to helicopter roatation display for better visibility
+* Enable GLES-2 fallback (more compability!)
 
 ### Vehicle 11.0.0.0
 
