@@ -6,3 +6,5 @@
 background_mode = 2
 background_sky = SubResource( 1 )
 fog_depth_curve = 1.03526e-05
+tonemap_mode = 2
+glow_enabled = true
