@@ -60,8 +60,8 @@ Net="*res://Scripts/Network.gd"
 
 [display]
 
-window/size/width=1600
-window/size/height=900
+window/size/width=1152
+window/size/height=648
 window/vsync/use_vsync=false
 
 [editor_plugins]
