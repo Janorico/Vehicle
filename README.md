@@ -37,7 +37,7 @@ Vehicle contain files from:
 ## License information
 
     Vehicle is a car driving computer game, that is created with Godot Engine.
-    Copyright (C) 2022-2024 Janosch Lion
+    Copyright (C) 2022-present Janosch Lion
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

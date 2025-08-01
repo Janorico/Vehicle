@@ -379,7 +379,7 @@ margin_right = 478.0
 margin_bottom = 245.0
 window_title = "License information"
 dialog_text = "Vehicle is a car driving computer game, that is createt with Godot Engine.
-Copyright (C) 2022-2024 Janosch Lion
+Copyright (C) 2022-present Janosch Lion
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
